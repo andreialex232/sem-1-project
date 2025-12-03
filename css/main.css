@@ -23,6 +23,8 @@
   --third--text-color: #e5e2d9;
   --forth-text-color: #e5e2d9cc; /* 80% opacity */
 
+  --card-color: hsla(223, 36%, 86%, 0.2);
+
   /* Color Swatches */
   --green-color: #a8c79b;
   --brown-color: #d2a17b;
@@ -297,54 +299,269 @@
 
 .get-tickets-btn,
 .explore-the-story-btn {
-    padding: 10px 30px;
-    height: 60px;
-    width: 220px;
-    font-size: 20px;
-    border: none;
-    font-family: "Crimson Pro", serif;
-    box-shadow: 
-        0px 4px 6px -4px rgba(0, 0, 0, 0.1),
-        0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 10px 30px;
+  height: 60px;
+  width: 220px;
+  font-size: 20px;
+  border: none;
+  font-family: "Crimson Pro", serif;
+  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 
-    transition: background-color 0.4s ease, opacity 0.3s ease; 
+  transition: background-color 0.4s ease, opacity 0.3s ease;
 }
 
 .get-tickets-btn {
-    background-color: var(--dark-brown-color);
-    color: var(--third--text-color);
+  background-color: var(--dark-brown-color);
+  color: var(--third--text-color);
 }
 
 .explore-the-story-btn {
-    background-color: var(--green-color);
-    color: var(--primary-text-color);
+  background-color: var(--green-color);
+  color: var(--primary-text-color);
 }
 
-.get-tickets-btn:hover{
-    background-color: #4e2a29;
+.get-tickets-btn:hover {
+  background-color: #4e2a29;
 }
 
 /* NEEDS MODIFICATION */
-.explore-the-story-btn:hover{
-    background-color: #4b683e;
-    color: #e5e2d9;
+.explore-the-story-btn:hover {
+  background-color: #4b683e;
+  color: #e5e2d9;
 }
 
-.hero-star{
-    display: flex;
-    position: absolute;
-    bottom: 30px;
+.hero-star {
+  display: flex;
+  position: absolute;
+  bottom: 30px;
 }
 
-.hero-star img{
-    position: relative;
+.hero-star img {
+  position: relative;
 }
 
 /* We need wavy cut for the hero image */
 
-
 /* HERE WILL BE RESPOSIVENESS */
 
+/* The Story Section */
+
+.section-divider {
+  /* This is the Flexbox setup that centers everything */
+  display: flex;
+  align-items: center; /* Vertically aligns the lines and icon */
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.line {
+  width: 5%;
+  border: 1px solid var(--primary-text-color);
+  margin: 0 30px; /* Space between the line and the icon */
+}
+
+.book-icon {
+  width: 30px; /* Adjust size as needed */
+  height: auto;
+  flex-shrink: 0; /* Prevents the icon from shrinking on small screens */
+}
+
+.the-story {
+  min-height: 1200px;
+}
+
+.the-story-headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.the-story-headline h2 {
+  font-size: 62px;
+  font-weight: 400;
+  color: var(--primary-text-color);
+  padding-top: 30px;
+}
+
+.the-story-headline p {
+  font-size: 24px;
+  font-style: italic;
+  color: var(--primary-text-color);
+  padding: 20px 0 50px 0;
+}
+
+/* Containerul Grid Wrapper (Definește coloanele) */
+.story-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gap);
+  width: var(--width-12col);
+  margin: 0 auto;
+}
+
+.the-story-content {
+  grid-column: 1 / span 12;
+  padding: 35px 35px;
+  border: 1px solid var(--primary-text-color);
+  border-radius: 10px;
+  background-color: var(--card-color);
+  height: 485px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Stiluri pentru Paragrafe și Quote-ul din interior */
+.the-story-content-block p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--primary-text-color);
+  font-family: var(--font-serif);
+}
+
+.the-story-content-block q {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.5;
+  margin-top: 30px;
+  color: var(--secondary-text-color);
+}
+
+
+/* Card section */
+.brotherhood-card {
+  padding-top: 50px;
+}
+
+.brotherhood-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gap);
+  width: var(--width-12col);
+  min-height: 100px;
+  margin: 0 auto;
+}
+
+.brotherhood-card-content {
+  grid-column: 1 / span 4;
+  border: 2px solid var(--green-color);
+  background-color: #a8c79b33;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  height: 100px; 
+}
+
+.card-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 12px;
+  min-height: 250px; 
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 4px solid #E5E2D9;
+  padding: 30px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.icon-circle img {
+  width: 35px;
+  height: 35px;
+}
+
+.card-brotherhood{
+    border: 2px solid var(--green-color);
+    background-color: #A8C79B33;
+}
+
+.card-brotherhood .icon-circle-brotherhood{
+    background-color: #A8C79B ;
+}
+
+.card-courage{
+    border: 2px solid #D2A17B66;
+    background-color: #D2A17B33;
+}
+
+.card-courage .icon-circle-courage{
+    background-color: #D2A17B;
+}
+
+.card-adventure{
+    border: 2px solid #B0A9DC66;
+    background-color: #B0A9DC33;
+}
+
+.card-adventure .icon-circle-adventure{
+    background-color: #B0A9DC;
+}
+
+.card h3 {
+  color: var(--primary-text-color);
+  margin: 0 0 15px 0;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.card p {
+  color: var(--primary-text-color);
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+
+/* Meet the Characters Section */
+.meet-the-characters-headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.meet-the-characters-headline h2 {
+  font-size: 62px;
+  font-weight: 400;
+  color: var(--primary-text-color);
+  padding-top: 30px;
+}
+
+.meet-the-characters-headline p {
+  font-size: 24px;
+  font-style: italic;
+  color: var(--primary-text-color);
+  padding: 20px 0 50px 0;
+}
 
 
 
