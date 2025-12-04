@@ -348,12 +348,11 @@
 /* The Story Section */
 
 .section-divider {
-  /* This is the Flexbox setup that centers everything */
   display: flex;
   align-items: center; /* Vertically aligns the lines and icon */
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 .line {
@@ -363,9 +362,9 @@
 }
 
 .book-icon {
-  width: 30px; /* Adjust size as needed */
+  width: 30px;
   height: auto;
-  flex-shrink: 0; /* Prevents the icon from shrinking on small screens */
+  flex-shrink: 0;
 }
 
 .the-story {
@@ -393,7 +392,6 @@
   padding: 20px 0 50px 0;
 }
 
-/* Containerul Grid Wrapper (Definește coloanele) */
 .story-grid-wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -436,7 +434,6 @@
   color: var(--secondary-text-color);
 }
 
-
 /* Card section */
 .brotherhood-card {
   padding-top: 50px;
@@ -460,14 +457,14 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  height: 100px; 
+  height: 100px;
 }
 
 .card-grid-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  max-width: 1200px;
+  max-width: var(--width-12col);
   margin: 50px auto;
 }
 
@@ -478,14 +475,14 @@
   text-align: center;
   padding: 40px 20px;
   border-radius: 12px;
-  min-height: 250px; 
+  min-height: 250px;
 }
 
 .icon-circle {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  border: 4px solid #E5E2D9;
+  border: 4px solid #e5e2d9;
   padding: 30px;
   margin-bottom: 25px;
   display: flex;
@@ -500,31 +497,31 @@
   height: 35px;
 }
 
-.card-brotherhood{
-    border: 2px solid var(--green-color);
-    background-color: #A8C79B33;
+.card-brotherhood {
+  border: 2px solid var(--green-color);
+  background-color: #a8c79b33;
 }
 
-.card-brotherhood .icon-circle-brotherhood{
-    background-color: #A8C79B ;
+.card-brotherhood .icon-circle-brotherhood {
+  background-color: #a8c79b;
 }
 
-.card-courage{
-    border: 2px solid #D2A17B66;
-    background-color: #D2A17B33;
+.card-courage {
+  border: 2px solid #d2a17b66;
+  background-color: #d2a17b33;
 }
 
-.card-courage .icon-circle-courage{
-    background-color: #D2A17B;
+.card-courage .icon-circle-courage {
+  background-color: #d2a17b;
 }
 
-.card-adventure{
-    border: 2px solid #B0A9DC66;
-    background-color: #B0A9DC33;
+.card-adventure {
+  border: 2px solid #b0a9dc66;
+  background-color: #b0a9dc33;
 }
 
-.card-adventure .icon-circle-adventure{
-    background-color: #B0A9DC;
+.card-adventure .icon-circle-adventure {
+  background-color: #b0a9dc;
 }
 
 .card h3 {
@@ -540,8 +537,11 @@
   line-height: 1.5;
 }
 
-
 /* Meet the Characters Section */
+.meet-the-characters {
+  min-height: 900px;
+}
+
 .meet-the-characters-headline {
   display: flex;
   flex-direction: column;
@@ -560,13 +560,269 @@
   font-size: 24px;
   font-style: italic;
   color: var(--primary-text-color);
-  padding: 20px 0 50px 0;
+  padding: 20px 0 30px 0;
+}
+
+/* Image Slider */
+.image-slider {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.first-slider-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: var(--width-12col);
+  margin: 50px auto;
+}
+
+.first-slider {
+  grid-column: 1 / span 4;
+}
+
+.image-card {
+  min-width: 360px;
+  border-radius: 10px;
+  border: 4px solid #90565433;
+  position: relative;
+}
+
+.image-1 img {
+  width: 100%;
+  height: 448px;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+}
+
+/* Text over image --- */
+.text-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #e5e2d9f2;
+  padding: 15px 10px;
+  border-radius: 10px;
+  margin: 0 20px 20px 20px;
+}
+
+.text-box h3 {
+  color: var(--primary-text-color);
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2px;
+}
+
+/* Arrows --- */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-text-color);
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.nav-button:hover {
+  transform: translateY(-50%) scale(0.98);
+}
+
+.nav-button:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.prev {
+  left: 0;
+  margin-left: 150px;
+}
+
+.next {
+  right: 0;
+  margin-right: 150px;
+}
+
+.under-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-text-color);
 }
 
 
+/* Show Calendar Section */
+.show-calendar-headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-calendar-headline h2 {
+  font-size: 62px;
+  font-weight: 400;
+  color: var(--primary-text-color);
+  padding-top: 30px;
+}
+
+.show-calendar-headline p {
+  font-size: 24px;
+  font-style: italic;
+  color: var(--primary-text-color);
+  padding: 20px 0 30px 0;
+}
 
 
+/* Main Calendar Container */
+.calendar {
+  width: 90%;
+  max-width: var(--width-12col);
+  margin: 0 auto;
+  padding: 20px 0;
+}
 
+/* Wrapper and Card (Calendar Card) */
+.calendar-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gap);
+  width: 100%;
+  min-height: 100px;
+}
+
+/* Card content (inside) */
+.calendar-content {
+  grid-column: 1 / span 12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  background-color: #d0d7e933;
+  border-radius: 10px;
+  border: 2px solid var(--green-color);
+  padding: 20px;
+}
+
+/* Date block (Dec 15) */
+.date-block {
+  grid-column: 2 / span 1;
+  background-color: var(--primary-text-color);
+  color: #e5e2d9;
+  border-radius: 10px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 400;
+}
+
+.date-block .month {
+  font-size: 12px;
+  margin-bottom: 2px;
+  font-weight: 300;
+}
+
+.date-block .day {
+  font-size: 24px;
+}
+
+/* Deatils (day and date) */
+.details {
+  grid-column: 3 / 5;
+}
+
+.details .day-name {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.details .full-date {
+  padding-top: 5px;
+  color: var(--primary-text-color);
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+/* Time + Icon (7:00 PM) */
+.time-box {
+  grid-column: 6 /8;
+  display: flex;
+  align-items: center;
+  color: var(--primary-text-color);
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.time-box svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  stroke: var(--primary-text-color);
+  stroke-width: 0.1;
+}
+
+/* Tag (Evening) */
+.tag {
+  grid-column: 8 / 9;
+  display: flex;
+  align-items: center;
+  background-color: #f3f1db;
+  color: var(--primary-text-color);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 500;
+  justify-self: center; 
+}
+
+/* Button (Book Now) */
+.book-button {
+  height: 40px;
+  width: 137px;
+  grid-column: 10 / 12;
+  background-color: var(--primary-text-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  justify-self: end; 
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.book-button svg {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+}
 
 
 

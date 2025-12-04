@@ -45,3 +45,22 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', closeMenu); // On click event for each link inside the mobile menu
   });
 }); 
+
+
+
+
+
+// Slider Logic
+ const slider = document.getElementById('sliderWrapper');
+        const scrollAmount = 390; // Latimea cardului (360px) + Gap (30px)
+
+        /**
+         * Glisează conținutul slider-ului orizontal.
+         * @param {number} direction - 1 pentru NEXT (dreapta), -1 pentru PREV (stânga).
+         */
+        function scrollSlider(direction) {
+            slider.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
