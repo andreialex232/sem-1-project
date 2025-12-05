@@ -664,7 +664,6 @@
   color: var(--primary-text-color);
 }
 
-
 /* Show Calendar Section */
 .show-calendar-headline {
   display: flex;
@@ -686,7 +685,6 @@
   color: var(--primary-text-color);
   padding: 20px 0 30px 0;
 }
-
 
 /* Main Calendar Container */
 .calendar {
@@ -792,7 +790,7 @@
   border-radius: 20px;
   font-size: 0.85em;
   font-weight: 500;
-  justify-self: center; 
+  justify-self: center;
 }
 
 /* Button (Book Now) */
@@ -811,18 +809,295 @@
   text-decoration: none;
   transition: all 0.2s;
   flex-shrink: 0;
-  justify-self: end; 
+  justify-self: end;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
 }
 
-.book-button svg {
-  width: 16px;
-  height: 16px;
+.book-button img {
+  width: 64px;
+  height: 64px;
   margin-left: 10px;
   fill: none;
-  stroke: white;
   stroke-width: 2;
 }
+
+/* Show Calendar Box */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: var(--width-12col);
+  margin: 0 auto;
+}
+
+.show-calendar-info {
+  grid-column: 1 / span 12;
+  margin: 40px 0;
+  border-radius: 10px;
+  background-color: #a8c79b66;
+  border: 2px solid var(--green-color);
+  height: 145px;
+  padding: 40px 50px;
+}
+
+.show-calendar-info-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-calendar-info-content p {
+  color: #8b4545;
+  font-size: 20px;
+  line-height: 1.6;
+  width: 80%;
+  text-align: center;
+}
+
+/* Ticket Information */
+.ticket-information {
+  min-height: 1200px;
+}
+
+.ticket-information-headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ticket-information-headline h2 {
+  font-size: 62px;
+  font-weight: 400;
+  color: var(--primary-text-color);
+  padding-top: 30px;
+}
+
+.ticket-information-headline p {
+  font-size: 24px;
+  font-style: italic;
+  color: var(--primary-text-color);
+  padding: 20px 0 50px 0;
+}
+
+/* Cards Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  max-width: var(--width-12col);
+  margin: 0 auto;
+}
+
+.childrens-ticket,
+.family-package {
+  background-color: #e5e2d9;
+  border-radius: 10px;
+  border: 4px solid;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Children's Card*/
+.childrens-ticket {
+  grid-column: 1 / span 6;
+  border-color: var(--green-color);
+  height: 536px;
+}
+
+/* Family Card */
+.family-package {
+  grid-column: 7 / span 6;
+  border-color: var(--brown-color);
+}
+
+.childrens-ticket-content,
+.family-package-content {
+  padding: 30px 30px 0px;
+  flex-grow: 1;
+}
+
+/* Title Icon Price Container */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 30px 30px 20px;
+}
+
+.header-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.icon-big {
+  width: 48px;
+  height: 48px;
+  fill: var(--primary-text-color);
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+/* Title and Subtitle Container */
+.title-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ticket-title {
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--primary-text-color);
+  margin-bottom: 2px;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 20px;
+  color: #905654b2;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 5px;
+}
+
+/* Price in the right side */
+.price {
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--primary-text-color);
+}
+
+/* Benefits Section */
+.includes-title {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 15px 0 12px 0;
+  color: var(--primary-text-color);
+  padding: 15px 0 0 10px;
+  border-top: 2px solid rgba(142, 77, 71, 0.2);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 20px;
+  margin-left: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-text-color);
+}
+
+.feature-item svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--check-green);
+  flex-shrink: 0;
+}
+
+/* Button 'Book Now' */
+.button-section {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-now-button {
+  width: 424px;
+  background-color: #905654;
+  color: #e5e2d9;
+  font-family: "Crimson PRO", serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 18px 15px;
+  margin-bottom: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.book-now-button:hover {
+  background-color: #6a3a3a;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Card Age Recomandation + Refund Policy */
+.age-recommendation-card,
+.refund-policy-card {
+  border-radius: 10px;
+  border: 2px solid #90565433;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
+}
+
+#age-recommendation {
+  grid-column: 1 / span 6;
+}
+
+#refund-policy {
+  grid-column: span 6;
+}
+
+.age-recommendation-content,
+.refund-policy-content {
+  display: flex;
+  justify-content: center;
+}
+
+.info-card-text-container {
+  padding: 5px 20px 0 20px;
+}
+
+.info-card-text-container h3 {
+  font-size: 20px;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+.info-card-text-container p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.info-card-text-container, h3 p {
+  color: var(--primary-text-color);
+}
+
+.age-recommendation-icon-container,
+.refund-policy-icon-container {
+  min-width: 50px; 
+  height: 50px; 
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.age-recommendation-icon-container img,
+.refund-policy-icon-container img {
+  width: 30px; 
+  height: 30px; 
+}
+
+.age-recommendation-icon-container {
+  background-color: #b0a9dc; 
+}
+
+.refund-policy-icon-container {
+  background-color: #d2a17b; 
+}
+
+
+
 
 
 
