@@ -855,7 +855,7 @@
 
 /* Ticket Information */
 .ticket-information {
-  min-height: 1200px;
+  min-height: 1100px;
 }
 
 .ticket-information-headline {
@@ -1029,7 +1029,6 @@
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-
 /* Card Age Recomandation + Refund Policy */
 .age-recommendation-card,
 .refund-policy-card {
@@ -1068,14 +1067,15 @@
   line-height: 1.6;
 }
 
-.info-card-text-container, h3 p {
+.info-card-text-container,
+h3 p {
   color: var(--primary-text-color);
 }
 
 .age-recommendation-icon-container,
 .refund-policy-icon-container {
-  min-width: 50px; 
-  height: 50px; 
+  min-width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1084,20 +1084,211 @@
 
 .age-recommendation-icon-container img,
 .refund-policy-icon-container img {
-  width: 30px; 
-  height: 30px; 
+  width: 30px;
+  height: 30px;
 }
 
 .age-recommendation-icon-container {
-  background-color: #b0a9dc; 
+  background-color: #b0a9dc;
 }
 
 .refund-policy-icon-container {
-  background-color: #d2a17b; 
+  background-color: #d2a17b;
 }
 
+/* Practical Information */
+.practical-information {
+  min-height: 1200px;
+}
 
+.practical-information-headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.practical-information-grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: var(--width-12col);
+  margin: 0 auto;
+  gap: 30px;
+}
 
+/* Cards */
+.location-card,
+.show-duration-card,
+.public-transport-card,
+.parking-card,
+.accessibility-card,
+.arrive-early-card {
+  border-radius: 10px;
+  border: 2px solid #90565433;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
+  min-height: 252px;
+  background-color: #d0d7e933;
+}
 
+.location-content,
+.show-duration-content,
+.public-transport-content,
+.parking-content,
+.accessibility-content,
+.arrive-early-content {
+  display: flex;
+}
 
+/* Icons */
+.practical-information-icon-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 1.2em;
+  color: white;
+}
+
+/* Color of the Icons */
+#location-icon-container {
+  background-color: #d2a17b;
+}
+
+/* HERE WILL BE THE COLORS OF THE OTHER ICONS */
+
+.info-location-card-text-container {
+  padding: 5px 0 0 20px;
+}
+
+.info-location-card-text-container h3 {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--primary-text-color);
+  margin-bottom: 20px;
+}
+
+.info-location-card-text-container p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--primary-text-color);
+  margin-bottom: 5px;
+}
+
+.location-btn {
+  background-color: var(--green-color);
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.location-btn a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+#location,
+#public-transport,
+#accessibility {
+  grid-column: 1 / span 6;
+}
+
+#show-duration,
+#parking,
+#arrive-early {
+  grid-column: span 6;
+}
+
+/* Frequently Asked Questions Section */
+.frequently-asked-headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.frequently-asked-headline h2 {
+  font-size: 62px;
+  font-weight: 400;
+  color: var(--primary-text-color);
+  padding-top: 30px;
+}
+
+.frequently-asked-headline p {
+  font-size: 24px;
+  font-style: italic;
+  color: var(--primary-text-color);
+  padding: 20px 0 30px 0;
+}
+
+.frequently-asked-questions-grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: var(--width-12col);
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.section-heading {
+    text-align: center;
+    color: var(--color-heading);
+    font-size: 1.8em;
+    font-weight: normal;
+    background-color: var(--color-background-box); 
+    padding: 15px 0;
+    margin-top: 30px; 
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    grid-column: 1 / span 12; 
+}
+
+.section-divider, .frequently-asked-headline {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.question-box {
+    grid-column: 1 / span 12; 
+    background-color: var(--color-background-box);
+    border-bottom: 1px solid var(--color-border-subtle);
+    cursor: pointer;
+}
+
+.question-grid .question-box:first-child {
+    border-top: 1px solid var(--color-border-subtle);
+}
+
+.question-box summary {
+    display: block; 
+    padding: 15px 20px;
+    font-weight: 500;
+    position: relative;
+    list-style: none; 
+}
+
+.question-box summary::after {
+    content: 'v'; 
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.2s, color 0.2s;
+    font-size: 1.2em;
+    color: var(--color-heading);
+}
+
+.question-box[open] summary::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.answer-content {
+    padding: 10px 20px 15px 20px;
+    background-color: var(--color-background-main); 
+    border-top: 1px solid var(--color-border-subtle);
+    font-size: 0.95em;
+    line-height: 1.5;
+}
