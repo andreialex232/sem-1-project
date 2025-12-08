@@ -68,12 +68,16 @@
         </div>
 
         <div class="hero-text">
-          <h1>Welcome to the<br><span>Enchanted Theatre</span></h1></br>
+          <div class="title-hero-container">
+            <h1>Welcome to the<br><span>Enchanted Theatre</span></h1></br>
+          </div>
           <p>Experience the magic of The Brothers Lionheart - a timeless tale of courage, adventure, and the unbreakable
             bond between brothers</p>
           <div class="buttons-hero">
-            <button class="get-tickets-btn"><a href="#anchor-ticket-information">Get Tickets</a></button> <!--HERE SHOULD BE AN ANCHOR-->
-            <button class="explore-the-story-btn"><a href="pages/about-us.html">Explore the story</a></button> <!--HERE SHOULD BE AN ANCHOR-->
+            <button class="get-tickets-btn"><a href="#anchor-ticket-information">Get Tickets</a></button>
+            <!--HERE SHOULD BE AN ANCHOR-->
+            <button class="explore-the-story-btn"><a href="pages/about-us.html">Explore the story</a></button>
+            <!--HERE SHOULD BE AN ANCHOR-->
           </div>
 
         </div>
@@ -181,14 +185,14 @@
 
       <div class="image-slider">
         <!-- Buton PREV Left Side -->
-        <button class="nav-button prev" onclick="scrollSlider(-1)">&#10094;</button>
+        <button class="nav-button prev">&#10094;</button>
 
         <div class="first-slider-wrapper" id="sliderWrapper">
 
           <!-- CARD 1 -->
           <div class="image-card">
             <div class="image-1">
-              <img src="https://picsum.photos/360/448?random=1" alt="Jonathan Lionheart">
+              <img src="assets/person-1.png" alt="Jonathan Lionheart">
             </div>
             <div class="text-box">
               <h3>Jonathan Lionheart</h3>
@@ -198,7 +202,7 @@
           <!-- CARD 2 -->
           <div class="image-card">
             <div class="image-1">
-              <img src="https://picsum.photos/360/448?random=2" alt="Karl Lionheart">
+              <img src="assets/person-2.png" alt="Karl Lionheart">
             </div>
             <div class="text-box">
               <h3>Karl Lionheart</h3>
@@ -208,339 +212,279 @@
           <!-- CARD 3 -->
           <div class="image-card">
             <div class="image-1">
-              <img src="https://picsum.photos/360/448?random=3" alt="Tengil">
+              <img src="assets/dragon-1.png" alt="Tengil">
             </div>
             <div class="text-box">
               <h3>Tengil</h3>
             </div>
           </div>
-
         </div>
 
         <!-- Buton NEXT Right Side -->
-        <button class="nav-button next" onclick="scrollSlider(1)">&#10095;</button>
+        <button class="nav-button next">&#10095;</button>
       </div>
 
       <p class="under-text">And many more wonderful characters await you in this magical performance!</p>
-
     </section>
-
-
-    <!--Show Calendar Section -->
     <div>
-      <div class="section-divider">
-        <hr class="line left-line">
-        <img src="assets/calendar-icon.svg" alt="">
-        <hr class="line right-line">
-      </div>
 
-      <div class="show-calendar-headline">
-        <h2>Show Calendar</h2>
-        <p>Choose your magical evening</p>
-      </div>
 
-      <!-- First Container -->
-      <div class="calendar">
-        <div class="calendar-1">
-          <div class="calendar-wrapper">
-            <div class="calendar-content">
 
-              <!-- Date (Dec 15) -->
-              <div class="date-block">
-                <span class="month">DEC</span>
-                <span class="day">15</span>
+      <!-- Show Calendar Section -->
+      <section class="show-calendar">
+        <div class="section-divider">
+          <hr class="line left-line">
+          <img src="assets/calendar-icon.svg" alt="">
+          <hr class="line right-line">
+        </div>
+
+        <div class="show-calendar-headline">
+          <h2>Show Calendar</h2>
+          <p>Choose your magical evening</p>
+        </div>
+
+        <div class="calendar">
+          <div class="calendar-1">
+            <div class="calendar-wrapper">
+              <div class="calendar-content">
+
+                <div class="date-block">
+                  <span class="month">DEC</span>
+                  <span class="day">15</span>
+                </div>
+
+                <div class="details">
+                  <p class="day-name">Monday</p>
+                  <p class="full-date">December 15, 2025</p>
+                </div>
+
+                <div class="time-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g fill="none">
+                      <path
+                        d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                      <path fill="currentColor"
+                        d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 2a1 1 0 0 1 .993.883L13 7v4.586l2.707 2.707a1 1 0 0 1-1.32 1.497l-.094-.083l-3-3a1 1 0 0 1-.284-.576L11 12V7a1 1 0 0 1 1-1" />
+                    </g>
+                  </svg>
+                  7:00 PM
+                </div>
+
+                <span class="evening-tag tag">Evening</span>
+
+                <button class="book-button">
+                  Book Now
+                  <img src="assets/book-now-icon.svg" alt="">
+                </button>
               </div>
-
-              <!-- Details (Day and Date) -->
-              <div class="details">
-                <p class="day-name">Monday</p>
-                <p class="full-date">December 15, 2025</p>
-              </div>
-
-              <!-- Time + Icon (7:00 PM) -->
-              <div class="time-box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <g fill="none">
-                    <path
-                      d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-                    <path fill="currentColor"
-                      d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 2a1 1 0 0 1 .993.883L13 7v4.586l2.707 2.707a1 1 0 0 1-1.32 1.497l-.094-.083l-3-3a1 1 0 0 1-.284-.576L11 12V7a1 1 0 0 1 1-1" />
-                  </g>
-                </svg>
-                7:00 PM
-              </div>
-
-              <!-- Tag (Evening) -->
-              <span class="tag">Evening</span>
-
-              <!--  Buton (Book Now) -->
-              <a href="#" class="book-button">
-                Book Now
-                <svg viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Second Container -->
-      <div class="calendar">
-        <div class="calendar-1">
-          <div class="calendar-wrapper">
-            <div class="calendar-content">
+        <div class="calendar">
+          <div class="calendar-1">
+            <div class="calendar-wrapper">
+              <div class="calendar-content">
 
-              <!-- Date (Dec 15) -->
-              <div class="date-block">
-                <span class="month">DEC</span>
-                <span class="day">15</span>
+                <div class="date-block">
+                  <span class="month">DEC</span>
+                  <span class="day">16</span>
+                </div>
+
+                <div class="details">
+                  <p class="day-name">Tuesday</p>
+                  <p class="full-date">December 16, 2025</p>
+                </div>
+
+                <div class="time-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g fill="none">
+                      <path
+                        d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                      <path fill="currentColor"
+                        d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 2a1 1 0 0 1 .993.883L13 7v4.586l2.707 2.707a1 1 0 0 1-1.32 1.497l-.094-.083l-3-3a1 1 0 0 1-.284-.576L11 12V7a1 1 0 0 1 1-1" />
+                    </g>
+                  </svg>
+                  2:00 PM
+                </div>
+
+                <span class="matinee-tag tag">Matinee</span>
+
+                <button class="book-button">
+                  Book Now
+                  <img src="assets/book-now-icon.svg" alt="">
+                </button>
               </div>
-
-              <!-- Details (Day and Date)-->
-              <div class="details">
-                <p class="day-name">Monday</p>
-                <p class="full-date">December 15, 2025</p>
-              </div>
-
-              <!-- Time + Icon (7:00 PM) -->
-              <div class="time-box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <g fill="none">
-                    <path
-                      d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-                    <path fill="currentColor"
-                      d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 2a1 1 0 0 1 .993.883L13 7v4.586l2.707 2.707a1 1 0 0 1-1.32 1.497l-.094-.083l-3-3a1 1 0 0 1-.284-.576L11 12V7a1 1 0 0 1 1-1" />
-                  </g>
-                </svg>
-                7:00 PM
-              </div>
-
-              <!-- Tag (Evening) -->
-              <span class="tag">Evening</span>
-
-              <!--  Buton (Book Now) -->
-              <a href="#" class="book-button">
-                Book Now
-                <svg viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
             </div>
           </div>
         </div>
-      </div>
 
 
-      <!-- Third Container -->
-      <div class="calendar">
-        <div class="calendar-1">
-          <div class="calendar-wrapper">
-            <div class="calendar-content">
+        <div class="calendar">
+          <div class="calendar-1">
+            <div class="calendar-wrapper">
+              <div class="calendar-content">
 
-              <!-- Date (Dec 15) -->
-              <div class="date-block">
-                <span class="month">DEC</span>
-                <span class="day">15</span>
+                <div class="date-block">
+                  <span class="month">DEC</span>
+                  <span class="day">16</span>
+                </div>
+
+                <div class="details">
+                  <p class="day-name">Tuesday</p>
+                  <p class="full-date">December 16, 2025</p>
+                </div>
+
+                <div class="time-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g fill="none">
+                      <path
+                        d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                      <path fill="currentColor"
+                        d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 2a1 1 0 0 1 .993.883L13 7v4.586l2.707 2.707a1 1 0 0 1-1.32 1.497l-.094-.083l-3-3a1 1 0 0 1-.284-.576L11 12V7a1 1 0 0 1 1-1" />
+                    </g>
+                  </svg>
+                  7:00 PM
+                </div>
+
+                <span class="evening-tag tag">Evening</span>
+
+                <button class="book-button">
+                  Book Now
+                  <img src="assets/book-now-icon.svg" alt="">
+                </button>
               </div>
-
-              <!-- Details (Day and Date) -->
-              <div class="details">
-                <p class="day-name">Monday</p>
-                <p class="full-date">December 15, 2025</p>
-              </div>
-
-              <!-- Time + Icon (7:00 PM) -->
-              <div class="time-box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <g fill="none">
-                    <path
-                      d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-                    <path fill="currentColor"
-                      d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 2a1 1 0 0 1 .993.883L13 7v4.586l2.707 2.707a1 1 0 0 1-1.32 1.497l-.094-.083l-3-3a1 1 0 0 1-.284-.576L11 12V7a1 1 0 0 1 1-1" />
-                  </g>
-                </svg>
-                7:00 PM
-              </div>
-
-              <!-- Tag (Evening) -->
-              <span class="tag">Evening</span>
-
-              <!--  Buton (Book Now) -->
-              <a href="#" class="book-button">
-                Book Now
-                <svg viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Fourth Container -->
-      <div class="calendar">
-        <div class="calendar-1">
-          <div class="calendar-wrapper">
-            <div class="calendar-content">
+        <div class="calendar">
+          <div class="calendar-1">
+            <div class="calendar-wrapper">
+              <div class="calendar-content">
 
-              <!-- Date (Dec 15) -->
-              <div class="date-block">
-                <span class="month">DEC</span>
-                <span class="day">15</span>
+                <div class="date-block">
+                  <span class="month">DEC</span>
+                  <span class="day">21</span>
+                </div>
+
+                <div class="details">
+                  <p class="day-name">Sunday</p>
+                  <p class="full-date">December 21, 2025</p>
+                </div>
+
+                <div class="time-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g fill="none">
+                      <path
+                        d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                      <path fill="currentColor"
+                        d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 2a1 1 0 0 1 .993.883L13 7v4.586l2.707 2.707a1 1 0 0 1-1.32 1.497l-.094-.083l-3-3a1 1 0 0 1-.284-.576L11 12V7a1 1 0 0 1 1-1" />
+                    </g>
+                  </svg>
+                  2:00 PM
+                </div>
+
+                <span class="matinee-tag tag">Matinee</span>
+
+                <button class="book-button">
+                  Book Now
+                  <img src="assets/book-now-icon.svg" alt="">
+                </button>
               </div>
-
-              <!-- Details (Day and Date) -->
-              <div class="details">
-                <p class="day-name">Monday</p>
-                <p class="full-date">December 15, 2025</p>
-              </div>
-
-              <!-- Time + Icon (7:00 PM) -->
-              <div class="time-box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <g fill="none">
-                    <path
-                      d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-                    <path fill="currentColor"
-                      d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 2a1 1 0 0 1 .993.883L13 7v4.586l2.707 2.707a1 1 0 0 1-1.32 1.497l-.094-.083l-3-3a1 1 0 0 1-.284-.576L11 12V7a1 1 0 0 1 1-1" />
-                  </g>
-                </svg>
-                7:00 PM
-              </div>
-
-              <!-- Tag (Evening) -->
-              <span class="tag">Evening</span>
-
-              <!--  Buton (Book Now) -->
-              <a href="#" class="book-button">
-                Book Now
-                <svg viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Fifth Container -->
-      <div class="calendar">
-        <div class="calendar-1">
-          <div class="calendar-wrapper">
-            <div class="calendar-content">
+        <div class="calendar">
+          <div class="calendar-1">
+            <div class="calendar-wrapper">
+              <div class="calendar-content">
 
-              <!-- Date (Dec 15) -->
-              <div class="date-block">
-                <span class="month">DEC</span>
-                <span class="day">15</span>
+                <div class="date-block">
+                  <span class="month">DEC</span>
+                  <span class="day">21</span>
+                </div>
+
+                <div class="details">
+                  <p class="day-name">Sunday</p>
+                  <p class="full-date">December 21, 2025</p>
+                </div>
+
+                <div class="time-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g fill="none">
+                      <path
+                        d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                      <path fill="currentColor"
+                        d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 2a1 1 0 0 1 .993.883L13 7v4.586l2.707 2.707a1 1 0 0 1-1.32 1.497l-.094-.083l-3-3a1 1 0 0 1-.284-.576L11 12V7a1 1 0 0 1 1-1" />
+                    </g>
+                  </svg>
+                  6:00 PM
+                </div>
+
+                <span class="evening-tag tag">Evening</span>
+
+                <button class="book-button">
+                  Book Now
+                  <img src="assets/book-now-icon.svg" alt="">
+                </button>
               </div>
-
-              <!-- Details (Day and Date) -->
-              <div class="details">
-                <p class="day-name">Monday</p>
-                <p class="full-date">December 15, 2025</p>
-              </div>
-
-              <!-- Time + Icon (7:00 PM) -->
-              <div class="time-box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <g fill="none">
-                    <path
-                      d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-                    <path fill="currentColor"
-                      d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 2a1 1 0 0 1 .993.883L13 7v4.586l2.707 2.707a1 1 0 0 1-1.32 1.497l-.094-.083l-3-3a1 1 0 0 1-.284-.576L11 12V7a1 1 0 0 1 1-1" />
-                  </g>
-                </svg>
-                7:00 PM
-              </div>
-
-              <!-- Tag (Evening) -->
-              <span class="tag">Evening</span>
-
-              <!--  Buton (Book Now) -->
-              <a href="#" class="book-button">
-                Book Now
-                <svg viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Sixth Container -->
-      <div class="calendar">
-        <div class="calendar-1">
-          <div class="calendar-wrapper">
-            <div class="calendar-content">
+        <div class="calendar">
+          <div class="calendar-1">
+            <div class="calendar-wrapper">
+              <div class="calendar-content">
 
-              <!-- Date (Dec 15) -->
-              <div class="date-block">
-                <span class="month">DEC</span>
-                <span class="day">15</span>
+                <div class="date-block">
+                  <span class="month">DEC</span>
+                  <span class="day">22</span>
+                </div>
+
+                <div class="details">
+                  <p class="day-name">Monday</p>
+                  <p class="full-date">December 22, 2025</p>
+                </div>
+
+                <div class="time-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g fill="none">
+                      <path
+                        d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                      <path fill="currentColor"
+                        d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 2a1 1 0 0 1 .993.883L13 7v4.586l2.707 2.707a1 1 0 0 1-1.32 1.497l-.094-.083l-3-3a1 1 0 0 1-.284-.576L11 12V7a1 1 0 0 1 1-1" />
+                    </g>
+                  </svg>
+                  7:00 PM
+                </div>
+
+                <span class="evening-tag tag">Evening</span>
+
+                <button class="book-button">
+                  Book Now
+                  <img src="assets/book-now-icon.svg" alt="">
+                </button>
               </div>
-
-              <!-- Details (Day and date) -->
-              <div class="details">
-                <p class="day-name">Monday</p>
-                <p class="full-date">December 15, 2025</p>
-              </div>
-
-              <!-- Time + Icon (7:00 PM) -->
-              <div class="time-box">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <g fill="none">
-                    <path
-                      d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
-                    <path fill="currentColor"
-                      d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 2a1 1 0 0 1 .993.883L13 7v4.586l2.707 2.707a1 1 0 0 1-1.32 1.497l-.094-.083l-3-3a1 1 0 0 1-.284-.576L11 12V7a1 1 0 0 1 1-1" />
-                  </g>
-                </svg>
-                7:00 PM
-              </div>
-
-              <!-- Tag (Evening) -->
-              <span class="tag">Evening</span>
-
-              <!--  Buton (Book Now) -->
-              <a href="#" class="book-button">
-                Book Now
-                <svg viewBox="0 0 24 24" stroke="currentColor">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
             </div>
           </div>
         </div>
-      </div>
 
-
-      <!-- Show Calendar Box -->
-      <div class="grid-container">
-        <div class="show-calendar-info">
-          <div class="show-calendar-info-content">
-            <p>The performances are especially family-friendly with shorter duration and lighter atmosphere, perfect
-              for
-              younger audience members.</p>
+        <!-- Show Calendar Box -->
+        <div class="grid-container">
+          <div class="show-calendar-info">
+            <div class="show-calendar-info-content">
+              <p>The performances are especially family-friendly with shorter duration and lighter atmosphere, perfect
+                for
+                younger audience members.</p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Ticket information -->
+      <!-- Ticket information Section -->
       <section class="ticket-information" id="anchor-ticket-information">
         <div class="section-divider">
           <hr class="line left-line">
@@ -552,8 +496,6 @@
           <h2>Ticket Information</h2>
           <p>Perfect for ages 8-15 and their families</p>
         </div>
-
-
 
         <div class="grid-container">
           <!-- Children's Ticket -->

@@ -33,11 +33,13 @@
 
   /* Color Swatches */
   --green-color: #a8c79b;
+  --hover-dark-green-btn: #8da981;
   --dark-green-color: #4b683e;
   --brown-color: #d2a17b;
   --purple-color: #b0a9dc;
   --dark-brown-color: #6a3a3a;
   --light-brown-color: #90565433; /* Border + hr */
+  --hover-dark-btn: #4e2a29; /* get-tickets btn */
 }
 
 /* Navigation Section */
@@ -49,6 +51,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .navigation.fixed {
@@ -63,7 +67,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: var(--width-12col);
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   height: 80px;
   transition: padding 0.5s ease-in-out;
@@ -233,7 +237,7 @@
 
 /* Header Section */
 .hero {
-  background-image: url("../assets/hero-image.jpg");
+  background-image: url("../assets/hero-image-2.png");
   min-height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
@@ -242,10 +246,10 @@
   display: flex;
   justify-content: center;
   position: relative;
-  margin: 0;
+  margin: 0 auto;
 }
 
-/* Blur Background  */
+/* Blur Background */
 .hero::before {
   content: "";
   position: absolute;
@@ -270,6 +274,7 @@
   width: 100%;
   max-width: var(--width-12col);
   height: 100vh;
+  margin: 0 auto;
 }
 
 .hero-text {
@@ -309,45 +314,53 @@
 
 .get-tickets-btn,
 .explore-the-story-btn {
-  padding: 10px 30px;
   height: 60px;
   width: 220px;
-  font-size: 20px;
   border: none;
   cursor: pointer;
   font-family: "Crimson Pro", serif;
   box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1),
     0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   transition: background-color 0.4s ease, opacity 0.3s ease;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+}
+
+.get-tickets-btn a,
+.explore-the-story-btn a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 10px 30px;
+  font-size: 20px;
+  transition: color 0.4s ease;
 }
 
 .get-tickets-btn {
   background-color: var(--dark-brown-color);
+}
+
+.get-tickets-btn a {
   color: var(--third--text-color);
 }
 
 .explore-the-story-btn {
   background-color: var(--green-color);
-  color: var(--primary-text-color);
-}
-
-.get-tickets-btn a {
-  text-decoration: none;
-  color: var(--third--text-color);
 }
 
 .explore-the-story-btn a {
-  text-decoration: none;
   color: var(--primary-text-color);
 }
 
-.get-tickets-btn:hover {
-  background-color: #4e2a29;
+.explore-the-story-btn:hover {
+  background-color: var(--hover-dark-green-btn);
 }
 
-/* NEEDS MODIFICATION */
-.explore-the-story-btn:hover {
-  background-color: var(--dark-green-color);
+.explore-the-story-btn:hover a {
   color: var(--third--text-color);
 }
 
@@ -386,141 +399,111 @@
   fill: var(--primary-background-color);
 }
 
-/* Adjustments for larger screens where content might start looking too stretched */
 @media (max-width: 1200px) {
-  .hero-container {
-    /* Slightly increase horizontal padding on large screens for visual balance */
-    padding: 0 40px;
-  }
-
   .hero-text h1 {
-    font-size: 80px; /* Minor size reduction from a potential larger default */
+    font-size: 80px;
   }
 
   .hero-text h1 span {
-    font-size: 110px;
+    font-size: 96px;
   }
 
   .hero-text p {
-    font-size: 32px;
-    width: 60%; /* Keep it constrained */
+    font-size: 30px;
+    width: 60%;
   }
 }
 
-/* --- New: Smaller Laptop/Tablet Landscape View (e.g., up to 992px) --- */
-/* A good intermediate step before the dedicated Tablet View */
 @media (max-width: 992px) {
+  .title-hero-container {
+    width: 75%;
+  }
+
   .hero-text h1 {
-    font-size: 70px; /* Further reduction */
+    font-size: 75px;
   }
 
   .hero-text h1 span {
-    font-size: 90px;
+    font-size: 76px;
   }
 
   .hero-text p {
     font-size: 28px;
-    width: 70%; /* Allow it to take more space */
+    width: 70%;
   }
 
   .buttons-hero {
-    /* Ensure buttons still look good before stacking */
     gap: 10px;
   }
 
   .get-tickets-btn,
   .explore-the-story-btn {
-    /* Slightly smaller button text/padding if needed */
     padding: 15px 30px;
     font-size: 18px;
   }
 }
 
-/* --- Existing: Tablet View (e.g., up to 768px) --- */
 @media (max-width: 768px) {
-  .hero {
-    width: 100%;
-  }
-
   .hero-text h1 {
-    font-size: 56px; /* Smaller main heading */
-    margin-top: 50px; /* Give more space on top */
+    font-size: 56px;
+    margin-top: 50px;
   }
 
   .hero-text h1 span {
-    font-size: 72px; /* Smaller emphasized text */
+    font-size: 72px;
   }
 
   .hero-text p {
-    font-size: 24px; /* Smaller paragraph text */
-    width: 80%; /* Increased width for better readability on tablets */
+    font-size: 24px;
+    width: 70%;
   }
 
   .buttons-hero {
     margin: 20px 0;
-    flex-direction: column; /* Stack buttons vertically */
-    gap: 15px;
-    width: 80%; /* Control button group width */
-    max-width: 300px; /* Limit max width for stacking */
+    flex-direction: column;
+    max-width: 300px;
   }
 
   .get-tickets-btn,
   .explore-the-story-btn {
-    width: 100%; /* Full width for stacked buttons */
-    max-width: none; /* Override desktop width restriction */
+    width: 100%;
+    max-width: none;
   }
 }
 
-/* --- Existing: Mobile View (e.g., up to 480px) --- */
-@media (max-width: 480px) {
-  .hero-container {
-    padding: 0 10px; /* Reduced padding */
-    justify-content: flex-start; /* Start content higher on the screen */
-    padding-top: 15vh; /* Push content down a bit from the top edge */
-    height: auto; /* Allow container height to be determined by content */
-  }
-
-  .hero {
-    min-height: 80vh; /* Make the hero section a bit shorter */
-  }
-
-  .top-svg {
-    margin-bottom: 20px; /* Space above the main text */
-  }
-
-  .top-svg img {
-    max-width: 60px; /* Smaller icon */
-  }
-
+@media (max-width: 576px) {
   .hero-text h1 {
-    font-size: 40px; /* Even smaller main heading */
-    margin: 10px 0;
+    font-size: 56px;
+    margin-top: 50px;
   }
 
   .hero-text h1 span {
-    font-size: 52px; /* Even smaller emphasized text */
-    display: block; /* Ensure the span is on its own line for better flow */
+    font-size: 72px;
   }
 
   .hero-text p {
-    font-size: 18px; /* Standard mobile paragraph size */
-    width: 90%; /* Take up nearly full width */
+    font-size: 24px;
+    width: 70%;
   }
 
-  .hero-star {
-    display: none;
+  .buttons-hero {
+    margin: 20px 0;
+    flex-direction: column;
+    /* width: 80%;  */
+    max-width: 300px;
   }
 
-  .custom-shape-divider-bottom-1765054686 svg {
-    height: 50px; /* Make the wave a bit less tall */
+  .get-tickets-btn,
+  .explore-the-story-btn {
+    width: 100%;
+    max-width: none;
   }
 }
 
 /* The Story Section */
-
 .section-divider {
   display: flex;
-  align-items: center; /* Vertically aligns the lines and icon */
+  align-items: center;
   justify-content: center;
   align-items: center;
   padding-top: 50px;
@@ -529,7 +512,7 @@
 .line {
   width: 5%;
   border: 1px solid var(--primary-text-color);
-  margin: 0 30px; /* Space between the line and the icon */
+  margin: 0 30px;
 }
 
 .book-icon {
@@ -547,6 +530,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .the-story-headline h2 {
@@ -561,6 +545,7 @@
   font-style: italic;
   color: var(--primary-text-color);
   padding: 20px 0 50px 0;
+  margin: 0 auto;
 }
 
 .story-grid-wrapper {
@@ -569,7 +554,6 @@
   gap: var(--grid-gap);
   width: 90%;
   max-width: var(--width-12col);
-
   margin: 0 auto;
 }
 
@@ -588,7 +572,6 @@
   overflow: hidden;
 }
 
-/* Stiluri pentru Paragrafe și Quote-ul din interior */
 .the-story-content-block p {
   font-size: 20px;
   line-height: 1.6;
@@ -713,6 +696,149 @@
   line-height: 1.5;
 }
 
+@media (max-width: 992px) {
+  .the-story-headline {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .the-story-headline h2 {
+    font-size: 58px;
+    text-align: center;
+  }
+
+  .story-grid-wrapper,
+  .card-grid-wrapper {
+    width: 90%;
+  }
+
+  .card-grid-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .brotherhood-card-wrapper {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .brotherhood-card-content {
+    grid-column: 5 / span 4;
+  }
+}
+
+@media (max-width: 768px) {
+  .the-story-headline {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .the-story-headline h2 {
+    font-size: 42px;
+    width: 80%;
+    text-align: center;
+  }
+
+  .the-story-headline p {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .line {
+    width: 15%;
+    margin: 0 20px;
+  }
+
+  .card-grid-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .brotherhood-card-content {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (max-width: 567px) {
+  .the-story {
+    min-height: auto;
+  }
+
+  .the-story-headline {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .the-story-headline h2 {
+    font-size: 36px;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .the-story-headline p {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 0 30px 0;
+  }
+
+  .section-divider {
+    padding-top: 30px;
+  }
+
+  .line {
+    width: 10%;
+    margin: 0 15px;
+  }
+
+  .story-grid-wrapper {
+    width: 90%;
+  }
+
+  .the-story-content {
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .the-story-content-block p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .the-story-content-block q {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .card-grid-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 30px 15px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .card p {
+    font-size: 16px;
+  }
+
+  .brotherhood-card-wrapper {
+    grid-template-columns: 1fr;
+    width: 95%;
+    min-height: auto;
+  }
+
+  .brotherhood-card-content {
+    grid-column: 1 / span 1;
+    padding: 15px;
+    height: auto;
+  }
+}
+
 /* Meet the Characters Section */
 .meet-the-characters {
   min-height: 900px;
@@ -723,6 +849,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .meet-the-characters-headline h2 {
@@ -730,6 +858,7 @@
   font-weight: 400;
   color: var(--primary-text-color);
   padding-top: 30px;
+  text-align: center;
 }
 
 .meet-the-characters-headline p {
@@ -737,6 +866,7 @@
   font-style: italic;
   color: var(--primary-text-color);
   padding: 20px 0 30px 0;
+  text-align: center;
 }
 
 /* Image Slider */
@@ -751,16 +881,17 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  width: 90%;
   max-width: var(--width-12col);
   margin: 50px auto;
 }
 
 .first-slider {
-  grid-column: 1 / span 4;
+  grid-column: span 1;
 }
 
 .image-card {
-  min-width: 360px;
+  min-width: unset; /* Reset min-width for grid control */
   border-radius: 10px;
   border: 4px solid #90565433;
   position: relative;
@@ -816,23 +947,40 @@
   transition: all 0.2s ease;
 }
 
-.nav-button:hover {
-  transform: translateY(-50%) scale(0.98);
-}
-
-.nav-button:active {
-  transform: translateY(-50%) scale(0.95);
-}
-/* 
 .prev {
-  left: 0;
-  margin-left: 0;
+  left: 50%;
+  transform: translate(
+    calc(-1 * (var(--width-12col) / 2) - 80px),
+    -50%
+  ); /* Adjusted based on max-width */
 }
 
 .next {
-  right: 0;
-  margin-right: 0;
-} */
+  right: 50%;
+  transform: translate(
+    calc(var(--width-12col) / 2 + 80px),
+    -50%
+  ); /* Adjusted based on max-width */
+}
+
+/* Updated :hover and :active for new positioning */
+.prev:hover {
+  transform: translate(calc(-1 * (var(--width-12col) / 2) - 80px), -50%)
+    scale(0.98);
+}
+
+.prev:active {
+  transform: translate(calc(-1 * (var(--width-12col) / 2) - 80px), -50%)
+    scale(0.95);
+}
+
+.next:hover {
+  transform: translate(calc(var(--width-12col) / 2 + 80px), -50%) scale(0.98);
+}
+
+.next:active {
+  transform: translate(calc(var(--width-12col) / 2 + 80px), -50%) scale(0.95);
+}
 
 .under-text {
   display: flex;
@@ -841,7 +989,88 @@
   color: var(--primary-text-color);
 }
 
+/* Tablet and smaller desktops (992px) */
+@media (max-width: 992px) {
+  .meet-the-characters-headline h2 {
+    font-size: 58px;
+  }
+
+  /* Reposition arrows closer to the content or edges for narrower screens */
+  .prev {
+    left: 2%; /* Position near the left edge */
+    transform: translateY(-50%);
+  }
+
+  .next {
+    right: 2%; /* Position near the right edge */
+    transform: translateY(-50%);
+  }
+
+  .prev:hover,
+  .prev:active,
+  .next:hover,
+  .next:active {
+    transform: translateY(-50%) scale(0.98);
+  }
+}
+
+@media (max-width: 768px) {
+  .meet-the-characters {
+    min-height: auto;
+  }
+
+  .meet-the-characters-headline h2 {
+    font-size: 42px;
+    width: 80%;
+  }
+
+  .meet-the-characters-headline p {
+    font-size: 20px;
+  }
+
+  .first-slider-wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  .image-1 img {
+    height: 448px;
+  }
+}
+
+@media (max-width: 567px) {
+  .meet-the-characters-headline h2 {
+    font-size: 36px;
+    padding-top: 20px;
+  }
+
+  .meet-the-characters-headline p {
+    font-size: 18px;
+    padding: 10px 0 20px 0;
+  }
+
+  .image-1 img {
+    height: 448px;
+  }
+
+  .text-box {
+    margin: 0 15px 15px 15px;
+    padding: 10px 8px;
+  }
+
+  .text-box h3 {
+    font-size: 18px;
+  }
+}
+
 /* Show Calendar Section */
+.show-calendar {
+  max-height: 1700px;
+  background-color: #bbc5b8;
+}
+
 .show-calendar-headline {
   display: flex;
   flex-direction: column;
@@ -888,9 +1117,9 @@
   align-items: center;
   width: 100%;
   gap: 10px;
-  background-color: #d0d7e933;
+  background-color: #faf3e0;
   border-radius: 10px;
-  border: 2px solid var(--green-color);
+  border: 2px solid #d37721;
   padding: 20px;
 }
 
@@ -926,7 +1155,7 @@
 }
 
 .details .day-name {
-  color: var(--primary-text-color);
+  color: #202020;
   font-size: 16px;
   font-weight: 400;
 }
@@ -962,7 +1191,7 @@
   display: flex;
   align-items: center;
   background-color: #f3f1db;
-  color: var(--primary-text-color);
+  color: #202020;
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 0.85em;
@@ -970,29 +1199,29 @@
   justify-self: center;
 }
 
+.evening-tag {
+  background-color: #d37721;
+}
+
+.matinee-tag {
+  background-color: #bbc5b8;
+}
+
 /* Button (Book Now) */
 .book-button {
-  height: 40px;
-  width: 137px;
   grid-column: 10 / 12;
   background-color: var(--primary-text-color);
-  color: white;
+  color: #faf3e0;
   border: none;
   padding: 12px 20px;
-  font-size: 1em;
   cursor: pointer;
   display: flex;
   align-items: center;
-  text-decoration: none;
   transition: all 0.2s;
-  flex-shrink: 0;
   justify-self: end;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
 }
 
 .book-button img {
-  width: 64px;
-  height: 64px;
   margin-left: 10px;
   fill: none;
   stroke-width: 2;
@@ -1011,8 +1240,8 @@
   grid-column: 1 / span 12;
   margin: 40px 0;
   border-radius: 10px;
-  background-color: #a8c79b66;
-  border: 2px solid var(--green-color);
+  background-color: #905654;
+  border: 2px solid #d37721;
   height: 145px;
   padding: 40px 50px;
 }
@@ -1024,14 +1253,103 @@
 }
 
 .show-calendar-info-content p {
-  color: #8b4545;
+  color: #bbc5b8;
   font-size: 20px;
   line-height: 1.6;
   width: 80%;
   text-align: center;
 }
 
-/* Ticket Information */
+@media (max-width: 1200px) {
+  .show-calendar-headline h2 {
+    font-size: 58px;
+  }
+
+  /* Tighten up the horizontal layout slightly */
+  .date-block {
+    grid-column: 1 / span 2; /* Use 2 columns to align left edge */
+  }
+
+  .details {
+    grid-column: 3 / 5;
+  }
+
+  .time-box {
+    grid-column: 5 / 7; /* Shift left */
+  }
+
+  .tag {
+    grid-column: 7 / 9; /* Shift left */
+  }
+
+  .book-button {
+    grid-column: 10 / 13; /* Use remaining space */
+  }
+}
+
+@media (max-width: 992px) {
+  .show-calendar-headline h2 {
+    font-size: 48px;
+  }
+  .show-calendar-headline p {
+    font-size: 20px;
+  }
+
+  /* Optimize padding and element sizes */
+  .calendar-content {
+    padding: 15px;
+    gap: 5px;
+  }
+
+  .date-block {
+    width: 60px;
+    height: 60px;
+    grid-column: 1 / span 2;
+  }
+
+  .details {
+    grid-column: 3 / 6; /* Give details more space */
+  }
+
+  .time-box {
+    grid-column: 6 / 8;
+    font-size: 15px;
+  }
+
+  .tag {
+    grid-column: 8 / 10;
+  }
+
+  .book-button {
+    grid-column: 10 / 13;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .show-calendar-info {
+    padding: 30px 40px;
+    height: auto;
+  }
+  .show-calendar-info-content p {
+    font-size: 18px;
+    width: 90%;
+  }
+}
+
+/* NEEDS MODIFICATION FOR MOBILE */
+
+@media (max-width: 567px) {
+  .show-calendar-info {
+    padding: 30px 10px;
+    height: auto;
+  }
+  .show-calendar-info-content p {
+    font-size: 18px;
+    width: 90%;
+  }
+}
+
+/* Ticket Information Section */
 .ticket-information {
   min-height: 1100px;
 }
@@ -1048,6 +1366,7 @@
   font-weight: 400;
   color: var(--primary-text-color);
   padding-top: 30px;
+  text-align: center; /* Added for responsiveness */
 }
 
 .ticket-information-headline p {
@@ -1055,15 +1374,17 @@
   font-style: italic;
   color: var(--primary-text-color);
   padding: 20px 0 50px 0;
+  text-align: center; /* Added for responsiveness */
 }
 
-/* Cards Grid */
+/* Cards Grid - Desktop Default (12-column) */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 30px;
   max-width: var(--width-12col);
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .childrens-ticket,
@@ -1075,19 +1396,23 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 
+        /* Umbra 1 */ 0px 4px 6px -4px rgba(0, 0, 0, 0.1),
+    /* Umbra 2 */ 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-/* Children's Card*/
+/* Children's Card - Desktop */
 .childrens-ticket {
   grid-column: 1 / span 6;
   border-color: var(--green-color);
   height: 536px;
 }
 
-/* Family Card */
+/* Family Card - Desktop */
 .family-package {
   grid-column: 7 / span 6;
   border-color: var(--brown-color);
+  height: 536px;
 }
 
 .childrens-ticket-content,
@@ -1207,7 +1532,7 @@
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* Card Age Recomandation + Refund Policy */
+/* Card Age Recomandation + Refund Policy - Desktop */
 .age-recommendation-card,
 .refund-policy-card {
   border-radius: 10px;
@@ -1221,13 +1546,14 @@
 }
 
 #refund-policy {
-  grid-column: span 6;
+  grid-column: 7 / span 6;
 }
 
 .age-recommendation-content,
 .refund-policy-content {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .info-card-text-container {
@@ -1245,8 +1571,8 @@
   line-height: 1.6;
 }
 
-.info-card-text-container,
-h3 p {
+.info-card-text-container h3,
+.info-card-text-container p {
   color: var(--primary-text-color);
 }
 
@@ -1258,6 +1584,7 @@ h3 p {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .age-recommendation-icon-container img,
@@ -1274,6 +1601,334 @@ h3 p {
   background-color: #d2a17b;
 }
 
+@media (max-width: 1200px) {
+  /* General Layout */
+  .grid-container {
+    gap: 20px;
+    padding: 0 30px;
+  }
+
+  /* Headlines */
+  .ticket-information-headline h2 {
+    font-size: 56px;
+  }
+
+  .ticket-information-headline p {
+    font-size: 22px;
+    padding: 20px 0 40px 0;
+  }
+
+  /* Ticket Card Elements */
+  .childrens-ticket-content,
+  .family-package-content {
+    padding: 25px 25px 0px;
+  }
+
+  .header {
+    margin: 0 20px 20px 15px;
+  }
+
+  .ticket-title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 44px;
+  }
+
+  .features-grid {
+    gap: 13px 15px;
+    margin-left: 15px;
+  }
+
+  /* Book Now Button */
+  .book-now-button {
+    width: 380px;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  /* Info Cards (Age/Refund) */
+  .age-recommendation-card,
+  .refund-policy-card {
+    padding: 25px;
+  }
+
+  .info-card-text-container h3 {
+    font-size: 18px;
+  }
+
+  .info-card-text-container p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .grid-container {
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  /* Titluri */
+  .ticket-information-headline h2 {
+    font-size: 48px;
+  }
+
+  .ticket-information-headline p {
+    font-size: 20px;
+    padding: 15px 0 35px 0;
+  }
+
+  .childrens-ticket,
+  .family-package {
+    grid-column: 1 / span 6; 
+    height: auto; /* IMPORTANT: Permite cardului să se extindă pentru a preveni override-ul conținutului */
+  }
+
+  .childrens-ticket {
+    grid-column: 1 / span 6;
+  }
+
+  .family-package {
+    grid-column: 7 / span 6;
+  }
+
+  .childrens-ticket-content,
+  .family-package-content {
+    padding: 20px 20px 0;
+  }
+
+  .header {
+    margin: 0 15px 20px 15px;
+  }
+
+  .icon-big {
+    width: 40px;
+    height: 40px;
+  }
+
+  .ticket-title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 40px;
+  }
+
+  /* Beneficii */
+  .features-grid {
+    gap: 15px 10px;
+    margin-left: 10px;
+  }
+
+  /* Butonul */
+  .book-now-button {
+    width: 90%;
+    font-size: 18px;
+    padding: 15px 10px;
+  }
+
+  /* Carduri Info */
+  #age-recommendation {
+    grid-column: 1 / span 6;
+  }
+
+  #refund-policy {
+    grid-column: 7 / span 6;
+  }
+
+  .age-recommendation-card,
+  .refund-policy-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    padding: 0 15px; 
+  }
+
+  .ticket-information {
+    min-height: auto;
+  }
+
+  /* Toate cardurile iau lățimea completă (un card pe rând) */
+  .childrens-ticket,
+  .family-package,
+  #age-recommendation,
+  #refund-policy {
+    grid-column: 1 / -1; /* Lățime completă */
+    height: auto;
+  }
+
+  .childrens-ticket-content,
+  .family-package-content {
+    padding: 20px 10px 0;
+  }
+
+  .ticket-information-headline h2 {
+    font-size: 38px;
+  }
+
+  .ticket-information-headline p {
+    font-size: 16px;
+    padding: 15px 0 30px 0;
+  }
+
+  .ticket-title {
+    font-size: 22px;
+  }
+
+  .price {
+    font-size: 32px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-left: 0; 
+  }
+
+  .feature-item {
+    font-size: 14px;
+  }
+
+  .book-now-button {
+    width: 90%;
+    font-size: 16px;
+    padding: 15px 10px;
+    margin-bottom: 20px;
+  }
+
+  /* Carduri de informații (Age/Refund) */
+  .age-recommendation-card,
+  .refund-policy-card {
+    padding: 15px;
+  }
+
+  .info-card-text-container h3 {
+    font-size: 17px;
+  }
+
+  .info-card-text-container p {
+    font-size: 14px;
+  }
+
+  .header {
+    margin: 0 10px 15px 5px;
+  }
+
+  .icon-big {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 567px) {
+  .grid-container {
+    padding: 0 10px; /* Padding mai mic la margini */
+    gap: 15px; /* Spațiu mai mic între carduri */
+  }
+
+  /* Titluri */
+  .ticket-information-headline h2 {
+    font-size: 32px;
+    padding-top: 20px;
+  }
+  .ticket-information-headline p {
+    font-size: 15px;
+    padding: 10px 0 25px 0;
+  }
+
+  /* Carduri de bilete */
+  .childrens-ticket-content,
+  .family-package-content {
+    padding: 15px 15px 0; 
+  }
+
+  .header {
+    margin: 0 0 10px 0;
+    align-items: center;
+  }
+
+  .icon-big {
+    width: 35px; 
+    height: 35px;
+  }
+
+  .ticket-title {
+    font-size: 20px; 
+  }
+
+  .subtitle {
+    font-size: 14px; 
+  }
+
+  .price {
+    font-size: 30px; 
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr; 
+    gap: 8px;
+  }
+
+  .includes-title {
+    margin: 10px 0 8px 0;
+    padding: 10px 0 0 0;
+  }
+
+  .feature-item {
+    font-size: 13px; 
+  }
+
+  /* Butonul */
+  .book-now-button {
+    font-size: 15px;
+    padding: 12px 10px;
+    margin-bottom: 15px;
+  }
+
+  .age-recommendation-card,
+  .refund-policy-card {
+    padding: 12px;
+  }
+
+  .info-card-text-container {
+    padding: 0 10px 0 10px;
+  }
+
+  .info-card-text-container h3 {
+    font-size: 16px;
+    padding-bottom: 5px;
+  }
+
+  .info-card-text-container p {
+    font-size: 13px;
+  }
+
+  .age-recommendation-icon-container,
+  .refund-policy-icon-container {
+    min-width: 40px;
+    height: 40px;
+  }
+  .age-recommendation-icon-container img,
+  .refund-policy-icon-container img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
 /* Practical Information */
 .practical-information {
   min-height: 1200px;
@@ -1289,10 +1944,10 @@ h3 p {
 .practical-information-grid-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  width: 90%;
-  min-width: var(--width-12col);
-  margin: 0 auto;
   gap: 30px;
+  max-width: var(--width-12col);
+  width: 90%;
+  margin: 0 auto;
 }
 
 /* Cards */
@@ -1412,7 +2067,7 @@ h3 p {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   width: 90%;
-  min-width: var(--width-12col);
+  max-width: var(--width-12col);
   margin: 0 auto;
   gap: 30px;
 }
@@ -1520,12 +2175,12 @@ h3 p {
 }
 
 /* Footer Section */
-.footer-content-grid,
+/* .footer-content-grid,
 .footer-bottom,
 .footer-decoration {
   margin: 0 auto;
   padding: 0 20px;
-}
+} */
 
 .site-footer {
   background-color: #905654;
@@ -1546,7 +2201,7 @@ h3 p {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--grid-gap);
-  width: var(--width-12col);
+  max-width: var(--width-12col);
   margin: 0 auto;
   padding-bottom: 70px;
 }
@@ -1695,4 +2350,96 @@ h3 p {
 
 .legal-links a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  /* Adjust overall padding for the footer */
+  .site-footer {
+    padding: 30px 20px;
+    min-height: auto; /* Remove fixed min-height */
+  }
+
+  /* Change the grid to stack columns differently */
+  .footer-content-grid {
+    /* Switch to a 6-column grid base for more flexibility */
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    padding-bottom: 50px;
+  }
+
+  /* Redefine columns to use the new 6-column grid:
+    - production-info takes 3 columns
+    - quick-links takes 3 columns
+    - contact-info spans all 6 columns, placed below
+    */
+  .production-info {
+    grid-column: 1 / span 3;
+  }
+
+  .quick-links {
+    grid-column: 4 / span 3;
+  }
+
+  .contact-info {
+    grid-column: 1 / span 6;
+    margin-top: 20px;
+  }
+
+  /* Adjust contact info header margin as it's now on a new row */
+  .contact-info h4 {
+    margin-top: 0;
+  }
+
+  /* Adjust divider width */
+  .footer-divider {
+    max-width: 90%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust overall padding for mobile */
+  .site-footer {
+    padding: 20px 15px;
+  }
+
+  /* Change the grid to stack all columns vertically */
+  .footer-content-grid {
+    display: block; /* Simpler stacking on mobile */
+    padding-bottom: 40px;
+  }
+
+  /* Set all columns to flow naturally (block display) */
+  .production-info,
+  .quick-links,
+  .contact-info {
+    grid-column: auto; /* Reset grid column spans */
+    width: 100%;
+    margin-bottom: 30px; /* Add spacing between stacked sections */
+  }
+
+  /* Add top margin back to the contact info header */
+  .contact-info h4 {
+    margin-top: 25px;
+  }
+
+  /* Reset margin on the contact info section */
+  .contact-info {
+    margin-top: 0;
+  }
+
+  /* Adjust the bottom section to stack legal links */
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .legal-links {
+    flex-direction: column; /* Stack the legal links vertically */
+    margin-top: 10px;
+  }
+
+  .legal-links a {
+    margin-left: 0;
+    margin-top: 5px; /* Add vertical space between links */
+  }
 }

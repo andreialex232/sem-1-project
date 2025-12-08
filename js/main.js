@@ -51,16 +51,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Slider Logic
- const slider = document.getElementById('sliderWrapper');
-        const scrollAmount = 390; // Latimea cardului (360px) + Gap (30px)
+/* === JAVASCRIPT FOR CHARACTER SLIDER === */
 
-        /**
-         * Glisează conținutul slider-ului orizontal.
-         * @param {number} direction - 1 pentru NEXT (dreapta), -1 pentru PREV (stânga).
-         */
-        function scrollSlider(direction) {
-            slider.scrollBy({
-                left: direction * scrollAmount,
-                behavior: 'smooth'
-            });
-        }
+// Function to handle slider movement on button click
+function scrollSlider(direction) {
+    const sliderWrapper = document.getElementById('sliderWrapper');
+    if (!sliderWrapper) return;
+
+    // Get the first card to determine the scroll distance
+    const firstCard = sliderWrapper.querySelector('.image-card');
+    if (!firstCard) return;
+
+    let cardWidth = firstCard.offsetWidth;
+    const gap = 30; // Matches the gap value in your CSS
+
+    // On screens smaller than 768px, we only move one card's width (plus the gap is 0 in flex)
+    // On screens larger than 768px, we scroll one card's width plus the gap.
+
+    let scrollAmount;
+    if (window.innerWidth <= 768) {
+        // Mobile view (1 card visible, uses flexbox, gap is effectively included in card width)
+        // Since we are using CSS Scroll Snap on mobile, this manual scroll might interfere,
+        // but for button control, we calculate the width without the gap since the CSS removes it.
+        scrollAmount = cardWidth; 
+    } else {
+        // Desktop/Tablet view (3 cards visible)
+        scrollAmount = cardWidth + gap;
+    }
+
+    // Scroll the wrapper by the calculated amount
+    sliderWrapper.scrollLeft += direction * scrollAmount;
+}
+
+// Function to handle responsive visibility of arrows
+const checkButtonVisibility = () => {
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    // On mobile (<= 768px), we rely on CSS Scroll Snap (swiping), so buttons are hidden.
+    if (window.innerWidth <= 768) {
+        if (prevButton) prevButton.style.display = 'none';
+        if (nextButton) nextButton.style.display = 'none';
+    } else {
+        // On desktop/tablet (> 768px), buttons are visible and active.
+        if (prevButton) prevButton.style.display = 'flex';
+        if (nextButton) nextButton.style.display = 'flex';
+    }
+};
+
+// Initialize listeners when the page is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Initial check for button display
+    checkButtonVisibility();
+    
+    // Check again whenever the window is resized
+    window.addEventListener('resize', checkButtonVisibility);
+});

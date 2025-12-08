@@ -15,19 +15,16 @@ html {
 
 .navigation,
 .hero,
-.footer {
+.footer,
+.the-story,
+.card-section,
+.meet-the-characters,
+.practical-information{
   width: var(--width-full);
 }
 
-/* Partea asta va fi schimbata */
-.todays-recipes,
-.categories,
-.content-area {
-  width: var(--width-12col);
-}
-
 .container {
-  display: grid;
+  /* display: grid; */
   grid-template-rows: auto;
   gap: var(--grid-gap);
   width: var(--width-full);
