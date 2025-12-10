@@ -987,71 +987,74 @@
 
 
     <!-- Footer Section -->
-    <section class="footer">
+    <footer class="footer">
       <div class="site-footer">
-        <div class="footer-decoration">
-          <img src="assets/footer-icon.svg" alt="">
+        <div class="footer-decoration" aria-hidden="true">
+          <img src="assets/svg/footer-icon.svg" alt="">
         </div>
 
         <div class="footer-content-grid">
-
-          <div class="footer-col production-info">
+          <div class="footer-info production-info">
             <h3>The Brothers Lionheart</h3>
             <p>Experience the magic of Astrid Lindgren's timeless tale brought to life on stage. A theatrical adventure
               the whole family will treasure.</p>
             <p class="small-text">Based on the novel by Astrid Lindgren</p>
           </div>
 
-          <div class="footer-col quick-links">
+          <nav class="footer-info quick-links" aria-label="Quick Links">
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="index.html">Home</a></li>
               <li><a href="pages/about-us.html">About Us</a></li>
               <li><a href="pages/contact.html">Contact</a></li>
             </ul>
-          </div>
+          </nav>
 
-          <div class="footer-col contact-info">
+          <div class="footer-info contact-info">
             <h3>Contact Us</h3>
-
-            <div class="contact-item">
-              <img src="assets/location-footer-icon.svg" alt="">
-              <div>
-                <p>Esbjerg Amatør Teater - Skartyden</p>
-                <p>Kirkegade 51, Esbjerg, Denmark</p>
+            <address>
+              <div class="contact-item">
+                <img src="assets/svg/location-footer-icon.svg" alt="Location Adress Icon">
+                <div>
+                  <p>Esbjerg Amatør Teater - Skartyden</p>
+                  <p>Kirkegade 51, Esbjerg, Denmark</p>
+                </div>
               </div>
-            </div>
 
-            <div class="contact-item">
-              <img src="assets/phone-footer-icon.svg" alt="">
-              <p>+45 25 47 06 83</p>
-            </div>
+              <div class="contact-item">
+                <img src="assets/svg/phone-footer-icon.svg" alt="Phone Number Icon">
+                <p><a href="tel:+4525470683">+45 25 47 06 83</a></p>
+              </div>
 
-            <div class="contact-item">
-              <img src="assets/mail-footer-icon.svg" alt="">
-              <p>eatskarntyden@gmail.com</p>
-            </div>
+              <div class="contact-item">
+                <img src="assets/svg/mail-footer-icon.svg" alt="Email Adress Icon">
+                <p class="footer-email"><a href="mailto:eatskarntyden@gmail.com">eatskarntyden@gmail.com</a></p>
+              </div>
+            </address>
 
-            <h4>Follow Us</h4>
-            <div class="social-links">
-              <a href="https://www.facebook.com/skarntyden/?locale=da_DK" class="social-icon facebook"><img src="assets/facebook-icon.svg" alt=""></a>
-              <a href="#" class="social-icon instagram"><img src="assets/insta-icon.svg" alt=""></a>
-              <a href="#" class="social-icon whatsapp"><img src="assets/whatsapp-icon.svg" alt=""></a>
+            <h3>Follow Us</h3>
+            <div class="social-links" role="list" aria-labelledby="follow-us-heading">
+              <a href="https://www.facebook.com/skarntyden/?locale=da_DK" class="social-icon facebook"
+                aria-label="Follow us on Facebook"><img src="assets/svg/facebook-icon.svg" alt="Facebook Logo"></a>
+              <a href="#" class="social-icon instagram" aria-label="Follow us on Instagram"><img
+                  src="assets/svg/insta-icon.svg" alt="Instagram Logo"></a>
+              <a href="#" class="social-icon whatsapp" aria-label="Contact us via WhatsApp"><img
+                  src="assets/svg/whatsapp-icon.svg" alt="Whatsapp Logo"></a>
             </div>
           </div>
         </div>
 
-        <hr class="footer-divider">
+        <hr class="footer-divider" aria-hidden="true">
         <div class="footer-bottom">
-          <p>© 2025 The Brothers Lionheart Theatre Production. All rights reserved.</p>
-          <div class="legal-links">
+          <div class="copyright">
+            <p>© 2025 The Brothers Lionheart Theatre Production. All rights reserved.</p>
+          </div>
+          <nav class="legal-links" aria-label="Legal Links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
-          </div>
+          </nav>
         </div>
       </div>
-    </section>
-
+    </footer>
 
 
     <script src="js/main.js"></script>
