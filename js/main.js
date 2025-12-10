@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
 
-    
+
     // --- Sliding Logic ---
     const updateSliderPosition = () => {
         const offset = getCardMovementOffset();
