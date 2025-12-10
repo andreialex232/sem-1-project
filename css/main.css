@@ -246,7 +246,6 @@
     height: 100px;
   }
   .menu-container {
- 
     margin: 0 20px;
   }
 }
@@ -652,6 +651,7 @@
   border-radius: 12px;
   min-height: 250px;
   background-color: #bbc5b8;
+  border: 2px solid #909A8D;
 }
 
 .icon-circle {
@@ -860,31 +860,39 @@
   text-align: center;
 }
 
-/* Image Slider */
-.image-slider {
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-}
-
-.first-slider-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+/* NEW: The viewport for the slider - enables horizontal scrolling/snapping */
+.slider-container {
+  overflow-x: scroll; 
+  scroll-behavior: smooth; 
+  scroll-snap-type: x mandatory; 
+  -webkit-overflow-scrolling: touch; /* Improved scrolling experience on touch devices */
+  /* Adjust width to ensure it only shows 3 cards at max-width */
   width: 90%;
   max-width: var(--width-12col);
   margin: 50px auto;
 }
 
-.first-slider {
-  grid-column: span 1;
+/* Updated: The wrapper holds all cards side-by-side */
+.first-slider-wrapper {
+  display: flex; /* Use flexbox to line up all cards */
+  gap: 30px;
+  width: fit-content; /* Make the wrapper as wide as all its contents */
+  margin: 0; /* Remove margin from here, it's on .slider-container now */
+  padding-bottom: 20px; /* Add some padding for scrollbar visibility if needed */
 }
 
 .image-card {
-  min-width: unset; /* Reset min-width for grid control */
+  /* Calculate the width for a single card:
+       (100% of container width - 2 * gap) / 3
+       This ensures 3 cards fit perfectly in the .slider-container width.
+       The 90%/max-width logic of .slider-container handles the overall section width.
+    */
+  width: calc((var(--width-12col) - 60px) / 3);
+  min-width: calc((var(--width-12col) - 60px) / 3);
+  flex-shrink: 0; /* Important: Prevents cards from shrinking */
   border-radius: 10px;
   position: relative;
+  scroll-snap-align: start; /* Snap the start of the card to the container edge */
 }
 
 .image img {
@@ -894,13 +902,103 @@
   border: 4px solid #905654;
 }
 
-/* Text over image --- */
+/* Text over image */
 .text-box {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color:#FAF3E0;
+  background-color: #faf3e0;
+  padding: 15px 10px;
+  border-radius: 10px;
+  margin: 0 20px 20px 20px;
+}
+
+.text-box h3 {
+  color: #202020;
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2px;
+}
+
+/* Image Slider */
+.image-slider {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* NEW CONTAINER: Hides the overflow of the sliding wrapper (The Viewport) */
+.slider-track-container {
+    overflow: hidden;
+    width: 90%;
+    max-width: var(--width-12col);
+    margin: 50px auto 20px auto; /* Reduced bottom margin to make space for dots */
+}
+
+/* The actual sliding element (Grid container) */
+.first-slider-wrapper {
+    display: grid;
+    /* CRUCIAL: Set grid columns to the TOTAL NUMBER OF CARDS (6 in this case) */
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 30px;
+    
+    /* Calculate the total required width for all 6 cards and 5 gaps (5*30px) */
+    /* This calculation is a rough estimate but works well with the card width calculation below */
+    margin: 0;
+
+    /* Key for movement: */
+    position: relative;
+    left: 0; /* Managed by JS */
+    transition: left 0.5s ease-in-out; /* Smooth sliding animation */
+}
+
+
+/* --- Navigation Dots Styling --- */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #905654; /* Active dot color */
+}
+
+/* --- Rest of the existing CSS remains unchanged --- */
+.image img {
+    width: 100%;
+    height: 448px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 4px solid #905654;
+}
+
+
+/* Text over image */
+.text-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #faf3e0;
   padding: 15px 10px;
   border-radius: 10px;
   margin: 0 20px 20px 20px;
@@ -971,28 +1069,13 @@
   transform: translate(calc(var(--width-12col) / 2 + 80px), -50%) scale(0.95);
 }
 
+
+
+
 /* Tablet and smaller desktops (992px) */
 @media (max-width: 992px) {
   .meet-the-characters-headline h2 {
     font-size: 58px;
-  }
-
-  /* Reposition arrows closer to the content or edges for narrower screens */
-  .prev {
-    left: 2%; /* Position near the left edge */
-    transform: translateY(-50%);
-  }
-
-  .next {
-    right: 2%; /* Position near the right edge */
-    transform: translateY(-50%);
-  }
-
-  .prev:hover,
-  .prev:active,
-  .next:hover,
-  .next:active {
-    transform: translateY(-50%) scale(0.98);
   }
 }
 
@@ -1046,6 +1129,7 @@
     font-size: 18px;
   }
 }
+
 
 /* Show Calendar Section */
 .show-calendar {
@@ -2453,7 +2537,11 @@
 }
 
 .social-icon:hover {
-  opacity: 2;
+    transform: scale(1.1); 
+     box-shadow: 
+        /* Umbra 1 */ 0px 4px 6px -4px rgba(0, 0, 0, 0.1),
+    /* Umbra 2 */ 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    opacity: 5; 
 }
 
 /* Bottom Section */
@@ -2569,7 +2657,6 @@
   .contact-info {
     grid-column: 1 / -1;
     margin-bottom: 30px;
-    /* max-width: 400px; */
     text-align: center;
   }
 

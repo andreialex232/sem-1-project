@@ -137,7 +137,7 @@
           <!-- Card 1 - Brotherhood -->
           <div class="card card-brotherhood">
             <div class="icon-circle icon-circle-brotherhood">
-              <img src="assets/brotherhood-icon.svg" alt="">
+              <img src="assets/heart-icon.svg" alt="">
             </div>
             <h3>Brotherhood</h3>
             <p>An unbreakable bond that transcends life itself</p>
@@ -147,7 +147,7 @@
           <!-- Card 2 Courage -->
           <div class="card card-courage">
             <div class="icon-circle icon-circle-courage">
-              <img src="assets/courage-icon.svg" alt="">
+              <img src="assets/sword-icon.svg" alt="">
             </div>
             <h3>Courage</h3>
             <p>Finding strength to stand against tyranny and fear</p>
@@ -182,87 +182,92 @@
         <p>The heroes and villains of our tale</p>
       </div>
 
+
+
       <div class="image-slider">
-        <!-- Buton PREV Left Side -->
-        <button class="nav-button prev">&#10094;</button>
+        <button class="nav-button prev" id="prevButton">&#10094;</button>
 
-        <div class="first-slider-wrapper" id="sliderWrapper">
+        <div class="slider-track-container" id="sliderTrackContainer">
 
-          <!-- CARD 1 -->
-          <div class="image-card">
-            <div class="image">
-              <img src="assets/person-1.png" alt="Jonathan Lionheart">
-            </div>
-            <div class="text-box">
-              <h3>Jonathan Lionheart</h3>
-            </div>
-          </div>
+          <div class="first-slider-wrapper" id="sliderWrapper">
 
-          <!-- CARD 2 -->
-          <div class="image-card">
-            <div class="image">
-              <img src="assets/person-2.png" alt="Karl Lionheart">
+            <div class="image-card">
+              <div class="image">
+                <img src="assets/person-1.png" alt="Jonathan Lionheart">
+              </div>
+              <div class="text-box">
+                <h3>Jonathan Lionheart</h3>
+              </div>
             </div>
-            <div class="text-box">
-              <h3>Karl Lionheart</h3>
-            </div>
-          </div>
 
-          <!-- CARD 3 -->
-          <div class="image-card">
-            <div class="image">
-              <img src="assets/dragon-1.png" alt="Tengil">
+            <div class="image-card">
+              <div class="image">
+                <img src="assets/person-2.png" alt="Karl Lionheart">
+              </div>
+              <div class="text-box">
+                <h3>Karl Lionheart</h3>
+              </div>
             </div>
-            <div class="text-box">
-              <h3>Tengil</h3>
-            </div>
-          </div>
 
-          <!-- Card 4 -->
-          <div class="image-card">
-            <div class="image">
-              <img src="assets/person-4.png" alt="Tengil">
+            <div class="image-card">
+              <div class="image">
+                <img src="assets/dragon-1.png" alt="Tengil">
+              </div>
+              <div class="text-box">
+                <h3>Tengil</h3>
+              </div>
             </div>
-            <div class="text-box">
-              <h3>Tengil</h3>
-            </div>
-          </div>
 
-          <!-- Card 5 -->
-          <div class="image-card">
-            <div class="image">
-              <img src="assets/person-5.png" alt="Tengil">
+            <div class="image-card">
+              <div class="image">
+                <img src="assets/person-4.png" alt="Tengil">
+              </div>
+              <div class="text-box">
+                <h3>Tengil</h3>
+              </div>
             </div>
-            <div class="text-box">
-              <h3>Tengil</h3>
-            </div>
-          </div>
 
-          <!-- Card 6 -->
-          <div class="image-card">
-            <div class="image">
-              <img src="assets/person-6.png" alt="Tengil">
+            <div class="image-card">
+              <div class="image">
+                <img src="assets/person-5.png" alt="Tengil">
+              </div>
+              <div class="text-box">
+                <h3>Tengil</h3>
+              </div>
             </div>
-            <div class="text-box">
-              <h3>Tengil</h3>
+
+            <div class="image-card">
+              <div class="image">
+                <img src="assets/person-6.png" alt="Tengil">
+              </div>
+              <div class="text-box">
+                <h3>Tengil</h3>
+              </div>
             </div>
           </div>
-
-
-
-
-
-
-
-
-
-
         </div>
 
-        <!-- Buton NEXT Right Side -->
-        <button class="nav-button next">&#10095;</button>
+        <button class="nav-button next" id="nextButton">&#10095;</button>
+
+        <div class="slider-dots" id="sliderDots">
+        </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
     </section>
+
+
+
+
     <div>
 
 
@@ -1013,25 +1018,25 @@
               <img src="assets/location-footer-icon.svg" alt="">
               <div>
                 <p>Esbjerg Amatør Teater - Skartyden</p>
-                <p>Kirkegade 51, 6700 Esbjerg</p>
+                <p>Kirkegade 51, Esbjerg, Denmark</p>
               </div>
             </div>
 
             <div class="contact-item">
               <img src="assets/phone-footer-icon.svg" alt="">
-              <p>(555) 123-4567</p>
+              <p>+45 25 47 06 83</p>
             </div>
 
             <div class="contact-item">
               <img src="assets/mail-footer-icon.svg" alt="">
-              <p>info@lionhearttheatre.com</p>
+              <p>eatskarntyden@gmail.com</p>
             </div>
 
             <h4>Follow Us</h4>
             <div class="social-links">
-              <a href="#" class="social-icon facebook"><img src="assets/facebook-icon.svg" alt=""></a>
+              <a href="https://www.facebook.com/skarntyden/?locale=da_DK" class="social-icon facebook"><img src="assets/facebook-icon.svg" alt=""></a>
               <a href="#" class="social-icon instagram"><img src="assets/insta-icon.svg" alt=""></a>
-              <a href="#" class="social-icon twitter"><img src="assets/twitter-icon.svg" alt=""></a>
+              <a href="#" class="social-icon whatsapp"><img src="assets/whatsapp-icon.svg" alt=""></a>
             </div>
           </div>
         </div>
@@ -1046,13 +1051,6 @@
         </div>
       </div>
     </section>
-
-
-
-
-
-
-
 
 
 

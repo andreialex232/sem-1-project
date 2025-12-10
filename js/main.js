@@ -51,59 +51,115 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Slider Logic
-/* === JAVASCRIPT FOR CHARACTER SLIDER === */
-
-// Function to handle slider movement on button click
-function scrollSlider(direction) {
+    document.addEventListener('DOMContentLoaded', () => {
     const sliderWrapper = document.getElementById('sliderWrapper');
-    if (!sliderWrapper) return;
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    const sliderDotsContainer = document.getElementById('sliderDots');
+    const cards = document.querySelectorAll('.image-card');
 
-    // Get the first card to determine the scroll distance
-    const firstCard = sliderWrapper.querySelector('.image-card');
-    if (!firstCard) return;
+    if (!sliderWrapper || !prevButton || !nextButton || cards.length === 0) return;
 
-    let cardWidth = firstCard.offsetWidth;
-    const gap = 30; // Matches the gap value in your CSS
+    // Configuration
+    const cardsPerView = 3;
+    const totalCards = cards.length;
+    // Calculate total possible slides. Since we show 3, for 6 cards, we have 4 slides (0, 1, 2, 3) 
+    // to show: (1-3), (2-4), (3-5), (4-6).
+    // Or, if we want to show 3 full slides: (1-3), (4-6). This gives 2 slides.
+    // Let's assume we want to scroll one card at a time, but only enable scrolling up to the last visible card.
+    const maxSlides = totalCards - cardsPerView; 
+    let currentSlide = 0; // Tracks the index of the first visible card
 
-    // On screens smaller than 768px, we only move one card's width (plus the gap is 0 in flex)
-    // On screens larger than 768px, we scroll one card's width plus the gap.
+    // --- Core Calculations ---
+    const getCardMovementOffset = () => {
+        // Must wait for card layout to be rendered to get accurate size
+        const firstCard = cards[0];
+        const cardWidth = firstCard.offsetWidth;
+        // Get the gap value (30px from CSS)
+        const wrapperStyle = window.getComputedStyle(sliderWrapper);
+        const gap = parseFloat(wrapperStyle.gap) || 30; 
 
-    let scrollAmount;
-    if (window.innerWidth <= 768) {
-        // Mobile view (1 card visible, uses flexbox, gap is effectively included in card width)
-        // Since we are using CSS Scroll Snap on mobile, this manual scroll might interfere,
-        // but for button control, we calculate the width without the gap since the CSS removes it.
-        scrollAmount = cardWidth; 
-    } else {
-        // Desktop/Tablet view (3 cards visible)
-        scrollAmount = cardWidth + gap;
-    }
+        // The distance to move one card is its width plus the gap to the next card.
+        return cardWidth + gap;
+    };
 
-    // Scroll the wrapper by the calculated amount
-    sliderWrapper.scrollLeft += direction * scrollAmount;
-}
 
-// Function to handle responsive visibility of arrows
-const checkButtonVisibility = () => {
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-
-    // On mobile (<= 768px), we rely on CSS Scroll Snap (swiping), so buttons are hidden.
-    if (window.innerWidth <= 768) {
-        if (prevButton) prevButton.style.display = 'none';
-        if (nextButton) nextButton.style.display = 'none';
-    } else {
-        // On desktop/tablet (> 768px), buttons are visible and active.
-        if (prevButton) prevButton.style.display = 'flex';
-        if (nextButton) nextButton.style.display = 'flex';
-    }
-};
-
-// Initialize listeners when the page is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // Initial check for button display
-    checkButtonVisibility();
     
-    // Check again whenever the window is resized
-    window.addEventListener('resize', checkButtonVisibility);
+    // --- Sliding Logic ---
+    const updateSliderPosition = () => {
+        const offset = getCardMovementOffset();
+        // Move the wrapper left by the current slide index multiplied by the card-plus-gap offset.
+        // We use translateX for smoother performance, although manipulating 'left' works with 'transition: left 0.5s'
+        sliderWrapper.style.left = `-${currentSlide * offset}px`;
+
+        // Update dot visibility
+        updateDots();
+        // Update button state
+        updateButtonState();
+    };
+
+    // --- Button Handlers ---
+    const nextSlide = () => {
+        if (currentSlide < maxSlides) {
+            currentSlide++;
+            updateSliderPosition();
+        }
+    };
+
+    const prevSlide = () => {
+        if (currentSlide > 0) {
+            currentSlide--;
+            updateSliderPosition();
+        }
+    };
+
+    const updateButtonState = () => {
+        prevButton.disabled = currentSlide === 0;
+        nextButton.disabled = currentSlide >= maxSlides;
+        
+        // Optional: Change opacity/style for disabled buttons
+        prevButton.style.opacity = currentSlide === 0 ? '0.5' : '1';
+        nextButton.style.opacity = currentSlide >= maxSlides ? '0.5' : '1';
+    };
+
+    // --- Dots Logic ---
+    const generateDots = () => {
+        // The number of dots should equal the number of possible slides (maxSlides + 1)
+        const dotCount = maxSlides + 1;
+        
+        for (let i = 0; i < dotCount; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.dataset.slideIndex = i; // Store the slide index in the data attribute
+            
+            // Add click listener to move to the corresponding slide
+            dot.addEventListener('click', () => {
+                currentSlide = i;
+                updateSliderPosition();
+            });
+
+            sliderDotsContainer.appendChild(dot);
+        }
+    };
+
+    const updateDots = () => {
+        const dots = sliderDotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.classList.remove('active');
+            if (index === currentSlide) {
+                dot.classList.add('active');
+            }
+        });
+    };
+
+    // --- Initialization ---
+    generateDots();
+    updateSliderPosition(); // Set initial position and dot/button state
+
+    // Attach event listeners
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+
+    // Optional: Recalculate on window resize to ensure responsiveness
+    window.addEventListener('resize', updateSliderPosition);
 });
