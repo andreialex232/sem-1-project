@@ -1977,16 +1977,30 @@
   }
 }
 
-/* Practical Information Section */
+/* ---------------------------- Practical Information Section ------------------------------------ */
 .practical-information {
-  min-height: 1200px;
+  padding: 60px 0;
 }
 
 .practical-information-headline {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   align-items: center;
+}
+
+.practical-information-headline h2 {
+  font-size: 62px;
+  font-weight: 400;
+  color: #202020;
+}
+
+.practical-information-headline p {
+  font-size: 24px;
+  font-style: italic;
+  color: #202020;
+  padding: 20px 0 80px 0;
 }
 
 .practical-information-grid-container {
@@ -1998,83 +2012,8 @@
   margin: 0 auto;
 }
 
-/* Cards */
-.location-card,
-.show-duration-card,
-.public-transport-card,
-.parking-card,
-.accessibility-card,
-.arrive-early-card {
-  border-radius: 10px;
-  border: 2px solid #909a8d;
-  padding: 30px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
-  min-height: 252px;
-  background-color: #bbc5b8;
-}
 
-.location-content,
-.show-duration-content,
-.public-transport-content,
-.parking-content,
-.accessibility-content,
-.arrive-early-content {
-  display: flex;
-}
-
-/* Icons */
-.practical-information-icon-circle {
-  width: 45px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 15px;
-  font-size: 1.2em;
-  color: white;
-}
-
-/* Color of the Icons */
-#location-icon-container,
-#show-duration-icon-container,
-#public-transport-icon-container,
-#parking-icon-container,
-#accessibility-icon-container,
-#arrive-early-icon-container {
-  background-color: #905654;
-}
-
-/* HERE WILL BE THE COLORS OF THE OTHER ICONS */
-
-.info-location-card-text-container h3 {
-  font-size: 24px;
-  font-weight: 500;
-  color: #202020;
-  margin-bottom: 20px;
-}
-
-.info-location-card-text-container p,
-.info-location-card-text-container ul li {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #202020;
-  margin-bottom: 5px;
-}
-
-.location-btn {
-  background-color: #905654;
-  border: none;
-  padding: 5px 10px;
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-.location-btn a {
-  color: #faf3e0;
-  text-decoration: none;
-}
-
+/* Two-Column Layout*/
 #location,
 #public-transport,
 #accessibility {
@@ -2087,11 +2026,104 @@
   grid-column: span 6;
 }
 
+.location-card,
+.show-duration-card,
+.public-transport-card,
+.parking-card,
+.accessibility-card,
+.arrive-early-card {
+  display: flex;
+  border-radius: 10px;
+  border: 2px solid #909a8d;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
+  min-height: 257px;
+  background-color: #bbc5b8;
+}
+
+/* Card Content */
+.location-content,
+.show-duration-content,
+.public-transport-content,
+.parking-content,
+.accessibility-content,
+.arrive-early-content {
+  display: flex; 
+  width: 100%;
+  align-items: flex-start; 
+}
+
+/* Icons Container */
+.practical-information-icon-circle {
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+/* Background Icons */
+#location-icon-container,
+#show-duration-icon-container,
+#public-transport-icon-container,
+#parking-icon-container,
+#accessibility-icon-container,
+#arrive-early-icon-container {
+  background-color: #905654;
+}
+
+/* Center Text Info */
+.info-location-card-text-container {
+  padding: 0 0 0 10px;
+  flex-grow: 1;
+}
+
+/* Title */
+.info-location-card-text-container h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #202020;
+  margin-bottom: 20px;
+}
+
+/* Text & List Items */
+.info-location-card-text-container p,
+.info-location-card-text-container ul li {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #202020;
+  margin-bottom: 5px;
+}
+
+.location-btn {
+  display: inline-block;
+  background-color: #905654;
+  padding: 8px 15px; 
+  margin-top: 20px;
+  font-size: 14px;
+  color: #faf3e0;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.location-btn:hover,
+.location-btn:focus {
+  background-color: #683e3d;
+}
+
+/* ---------------------------- Media Queries (Responsive Design) --------------------------------------- */
+
+@media (max-width: 992px) {
+  .practical-information-headline h2 {
+    font-size: 58px;
+  }
+}
+
 @media (max-width: 768px) {
-  /* --- Ajustări Titluri --- */
   .practical-information {
-    min-height: auto; /* Elimină înălțimea fixă masivă */
-    padding-bottom: 40px;
+    padding-bottom: 50px;
   }
 
   .practical-information-headline h2 {
@@ -2100,26 +2132,24 @@
 
   .practical-information-headline p {
     font-size: 20px;
-    padding: 15px 15px 25px 15px;
+    padding: 15px 15px 35px 15px;
   }
 
-  /* --- Ajustări Grilă și Carduri (STIVUIRE) --- */
   .practical-information-grid-container {
-    width: 90%;
-    gap: 20px; /* Reducem spațiul */
+    gap: 20px;
   }
 
-  /* Trecerea la o singură coloană pentru TOATE cardurile */
+  /* One Column for Each Card */
   #location,
   #show-duration,
   #public-transport,
   #parking,
   #accessibility,
   #arrive-early {
-    grid-column: 1 / span 12; /* Fiecare card ocupă întreaga lățime */
+    grid-column: 1 / span 12;
   }
 
-  /* --- Ajustări Elemente Card --- */
+  /* Cards Container */
   .location-card,
   .show-duration-card,
   .public-transport-card,
@@ -2131,14 +2161,9 @@
   }
 
   .practical-information-icon-circle {
-    width: 40px;
-    height: 40px;
-    font-size: 1.1em;
     margin-right: 10px;
-  }
-
-  .info-location-card-text-container {
-    padding: 0 0 0 10px;
+    min-width: 40px;
+    min-height: 40px;
   }
 
   .info-location-card-text-container h3 {
@@ -2146,12 +2171,29 @@
     margin-bottom: 10px;
   }
 
-  .info-location-card-text-container p {
+  .info-location-card-text-container p,
+  .info-location-card-text-container ul li {
     font-size: 15px;
   }
 
-  .location-btn a {
-    font-size: 10px;
+  .location-btn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 567px) {
+  .practical-information-headline {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .practical-information-headline h2 {
+    font-size: 36px;
+  }
+
+  .practical-information-headline p {
+    font-size: 20px;
+    padding: 15px 15px 25px 15px;
   }
 }
 
@@ -2173,7 +2215,6 @@
   font-size: 62px;
   font-weight: 400;
   color: #202020;
-  padding-top: 30px;
 }
 
 /* Subtitle */
@@ -2295,8 +2336,11 @@
 }
 
 .more-questions-contact-button:hover {
-    background-color:  #683e3d;
+  background-color: #683e3d;
 }
+
+
+/* ---------------------------- Media Queries (Responsive Design) --------------------------------------- */
 
 /* NO NEED FO 1200 PX RESPONSIVENESS*/
 
