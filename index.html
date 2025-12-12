@@ -273,207 +273,238 @@
 
 
       <!-- Show Calendar Section -->
-      <section class="show-calendar">
+      <section class="show-calendar" aria-labelledby="show-calendar-heading" role="list">
         <div class="section-divider">
           <hr class="line left-line">
-          <img src="assets/calendar-icon.svg" alt="">
+          <img src="assets/svg/calendar-icon.svg" alt="Calendar Icon" aria-hidden="true">
           <hr class="line right-line">
         </div>
 
         <div class="show-calendar-headline">
-          <h2>Show Calendar</h2>
+          <h2 id="show-calendar-heading">Show Calendar</h2>
           <p>Choose your magical evening</p>
         </div>
 
         <!-- Card 1 -->
-        <div class="calendar">
+        <div class="calendar" role="listitem">
           <div class="calendar-grid">
-            <div class="calendar-content">
+            <div class="calendar-content" role="region" aria-label="Showtime Monday, December 15, 2025 at 10 AM, Morning Show">
 
-              <div class="date-container">
-                <span class="month">DEC</span>
+              <!-- Date Container Left -->
+              <div class="date-container" aria-hidden="true" >
+                <span class="month">dec</span>
                 <span class="day">15</span>
               </div>
 
-              <div class="details">
+              <!-- Details (Besides Date Container Left) -->
+              <div class="details" id="show-details-dec15-morning">
                 <p class="day-name">Monday</p>
                 <p class="full-date">December 15, 2025</p>
               </div>
 
-              <div class="time-box">
+              <!-- Time Container -->
+              <div class="time-container" aria-hidden="true">
                 <img src="assets/svg/time-calenadar-icon.svg" alt="Time Icon">
-                7:00 PM
+                10:00 AM
               </div>
-              <span class="evening-tag tag">Evening</span>
-              <button class="book-button">
-                Book Now
-                <img src="assets/book-now-icon.svg" alt="">
+
+              <!-- Tag -->
+              <span class="morning-tag tag" aria-label="Show type: Morning">Morning</span>
+
+              <!-- Button -->
+              <button class="ticket-info-btn" aria-labelledby="ticket-info-label-dec15-morning show-details-dec15-morning">
+                <span id="ticket-info-label-dec15-morning">Ticket info</span>
+                <img src="assets/svg/book-now-icon.svg" alt="Ticket Info Icon" aria-hidden="true">
               </button>
             </div>
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="calendar">
+        <div class="calendar" role="listitem">
           <div class="calendar-grid">
-            <div class="calendar-content">
+            <div class="calendar-content" role="region" aria-label="Showtime Tuesday, December 16, 2025 at 2 PM, Afternoon Show">
 
-              <div class="date-container">
-                <span class="month">DEC</span>
+              <!-- Date Container Left -->
+              <div class="date-container" aria-hidden="true">
+                <span class="month">dec</span>
                 <span class="day">16</span>
               </div>
 
-              <div class="details">
+              <!-- Details (Besides Date Container Left) -->
+              <div class="details" id="show-details-dec16-afternoon">
                 <p class="day-name">Tuesday</p>
                 <p class="full-date">December 16, 2025</p>
               </div>
 
-              <div class="time-box">
-                <img src="assets/svg/time-calenadar-icon.svg" alt="Time Icon">
+              <!-- Time Container -->
+              <div class="time-container">
+                <img src="assets/svg/time-calenadar-icon.svg" alt="Time Icon" aria-hidden="true">
                 2:00 PM
               </div>
 
-              <span class="matinee-tag tag">Matinee</span>
+              <!-- Tag -->
+              <span class="afternoon-tag tag" aria-label="Show type: Afternoon">Afternoon</span>
 
-              <button class="book-button">
-                Book Now
-                <img src="assets/book-now-icon.svg" alt="">
+              <!-- Button -->
+              <button class="ticket-info-btn" aria-labelledby="ticket-info-label-dec16-afternoon show-details-dec16-afternoon">
+                <span id="ticket-info-label-dec16-afternoon">Ticket info</span>
+                <img src="assets/svg/book-now-icon.svg" alt="Ticket Info Icon" aria-hidden="true">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="calendar" role="listitem">
+          <div class="calendar-grid">
+            <div class="calendar-content" role="region" aria-label="Showtime Tuesday, December 16, 2025 at 10 AM, Morning Show">
+
+              <!-- Date Container Left -->
+              <div class="date-container" aria-hidden="true">
+                <span class="month">dec</span>
+                <span class="day">16</span>
+              </div>
+
+              <!-- Details (Besides Date Container Left) -->
+              <div class="details" id="show-details-dec16-morning">
+                <p class="day-name">Tuesday</p>
+                <p class="full-date">December 16, 2025</p>
+              </div>
+
+              <!-- Time Container -->
+              <div class="time-container" aria-hidden="true">
+                <img src="assets/svg/time-calenadar-icon.svg" alt="Time Icon">
+                10:00 AM
+              </div>
+
+              <!-- Tag -->
+              <span class="morning-tag tag" aria-label="Show type: Morning">Morning</span>
+
+              <!-- Button -->
+              <button class="ticket-info-btn" aria-labelledby="ticket-info-label-dec16-morning show-details-dec16-morning">
+                <span id="ticket-info-label-dec16-morning">Ticket info</span>
+                <img src="assets/svg/book-now-icon.svg" alt="Ticket Info Icon" aria-hidden="true">
               </button>
             </div>
           </div>
         </div>
 
         <!-- Card 4 -->
-        <div class="calendar">
+        <div class="calendar" role="listitem">
           <div class="calendar-grid">
-            <div class="calendar-content">
-              <div class="date-container">
-                <span class="month">DEC</span>
-                <span class="day">16</span>
+            <div class="calendar-content" role="region" aria-label="Showtime Sunday, December 21, 2025 at 2 PM, Afternoon Show">
+
+              <!-- Date Container Left -->
+              <div class="date-container" aria-hidden="true">
+                <span class="month">dec</span>
+                <span class="day">21</span>
               </div>
 
-              <div class="details">
-                <p class="day-name">Tuesday</p>
-                <p class="full-date">December 16, 2025</p>
+              <!-- Details (Besides Date Container Left) -->
+              <div class="details" id="show-details-dec21-afternoon">
+                <p class="day-name">Sunday</p>
+                <p class="full-date">December 21, 2025</p>
               </div>
 
-              <div class="time-box">
+              <!-- Time Container -->
+              <div class="time-container" aria-hidden="true">
                 <img src="assets/svg/time-calenadar-icon.svg" alt="Time Icon">
-                7:00 PM
+                2:00 PM
               </div>
 
-              <span class="evening-tag tag">Evening</span>
+              <!-- Tag -->
+              <span class="afternoon-tag tag" aria-label="Show type: Afternoon">Afternoon</span>
 
-              <button class="book-button">
-                Book Now
-                <img src="assets/book-now-icon.svg" alt="">
+              <!-- Button -->
+              <button class="ticket-info-btn" aria-labelledby="ticket-info-label-dec21-afternoon show-details-dec21-afternoon">
+                <span id="ticket-info-label-dec21-afternoon">Ticket info</span>
+                <img src="assets/svg/book-now-icon.svg" alt="Ticket Info Icon" aria-hidden="true">
               </button>
             </div>
           </div>
         </div>
 
         <!-- Card 5 -->
-        <div class="calendar">
+        <div class="calendar" role="listitem">
           <div class="calendar-grid">
-            <div class="calendar-content">
+            <div class="calendar-content" role="region" aria-label="Showtime Sunday, December 21, 2025 at 10 AM, Morning Show">
 
-              <div class="date-container">
-                <span class="month">DEC</span>
+              <!-- Date Container Left -->
+              <div class="date-container" aria-hidden="true">
+                <span class="month">dec</span>
                 <span class="day">21</span>
               </div>
 
-              <div class="details">
+              <!-- Details (Besides Date Container Left) -->
+              <div class="details" id="show-details-dec21-morning">
                 <p class="day-name">Sunday</p>
                 <p class="full-date">December 21, 2025</p>
               </div>
 
-              <div class="time-box">
-                <img src="assets/svg/time-calenadar-icon.svg" alt="Time Icon">
-                2:00 PM
+              <!-- Time Container -->
+              <div class="time-container">
+                <img src="assets/svg/time-calenadar-icon.svg" alt="Time Icon" aria-hidden="true">
+                10:00 AM
               </div>
 
-              <span class="matinee-tag tag">Matinee</span>
+              <!-- Tag -->
+              <span class="morning-tag tag" aria-label="Show type: Morning">Morning</span>
 
-              <button class="book-button">
-                Book Now
-                <img src="assets/book-now-icon.svg" alt="">
+              <!-- Button -->
+              <button class="ticket-info-btn" aria-labelledby="ticket-info-label-show-details-dec21-morning show-details-dec21-morning">
+                <span id="ticket-info-label-dec21-morning">Ticket info</span>
+                <img src="assets/svg/book-now-icon.svg" alt="Ticket Info Icon" aria-hidden="true">
               </button>
             </div>
           </div>
         </div>
 
         <!-- Card 6 -->
-        <div class="calendar">
+        <div class="calendar calendar-last-container" role="listitem">
           <div class="calendar-grid">
-            <div class="calendar-content">
+            <div class="calendar-content" role="region" aria-label="Showtime Monday, December 22, 2025 at 10 AM, Morning Show">
 
-              <div class="date-container">
-                <span class="month">DEC</span>
-                <span class="day">21</span>
-              </div>
-
-              <div class="details">
-                <p class="day-name">Sunday</p>
-                <p class="full-date">December 21, 2025</p>
-              </div>
-
-              <div class="time-box">
-                <img src="assets/svg/time-calenadar-icon.svg" alt="Time Icon">
-                6:00 PM
-              </div>
-
-              <span class="evening-tag tag">Evening</span>
-
-              <button class="book-button">
-                Book Now
-                <img src="assets/book-now-icon.svg" alt="">
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 7 -->
-        <div class="calendar">
-          <div class="calendar-grid">
-            <div class="calendar-content">
-
-              <div class="date-container">
-                <span class="month">DEC</span>
+              <!-- Date Container Left -->
+              <div class="date-container" aria-hidden="true">
+                <span class="month">dec</span>
                 <span class="day">22</span>
               </div>
 
-              <div class="details">
+              <!-- Details (Besides Date Container Left) -->
+              <div class="details" id="show-details-dec22-morning">
                 <p class="day-name">Monday</p>
                 <p class="full-date">December 22, 2025</p>
               </div>
 
-              <div class="time-box">
-                <img src="assets/svg/time-calenadar-icon.svg" alt="Time Icon">
-                7:00 PM
+              <!-- Time Container -->
+              <div class="time-container">
+                <img src="assets/svg/time-calenadar-icon.svg" alt="Time Icon" aria-hidden="true">
+                10:00 AM
               </div>
 
-              <span class="evening-tag tag">Evening</span>
+              <!-- Tag -->
+              <span class="morning-tag tag" aria-label="Show type: Morning">Morning</span>
 
-              <button class="book-button">
-                Book Now
-                <img src="assets/book-now-icon.svg" alt="">
+              <!-- Button -->
+              <button class="ticket-info-btn" aria-labelledby="ticket-info-label-dec22-morning show-details-dec22-morning">
+                 <span id="ticket-info-label-dec22-morning">Ticket info</span>
+                <img src="assets/svg/book-now-icon.svg" alt="Ticket Info Icon" aria-hidden="true">
               </button>
             </div>
           </div>
         </div>
 
-        <!-- Show Calendar Box -->
-        <div class="grid-container">
-          <div class="show-calendar-info">
+        <!-- Show Calendar Info -->
+        <div class="show-calendar-info-grid">
+          <div class="show-calendar-info" role="note" aria-labelledby="info-paragraph">
             <div class="show-calendar-info-content">
-              <p>The performances are especially family-friendly with shorter duration and lighter atmosphere, perfect
-                for
-                younger audience members.</p>
+              <p id="info-paragraph">The performances are especially family-friendly with shorter duration and lighter atmosphere, perfect
+                for younger audience members.</p>
             </div>
           </div>
         </div>
       </section>
-
 
       <!-- Ticket information Section -->
       <section id="anchor-ticket-information" class="ticket-information" aria-labelledby="ticket-info-main-heading">

@@ -1128,13 +1128,14 @@
 /* ------------------------------ Show Calendar Section ------------------------------------------ */
 .show-calendar {
   background-color: #bbc5b8;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 }
 
 .show-calendar-headline {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   align-items: center;
 }
 
@@ -1151,7 +1152,7 @@
   padding: 20px 0 30px 0;
 }
 
-/* Main Calendar Container */
+/* Calendar Container */
 .calendar {
   width: 90%;
   max-width: var(--width-12col);
@@ -1172,7 +1173,6 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
-  width: 100%;
   gap: 10px;
   background-color: #faf3e0;
   border-radius: 10px;
@@ -1180,26 +1180,25 @@
   padding: 20px;
 }
 
-/* Date Container */
+/* Date Container Left */
 .date-container {
   grid-column: 2 / span 1;
-  background-color: var(--primary-text-color);
+  background-color: #905654;
   border-radius: 10px;
   width: 64px;
   height: 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
 .date-container .month {
   font-size: 12px;
-  font-weight: 400;
   color: #e5e2d9;
   margin-bottom: 2px;
   font-weight: 300;
+  text-transform: uppercase;
 }
 
 .date-container .day {
@@ -1207,7 +1206,7 @@
   color: #e5e2d9;
 }
 
-/* Deatils (day and date) */
+/* Details (Besides Date Container Left) */
 .details {
   grid-column: 3 / 5;
 }
@@ -1219,14 +1218,14 @@
 }
 
 .details .full-date {
-  padding-top: 5px;
-  color: var(--primary-text-color);
-  opacity: 0.7;
   font-size: 14px;
+  padding-top: 5px;
+  color: #905654;
+  opacity: 0.7;
 }
 
-/* Time + Icon (7:00 PM) */
-.time-box {
+/* Time Container */
+.time-container {
   grid-column: 6 /8;
   display: flex;
   align-items: center;
@@ -1235,58 +1234,66 @@
   font-size: 16px;
 }
 
-.time-box img {
+/* Time Icon */
+.time-container img {
   width: 18px;
   height: 18px;
   margin-right: 5px;
-  stroke: var(--primary-text-color);
-  stroke-width: 0.1;
 }
 
-/* Tag (Evening) */
+/* Tag */
 .tag {
   grid-column: 8 / 9;
   display: flex;
+  justify-content: center;
   align-items: center;
-  background-color: #f3f1db;
   color: #202020;
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 0.85em;
-  font-weight: 500;
-  justify-self: center;
 }
 
-.evening-tag {
+.morning-tag {
   background-color: #d37721;
 }
 
-.matinee-tag {
+.afternoon-tag {
   background-color: #bbc5b8;
 }
 
-/* Button (Book Now) */
-.book-button {
+/* Button */
+.ticket-info-btn {
   grid-column: 10 / 12;
-  background-color: var(--primary-text-color);
+  background-color: #905654;
+  font-size: 16px;
+  height: 40px;
+  font-family: "Crimson PRO", serif;
   color: #faf3e0;
   border: none;
   padding: 12px 20px;
   cursor: pointer;
   display: flex;
-  align-items: center;
-  transition: all 0.2s;
   justify-self: end;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.book-button img {
+.ticket-info-btn:hover {
+  background-color: #6a3a3a;
+}
+
+/* Button Icon */
+.ticket-info-btn img {
   margin-left: 10px;
-  fill: none;
-  stroke-width: 2;
 }
 
-/* Show Calendar Box */
-.grid-container {
+/* Last Container */
+.calendar-last-container {
+  margin-bottom: 20px;
+}
+
+/* Show Calendar Info Grid */
+.show-calendar-info-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   width: 90%;
@@ -1294,9 +1301,10 @@
   margin: 0 auto;
 }
 
+/* Show Calendar Info Container */
 .show-calendar-info {
   grid-column: 1 / span 12;
-  margin: 40px 0;
+  margin: 0 auto;
   border-radius: 10px;
   background-color: #905654;
   border: 2px solid #d37721;
@@ -1304,6 +1312,7 @@
   padding: 40px 50px;
 }
 
+/* Show Calendar Info Content */
 .show-calendar-info-content {
   display: flex;
   justify-content: center;
@@ -1311,75 +1320,48 @@
 }
 
 .show-calendar-info-content p {
-  color: #faf3e0;
   font-size: 20px;
+  color: #faf3e0;
   line-height: 1.6;
-  width: 80%;
   text-align: center;
+  width: 80%;
 }
 
+/* ---------------------------- Media Queries (Responsive Design) --------------------------------------- */
+
 @media (max-width: 1200px) {
-  .show-calendar-headline h2 {
-    font-size: 58px;
-  }
-
-  /* Tighten up the horizontal layout slightly */
+  /* Date Container Left */
   .date-container {
-    grid-column: 1 / span 2; /* Use 2 columns to align left edge */
+    grid-column: 2 / 2;
   }
 
-  .details {
-    grid-column: 3 / 5;
-  }
-
-  .time-box {
-    grid-column: 5 / 7; /* Shift left */
-  }
-
-  .tag {
-    grid-column: 7 / 9; /* Shift left */
-  }
-
-  .book-button {
-    grid-column: 10 / 13; /* Use remaining space */
+  .ticket-info-btn {
+    grid-column: 10 / 13;
   }
 }
 
 @media (max-width: 992px) {
   .show-calendar-headline h2 {
-    font-size: 48px;
-  }
-  .show-calendar-headline p {
-    font-size: 20px;
+    font-size: 58px;
   }
 
-  /* Optimize padding and element sizes */
   .calendar-content {
     padding: 15px;
     gap: 5px;
   }
 
+  /* Date Container Left */
   .date-container {
     width: 60px;
     height: 60px;
     grid-column: 1 / span 2;
   }
 
-  .details {
-    grid-column: 3 / 6; /* Give details more space */
-  }
-
-  .time-box {
-    grid-column: 6 / 8;
+  .time-container {
     font-size: 15px;
   }
 
-  .tag {
-    grid-column: 8 / 10;
-  }
-
-  .book-button {
-    grid-column: 10 / 13;
+  .ticket-info-btn {
     padding: 10px 15px;
     font-size: 14px;
   }
@@ -1388,130 +1370,97 @@
     padding: 30px 40px;
     height: auto;
   }
+
   .show-calendar-info-content p {
     font-size: 18px;
     width: 90%;
   }
 }
 
-@media (max-width: 768px){
-    .book-button {
-        grid-column: 10 / 13;
-        padding: 10px 15px;
-        font-size: 12px;
-    }
+@media (max-width: 768px) {
+  .ticket-info-btn {
+    grid-column: 10 / 13;
+    padding: 10px 15px;
+    font-size: 12px;
+    height: 30px;
+  }
 
-    .book-button {
-    grid-column: 10 / 12;
-    background-color: var(--primary-text-color);
-    color: #faf3e0;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
+  .time-container {
+    font-size: 14px;
+  }
+
+  .tag {
+    grid-column: 8 / span 2;
     display: flex;
-    align-items: center;
-    transition: all 0.2s;
     justify-self: end;
-}
+  }
+
+  .show-calendar-info-content p {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 567px) {
-    /* Main Headings (Slight adjustment for smaller screen) */
-    .show-calendar-headline h2 {
-        font-size: 36px;
-    }
-    .show-calendar-headline p {
-        font-size: 17px;
-        padding: 15px 0 20px 0;
-    }
+  .show-calendar-headline {
+    width: 80%;
+    margin: 0 auto;
+  }
 
-    /* Calendar Card Content Re-structure */
-    .calendar-content {
-        /* Keep the inner grid structure */
-        grid-template-columns: repeat(12, 1fr); 
-        /* Increase vertical padding */
-        padding: 15px; 
-        /* Adjust gap for better spacing between stacked rows/elements */
-        row-gap: 15px;
-    }
+  .show-calendar-headline h2 {
+    font-size: 36px;
+  }
 
-    /* === ROW 1: Date and Details === */
+  .show-calendar-headline p {
+    font-size: 20px;
+    padding: 15px 0 5px 0;
+  }
 
-    /* Date block (Dec 15) - Keep it left */
-    .date-container {
-        grid-column: 1 / span 3; /* Allocate space for the date block (1/4 of the card) */
-        width: 60px;
-        height: 60px;
-        /* Ensure vertical center alignment */
-        align-self: center; 
-    }
+  .calendar-content {
+    grid-template-columns: repeat(12, 1fr);
+    padding: 15px;
+    row-gap: 15px;
+  }
 
-    /* Details (day and date) - Place next to the date block */
-    .details {
-        grid-column: 4 / span 9; /* Take the remaining 3/4 of the space */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-self: center; /* Vertical center alignment */
-        padding-left: 5px; 
-    }
-    
-    .details .day-name {
-        font-size: 15px;
-    }
+  /* Details (Besides Date Container Left) */
+  .details {
+    grid-column: 4 / span 8;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+  }
 
-    /* === ROW 2: Time, Tag, and Button (Stacked/Wrapped) === */
-    /* This row must occupy the space *below* the Date/Details */
-    
-    /* Time + Icon (7:00 PM) - Start on a new row, take 4/12 width */
-    .time-box {
-        grid-column: 1 / span 4; /* Left-align, take 1/3 of the bottom row */
-        font-size: 14px;
-        justify-content: flex-start; /* Align icon and text to the left */
-        align-self: center;
-    }
-    
-    /* Tag (Evening) - Place next to the time box, take 4/12 width */
-    .tag {
-        grid-column: 5 / span 4; /* Center position, take 1/3 of the bottom row */
-        justify-self: center; /* Center the tag itself */
-        align-self: center;
-        font-size: 0.75em;
-        padding: 4px 10px;
-    }
+  .details .day-name {
+    font-size: 15px;
+  }
 
-    /* Button (Book Now) - Place on the right, take 4/12 width */
-    .book-button {
-        grid-column: 9 / span 4; /* Right-align, take 1/3 of the bottom row */
-        justify-self: end; /* Align the button container to the right */
-        text-align: center;
-        align-self: center;
-        padding: 8px 10px; /* Smaller padding for better fit */
-        font-size: 13px;
-        white-space: nowrap; /* Prevent "Book Now" from wrapping */
-    }
-    
-    .book-button img {
-        display: none; /* Hide the icon on the smallest screen to save space */
-    }
+  /* Time Container */
+  .time-container {
+    grid-column: 1 / span 4;
+  }
 
+  /* Tag */
+  .tag {
+    grid-column: 5 / span 2;
+    font-size: 0.75em;
+    padding: 4px 10px;
+  }
 
-    /* Show Calendar Info Box */
-    .show-calendar-info {
-        padding: 25px 15px;
-    }
-    .show-calendar-info-content p {
-        font-size: 16px;
-        width: 100%;
-    }
+  .ticket-info-btn {
+    grid-column: 9 / span 4;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  /* Show Calendar Info Box */
+  .show-calendar-info {
+    padding: 25px 15px;
+  }
+
+  .show-calendar-info-content p {
+    font-size: 14px;
+  }
 }
-
-
-
-
-
-
-
 
 /* --------------------------------- Ticket Information Section --------------------------------------------*/
 .ticket-information {
@@ -1551,14 +1500,13 @@
 /* Cards Container */
 .childrens-ticket,
 .family-package {
-    min-height: 536px;
+  min-height: 536px;
   border-radius: 10px;
   border: 4px solid #905654;
   display: flex;
   flex-direction: column;
-  box-shadow: 
-   0px 8px 10px -6px rgba(0, 0, 0, 0.1),
-   0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 10px -6px rgba(0, 0, 0, 0.1),
+    0px 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 /* Children's Card Grid*/
@@ -1672,7 +1620,7 @@
 .ticket-information-btn {
   min-width: 85%;
   background-color: #905654;
-  color: #e5e2d9;
+  color: #faf3e0;
   font-family: "Crimson PRO", serif;
   font-size: 20px;
   padding: 18px 15px;
@@ -1742,7 +1690,7 @@
 }
 
 @media (max-width: 768px) {
-  .ticket-information-headline h2{
+  .ticket-information-headline h2 {
     font-size: 42px;
   }
 
@@ -1753,7 +1701,7 @@
 
   .childrens-ticket,
   .family-package {
-    grid-column: 1 / -1; 
+    grid-column: 1 / -1;
     min-height: auto;
   }
 
@@ -1765,7 +1713,7 @@
     font-size: 32px;
   }
 
-  .header{
+  .header {
     padding: 0 2px 15px 0px;
   }
 
@@ -1780,7 +1728,7 @@
 }
 
 @media (max-width: 567px) {
-  .ticket-information-headline{
+  .ticket-information-headline {
     width: 80%;
     margin: 0 auto;
   }
@@ -1809,16 +1757,16 @@
     gap: 10px;
   }
 
-  .icon-container{
+  .icon-container {
     display: flex;
     align-items: center;
   }
 
-   .icon-container img{
+  .icon-container img {
     width: 40px;
     height: 40px;
   }
-  
+
   .title-container {
     padding: 10px 0 10px 0;
   }
@@ -1827,7 +1775,7 @@
     font-size: 18px;
   }
 
-   .subtitle {
+  .subtitle {
     font-size: 14px;
   }
 
