@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Brothers Lionheart | Esbjerg Amatør Teater - Skartyden</title>
   <!-- Meta Tags -->
-  <meta name="description" content="Experience the magic of 'The Brothers Lionheart' by Skarntyden Theater – a timeless tale of courage, adventure, and the unbreakable bond between brothers. Book your tickets now!">
-    <meta name="keywords" content="The Brothers Lionheart, Brothers Lionheart, Skarntyden Theater, theater, play, tickets, cultural events, Astrid Lindgren">
-    <meta name="author" content="Esbjerg Amatør Teater Skartyden">
-    <meta name="robots" content="index, follow">
+  <meta name="description"
+    content="Experience the magic of 'The Brothers Lionheart' by Skarntyden Theater – a timeless tale of courage, adventure, and the unbreakable bond between brothers. Book your tickets now!">
+  <meta name="keywords"
+    content="The Brothers Lionheart, Brothers Lionheart, Skarntyden Theater, theater, play, tickets, cultural events, Astrid Lindgren">
+  <meta name="author" content="Esbjerg Amatør Teater Skartyden">
+  <meta name="robots" content="index, follow">
 
   <link rel="stylesheet" href="css/base/reset.css">
   <link rel="stylesheet" href="css/main.css">
@@ -185,12 +187,12 @@
 
 
       <!-- Image Slider -->
-      <div class="image-slider">
+      <div class="carousel">
         <button class="nav-button prev" id="prevButton">&#10094;</button>
 
-        <div class="slider-track-container" id="sliderTrackContainer">
 
-          <div class="first-slider-wrapper" id="sliderWrapper">
+        <div class="carousel-inner">
+          <div class="carousel-track" id="sliderWrapper">
 
             <!-- Image 1 -->
             <div class="image-card">
@@ -261,15 +263,13 @@
                 <h3>Orvar</h3>
               </div>
             </div>
-
           </div>
+          <button class="nav-button next" id="nextButton">&#10095;</button>
         </div>
-
-        <button class="nav-button next" id="nextButton">&#10095;</button>
-
-        <div class="slider-dots" id="sliderDots"></div>
       </div>
     </section>
+
+
 
 
 
@@ -680,365 +680,365 @@
 
         </div>
       </div>
+    </section>
 
 
 
-      <!-- Practical Information Section -->
-      <section class="practical-information" aria-labelledby="practical-info-main-heading">
-        <div class="section-divider">
-          <hr class="line left-line">
-          <img src="assets/location-headline.svg" alt="" aria-hidden="true">
-          <hr class="line right-line">
-        </div>
+    <!-- Practical Information Section -->
+    <section class="practical-information" aria-labelledby="practical-info-main-heading">
+      <div class="section-divider">
+        <hr class="line left-line">
+        <img src="assets/location-headline.svg" alt="" aria-hidden="true">
+        <hr class="line right-line">
+      </div>
 
-        <div class="practical-information-headline">
-          <h2>Practical information</h2>
-          <p>Everything you need to know for your visit</p>
-        </div>
+      <div class="practical-information-headline">
+        <h2>Practical information</h2>
+        <p>Everything you need to know for your visit</p>
+      </div>
 
-        <!-- Cards-->
-        <div class="practical-information-grid-container">
-          <!-- Card 1 Location -->
-          <div id="location" class="location-card">
-            <div class="location-content">
-              <div id="location-icon-container" class="practical-information-icon-circle">
-                <img src="assets/location-icon.svg" alt="Location Icon" aria-hidden="true">
-              </div>
-              <!-- Center Title and Paragraph  -->
-              <div class="info-location-card-text-container">
-                <h3>Location</h3>
-                <p>Esbjerg Amatør Teater - Skartyden<br>
-                  Kirkegade 51, 6700 Esbjerg<br>
-                </p>
-                <a class="location-btn"
-                  href="https://www.google.com/maps/dir//Kirkegade+51,+6700+Esbjerg/@55.5646976,9.7452032,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x464b21375c01b8b5:0x724ad2e33a4f5327!2m2!1d8.4501049!2d55.4691023?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D"
-                  target="_blank" rel="noopener noreferrer"
-                  aria-label="Open Esbjerg Amatør Teater location in Google Maps">
-                  Open to Maps
-                </a>
-              </div>
+      <!-- Cards-->
+      <div class="practical-information-grid-container">
+        <!-- Card 1 Location -->
+        <div id="location" class="location-card">
+          <div class="location-content">
+            <div id="location-icon-container" class="practical-information-icon-circle">
+              <img src="assets/location-icon.svg" alt="Location Icon" aria-hidden="true">
             </div>
-          </div>
-
-          <!-- Card 2 Show Duration -->
-          <div id="show-duration" class="show-duration-card">
-            <div class="show-duration-content">
-              <div id="show-duration-icon-container" class="practical-information-icon-circle">
-                <img src="assets/time-icon-practical-information.svg" alt="Time Icon" aria-hidden="true">
-              </div>
-              <!-- Center title and paragraph -->
-              <div class="info-location-card-text-container">
-                <h3>Show Duration</h3>
-                <p><strong>Performance:</strong> 2 hours 30 minutes</p>
-                <p><strong>Matinée Performance:</strong> 2 hours</p>
-                <p>Includes one 15-minute intermission with refreshments available</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 Public Transport -->
-          <div id="public-transport" class="public-transport-card">
-            <div class="public-transport-content">
-              <div id="public-transport-icon-container" class="practical-information-icon-circle">
-                <img src="assets/transport-icon.svg" alt="Transport Icon" aria-hidden="true">
-              </div>
-              <div class="info-location-card-text-container">
-                <h3>Public Transport</h3>
-                <p><strong>Bus:</strong> Routes 12, 34, and 56 stop directly in front of the theatre</p>
-                <p><strong>Metro:</strong> Green Line, Storyville Station (5-minute walk)</p>
-                <p><strong>Train:</strong> Central Station (10-minute walk)</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4 Parking -->
-          <div id="parking" class="parking-card">
-            <div class="parking-content">
-              <div id="parking-icon-container" class="practical-information-icon-circle">
-                <img src="assets/car-icon.svg" alt="Parking Icon" aria-hidden="true">
-              </div>
-              <div class="info-location-card-text-container">
-                <h3>Parking</h3>
-                <p><strong>Theatre Parking:</strong> Limited spaces available behind the building ($10)</p>
-                <p><strong>Public Parking:</strong> City Garage, 2 blocks away ($8)</p>
-                <p><strong>Street Parking:</strong> Free after 6 PM on weekdays</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 5 Acessibility -->
-          <div id="accessibility" class="accessibility-card">
-            <div class="accessibility-content">
-              <div id="accessibility-icon-container" class="practical-information-icon-circle">
-                <img src="assets/accessibility-icon.svg" alt="Accessibility Icon" aria-hidden="true">
-              </div>
-              <div class="info-location-card-text-container">
-                <h3>Accessibility</h3>
-                <ul>
-                  <li>Wheelchair accessible entrance and seating</li>
-                  <li>Assisted listening devices available</li>
-                  <li>Accessible restrooms on all levels</li>
-                  <li>Service animals welcome</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 6 Arrive Early -->
-          <div id="arrive-early" class="arrive-early-card">
-            <div class="arrive-early-content">
-              <div id="arrive-early-icon-container" class="practical-information-icon-circle">
-                <img src="assets/arrive-early-icon.svg" alt="Arrive Early Icon" aria-hidden="true">
-              </div>
-              <div class="info-location-card-text-container">
-                <h3>Arrive Early</h3>
-                <p>We recommend arriving <strong>30 minutes</strong> before showtime:</p>
-                <ul>
-                  <li>Find parking and get seated comfortably</li>
-                  <li>Visit our lobby gift shop</li>
-                  <li>Enjoy pre-show refreshments</li>
-                  <li>Take photos in our magical photo booth</li>
-                </ul>
-              </div>
+            <!-- Center Title and Paragraph  -->
+            <div class="info-location-card-text-container">
+              <h3>Location</h3>
+              <p>Esbjerg Amatør Teater - Skartyden<br>
+                Kirkegade 51, 6700 Esbjerg<br>
+              </p>
+              <a class="location-btn"
+                href="https://www.google.com/maps/dir//Kirkegade+51,+6700+Esbjerg/@55.5646976,9.7452032,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x464b21375c01b8b5:0x724ad2e33a4f5327!2m2!1d8.4501049!2d55.4691023?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank" rel="noopener noreferrer"
+                aria-label="Open Esbjerg Amatør Teater location in Google Maps">
+                Open to Maps
+              </a>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- Frequently Asked Questions Section -->
-      <section class="frquently-asked-questions" aria-labelledby="faq-main-heading">
-        <div class="section-divider">
-          <hr class="line left-line">
-          <img src="assets/svg/frequently-questions-icon.svg" alt="" aria-hidden="true">
-          <hr class="line right-line">
-        </div>
-        <div class="frequently-asked-headline">
-          <h2>Frequently Asked Questions</h2>
-          <p>Everything you need to know</p>
-        </div>
-
-        <div class="frequently-asked-questions-grid-container">
-          <!-- Tickets & Bookings Section -->
-          <h3 class="section-heading">Tickets & Bookings</h3>
-          <details class="question-box">
-            <!-- 1st Question -->
-            <summary>How do I purchase tickets?
-              <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
-            </summary>
-            <div class="answer-content">
-              <p>Tickets can be purchased online through our official website or at the box office.</p>
+        <!-- Card 2 Show Duration -->
+        <div id="show-duration" class="show-duration-card">
+          <div class="show-duration-content">
+            <div id="show-duration-icon-container" class="practical-information-icon-circle">
+              <img src="assets/time-icon-practical-information.svg" alt="Time Icon" aria-hidden="true">
             </div>
-          </details>
-
-          <!-- 2nd Question -->
-          <details class="question-box">
-            <summary>Can I choose my seats?
-              <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
-            </summary>
-            <div class="answer-content">
-              <p>Yes, you can choose your seats during the online booking process, subject to availability.</p>
-            </div>
-          </details>
-
-          <!-- 3rd Question -->
-          <details class="question-box">
-            <summary>What is your cancellation policy?
-              <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
-            </summary>
-            <div class="answer-content">
-              <p>Cancellations are permitted up to 24 hours before the performance, subject to a booking fee. Please
-                check
-                our full policy for details.</p>
-            </div>
-          </details>
-
-          <!-- 4th Question -->
-          <details class="question-box">
-            <summary>Are group discounts available?
-              <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
-            </summary>
-            <div class="answer-content">
-              <p>Group discounts are available for parties of 10 or more. Please contact our group bookings office for
-                pricing.</p>
-            </div>
-          </details>
-
-          <!-- Arrival & Practicalities Section -->
-          <h3 class="section-heading">Arrival & Practicalities</h3>
-          <!-- 1st Question -->
-          <details class="question-box">
-            <summary>When should we arrive?
-              <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
-            </summary>
-            <div class="answer-content">
-              <p>We recommend arriving at least 30 minutes before the scheduled start time to allow for seating and any
-                pre-show purchases.</p>
-            </div>
-          </details>
-
-          <!-- 2nd Question -->
-          <details class="question-box">
-            <summary>Is there parking available?
-              <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
-            </summary>
-            <div class="answer-content">
-              <p>Limited street parking is available, and there are several paid parking garages within a two-block
-                radius.</p>
-            </div>
-          </details>
-
-          <!-- 3rd Question -->
-          <details class="question-box">
-            <summary>Can I bring food or drinks into the theatre?
-              <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
-            </summary>
-            <div class="answer-content">
-              <p>Outside food and drinks are generally not permitted. Concessions are available for purchase inside the
-                theatre.</p>
-            </div>
-          </details>
-
-          <!-- 4th Question -->
-          <details class="question-box">
-            <summary>Is the theatre wheelchair accessible?
-              <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
-            </summary>
-            <div class="answer-content">
-              <p>Yes, the theatre is fully wheelchair accessible. Please inform the box office when booking so we can
-                allocate the most suitable seating.</p>
-            </div>
-          </details>
-
-          <!-- > Kids' Questions Section -->
-          <h3 class="section-heading">Kids' Questions</h3>
-          <!-- 1st Question  -->
-          <details class="question-box">
-            <summary>Is it scary?
-              <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
-            </summary>
-            <div class="answer-content">
-              <p>The show is generally designed to be family-friendly and is not scary, but it does include some loud
-                sound effects and dramatic lighting sequences. Parental discretion is advised.</p>
-            </div>
-          </details>
-
-          <!-- 2nd Question -->
-          <details class="question-box">
-            <summary>Can I dress up like the characters?
-              <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
-            </summary>
-            <div class="answer-content">
-              <p>Yes, costumes are highly encouraged! We love seeing our guests dressed up. Please ensure costumes do
-                not
-                include large props that could obstruct aisles or seating.</p>
-            </div>
-          </details>
-
-          <!-- 3rd Question -->
-          <details class="question-box">
-            <summary>How long is the show?
-              <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
-            </summary>
-            <div class="answer-content">
-              <p>The running time is approximately 2 hours, including a 15-minute intermission.</p>
-            </div>
-          </details>
-
-          <!-- 4th Question -->
-          <details class="question-box">
-            <summary>What if my child needs to leave during the show?
-              <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
-            </summary>
-            <div class="answer-content">
-              <p>If you or your child needs to step out, please do so quietly. Our ushers will help you return to your
-                seats at an appropriate break in the performance.</p>
-            </div>
-          </details>
-
-          <!-- More Questions Box  -->
-          <div class="more-questions">
-            <div class="more-questions-content">
-              <p>Still have questions? We are here to help!</p>
-              <a href="pages/contact.html" class="more-questions-contact-button">Contact Us</a>
+            <!-- Center title and paragraph -->
+            <div class="info-location-card-text-container">
+              <h3>Show Duration</h3>
+              <p><strong>Performance:</strong> 2 hours 30 minutes</p>
+              <p><strong>Matinée Performance:</strong> 2 hours</p>
+              <p>Includes one 15-minute intermission with refreshments available</p>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- Footer Section -->
-      <footer class="footer">
-        <div class="site-footer">
-          <div class="footer-decoration" aria-hidden="true">
-            <img src="assets/svg/footer-icon.svg" alt="">
-          </div>
-
-          <div class="footer-content-grid">
-            <div class="footer-info production-info">
-              <h3>The Brothers Lionheart</h3>
-              <p>Experience the magic of Astrid Lindgren's timeless tale brought to life on stage. A theatrical
-                adventure
-                the whole family will treasure.</p>
-              <p class="small-text">Based on the novel by Astrid Lindgren</p>
+        <!-- Card 3 Public Transport -->
+        <div id="public-transport" class="public-transport-card">
+          <div class="public-transport-content">
+            <div id="public-transport-icon-container" class="practical-information-icon-circle">
+              <img src="assets/transport-icon.svg" alt="Transport Icon" aria-hidden="true">
             </div>
+            <div class="info-location-card-text-container">
+              <h3>Public Transport</h3>
+              <p><strong>Bus:</strong> Routes 12, 34, and 56 stop directly in front of the theatre</p>
+              <p><strong>Metro:</strong> Green Line, Storyville Station (5-minute walk)</p>
+              <p><strong>Train:</strong> Central Station (10-minute walk)</p>
+            </div>
+          </div>
+        </div>
 
-            <nav class="footer-info quick-links" aria-label="Quick Links">
-              <h3>Quick Links</h3>
+        <!-- Card 4 Parking -->
+        <div id="parking" class="parking-card">
+          <div class="parking-content">
+            <div id="parking-icon-container" class="practical-information-icon-circle">
+              <img src="assets/car-icon.svg" alt="Parking Icon" aria-hidden="true">
+            </div>
+            <div class="info-location-card-text-container">
+              <h3>Parking</h3>
+              <p><strong>Theatre Parking:</strong> Limited spaces available behind the building ($10)</p>
+              <p><strong>Public Parking:</strong> City Garage, 2 blocks away ($8)</p>
+              <p><strong>Street Parking:</strong> Free after 6 PM on weekdays</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 Acessibility -->
+        <div id="accessibility" class="accessibility-card">
+          <div class="accessibility-content">
+            <div id="accessibility-icon-container" class="practical-information-icon-circle">
+              <img src="assets/accessibility-icon.svg" alt="Accessibility Icon" aria-hidden="true">
+            </div>
+            <div class="info-location-card-text-container">
+              <h3>Accessibility</h3>
               <ul>
-                <li><a href="pages/about-us.html">About Us</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
+                <li>Wheelchair accessible entrance and seating</li>
+                <li>Assisted listening devices available</li>
+                <li>Accessible restrooms on all levels</li>
+                <li>Service animals welcome</li>
               </ul>
-            </nav>
-
-            <div class="footer-info contact-info">
-              <h3>Contact Us</h3>
-              <address>
-                <div class="contact-item">
-                  <img src="assets/svg/location-footer-icon.svg" alt="Location Adress Icon">
-                  <div>
-                    <p>Esbjerg Amatør Teater - Skartyden</p>
-                    <p>Kirkegade 51, Esbjerg, Denmark</p>
-                  </div>
-                </div>
-
-                <div class="contact-item">
-                  <img src="assets/svg/phone-footer-icon.svg" alt="Phone Number Icon">
-                  <p><a href="tel:+4525470683">+45 25 47 06 83</a></p>
-                </div>
-
-                <div class="contact-item">
-                  <img src="assets/svg/mail-footer-icon.svg" alt="Email Adress Icon">
-                  <p class="footer-email"><a href="mailto:eatskarntyden@gmail.com">eatskarntyden@gmail.com</a></p>
-                </div>
-              </address>
-
-              <h3>Follow Us</h3>
-              <div class="social-links" role="list" aria-labelledby="follow-us-heading">
-                <a href="https://www.facebook.com/skarntyden/?locale=da_DK" class="social-icon facebook"
-                  aria-label="Follow us on Facebook"><img src="assets/svg/facebook-icon.svg" alt="Facebook Logo"></a>
-                <a href="#" class="social-icon instagram" aria-label="Follow us on Instagram"><img
-                    src="assets/svg/insta-icon.svg" alt="Instagram Logo"></a>
-                <a href="#" class="social-icon whatsapp" aria-label="Contact us via WhatsApp"><img
-                    src="assets/svg/whatsapp-icon.svg" alt="Whatsapp Logo"></a>
-              </div>
             </div>
-          </div>
-
-          <hr class="footer-divider" aria-hidden="true">
-          <div class="footer-bottom">
-            <div class="copyright">
-              <p>© 2025 The Brothers Lionheart Theatre Production. All rights reserved.</p>
-            </div>
-            <nav class="legal-links" aria-label="Legal Links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-            </nav>
           </div>
         </div>
-      </footer>
 
+        <!-- Card 6 Arrive Early -->
+        <div id="arrive-early" class="arrive-early-card">
+          <div class="arrive-early-content">
+            <div id="arrive-early-icon-container" class="practical-information-icon-circle">
+              <img src="assets/arrive-early-icon.svg" alt="Arrive Early Icon" aria-hidden="true">
+            </div>
+            <div class="info-location-card-text-container">
+              <h3>Arrive Early</h3>
+              <p>We recommend arriving <strong>30 minutes</strong> before showtime:</p>
+              <ul>
+                <li>Find parking and get seated comfortably</li>
+                <li>Visit our lobby gift shop</li>
+                <li>Enjoy pre-show refreshments</li>
+                <li>Take photos in our magical photo booth</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <script src="js/main.js"></script>
+    <!-- Frequently Asked Questions Section -->
+    <section class="frquently-asked-questions" aria-labelledby="faq-main-heading">
+      <div class="section-divider">
+        <hr class="line left-line">
+        <img src="assets/svg/frequently-questions-icon.svg" alt="" aria-hidden="true">
+        <hr class="line right-line">
+      </div>
+      <div class="frequently-asked-headline">
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know</p>
+      </div>
+
+      <div class="frequently-asked-questions-grid-container">
+        <!-- Tickets & Bookings Section -->
+        <h3 class="section-heading">Tickets & Bookings</h3>
+        <details class="question-box">
+          <!-- 1st Question -->
+          <summary>How do I purchase tickets?
+            <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
+          </summary>
+          <div class="answer-content">
+            <p>Tickets can be purchased online through our official website or at the box office.</p>
+          </div>
+        </details>
+
+        <!-- 2nd Question -->
+        <details class="question-box">
+          <summary>Can I choose my seats?
+            <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
+          </summary>
+          <div class="answer-content">
+            <p>Yes, you can choose your seats during the online booking process, subject to availability.</p>
+          </div>
+        </details>
+
+        <!-- 3rd Question -->
+        <details class="question-box">
+          <summary>What is your cancellation policy?
+            <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
+          </summary>
+          <div class="answer-content">
+            <p>Cancellations are permitted up to 24 hours before the performance, subject to a booking fee. Please
+              check
+              our full policy for details.</p>
+          </div>
+        </details>
+
+        <!-- 4th Question -->
+        <details class="question-box">
+          <summary>Are group discounts available?
+            <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
+          </summary>
+          <div class="answer-content">
+            <p>Group discounts are available for parties of 10 or more. Please contact our group bookings office for
+              pricing.</p>
+          </div>
+        </details>
+
+        <!-- Arrival & Practicalities Section -->
+        <h3 class="section-heading">Arrival & Practicalities</h3>
+        <!-- 1st Question -->
+        <details class="question-box">
+          <summary>When should we arrive?
+            <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
+          </summary>
+          <div class="answer-content">
+            <p>We recommend arriving at least 30 minutes before the scheduled start time to allow for seating and any
+              pre-show purchases.</p>
+          </div>
+        </details>
+
+        <!-- 2nd Question -->
+        <details class="question-box">
+          <summary>Is there parking available?
+            <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
+          </summary>
+          <div class="answer-content">
+            <p>Limited street parking is available, and there are several paid parking garages within a two-block
+              radius.</p>
+          </div>
+        </details>
+
+        <!-- 3rd Question -->
+        <details class="question-box">
+          <summary>Can I bring food or drinks into the theatre?
+            <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
+          </summary>
+          <div class="answer-content">
+            <p>Outside food and drinks are generally not permitted. Concessions are available for purchase inside the
+              theatre.</p>
+          </div>
+        </details>
+
+        <!-- 4th Question -->
+        <details class="question-box">
+          <summary>Is the theatre wheelchair accessible?
+            <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
+          </summary>
+          <div class="answer-content">
+            <p>Yes, the theatre is fully wheelchair accessible. Please inform the box office when booking so we can
+              allocate the most suitable seating.</p>
+          </div>
+        </details>
+
+        <!-- > Kids' Questions Section -->
+        <h3 class="section-heading">Kids' Questions</h3>
+        <!-- 1st Question  -->
+        <details class="question-box">
+          <summary>Is it scary?
+            <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
+          </summary>
+          <div class="answer-content">
+            <p>The show is generally designed to be family-friendly and is not scary, but it does include some loud
+              sound effects and dramatic lighting sequences. Parental discretion is advised.</p>
+          </div>
+        </details>
+
+        <!-- 2nd Question -->
+        <details class="question-box">
+          <summary>Can I dress up like the characters?
+            <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
+          </summary>
+          <div class="answer-content">
+            <p>Yes, costumes are highly encouraged! We love seeing our guests dressed up. Please ensure costumes do
+              not
+              include large props that could obstruct aisles or seating.</p>
+          </div>
+        </details>
+
+        <!-- 3rd Question -->
+        <details class="question-box">
+          <summary>How long is the show?
+            <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
+          </summary>
+          <div class="answer-content">
+            <p>The running time is approximately 2 hours, including a 15-minute intermission.</p>
+          </div>
+        </details>
+
+        <!-- 4th Question -->
+        <details class="question-box">
+          <summary>What if my child needs to leave during the show?
+            <img src="assets/arrow-down-icon.svg" class="question-arrow" alt="Arrow Down" aria-hidden="true">
+          </summary>
+          <div class="answer-content">
+            <p>If you or your child needs to step out, please do so quietly. Our ushers will help you return to your
+              seats at an appropriate break in the performance.</p>
+          </div>
+        </details>
+
+        <!-- More Questions Box  -->
+        <div class="more-questions">
+          <div class="more-questions-content">
+            <p>Still have questions? We are here to help!</p>
+            <a href="pages/contact.html" class="more-questions-contact-button">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="site-footer">
+        <div class="footer-decoration" aria-hidden="true">
+          <img src="assets/svg/footer-icon.svg" alt="">
+        </div>
+
+        <div class="footer-content-grid">
+          <div class="footer-info production-info">
+            <h3>The Brothers Lionheart</h3>
+            <p>Experience the magic of Astrid Lindgren's timeless tale brought to life on stage. A theatrical
+              adventure
+              the whole family will treasure.</p>
+            <p class="small-text">Based on the novel by Astrid Lindgren</p>
+          </div>
+
+          <nav class="footer-info quick-links" aria-label="Quick Links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="pages/about-us.html">About Us</a></li>
+              <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer-info contact-info">
+            <h3>Contact Us</h3>
+            <address>
+              <div class="contact-item">
+                <img src="assets/svg/location-footer-icon.svg" alt="Location Adress Icon">
+                <div>
+                  <p>Esbjerg Amatør Teater - Skartyden</p>
+                  <p>Kirkegade 51, Esbjerg, Denmark</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <img src="assets/svg/phone-footer-icon.svg" alt="Phone Number Icon">
+                <p><a href="tel:+4525470683">+45 25 47 06 83</a></p>
+              </div>
+
+              <div class="contact-item">
+                <img src="assets/svg/mail-footer-icon.svg" alt="Email Adress Icon">
+                <p class="footer-email"><a href="mailto:eatskarntyden@gmail.com">eatskarntyden@gmail.com</a></p>
+              </div>
+            </address>
+
+            <h3>Follow Us</h3>
+            <div class="social-links" role="list" aria-labelledby="follow-us-heading">
+              <a href="https://www.facebook.com/skarntyden/?locale=da_DK" class="social-icon facebook"
+                aria-label="Follow us on Facebook"><img src="assets/svg/facebook-icon.svg" alt="Facebook Logo"></a>
+              <a href="#" class="social-icon instagram" aria-label="Follow us on Instagram"><img
+                  src="assets/svg/insta-icon.svg" alt="Instagram Logo"></a>
+              <a href="#" class="social-icon whatsapp" aria-label="Contact us via WhatsApp"><img
+                  src="assets/svg/whatsapp-icon.svg" alt="Whatsapp Logo"></a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="footer-divider" aria-hidden="true">
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p>© 2025 The Brothers Lionheart Theatre Production. All rights reserved.</p>
+          </div>
+          <nav class="legal-links" aria-label="Legal Links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
   </div>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

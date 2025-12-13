@@ -44,7 +44,7 @@
 
 /* ------------------------------------------------- Navigation Section ----------------------------------------- */
 .navigation {
-  background-color: #FAF3E0;
+  background-color: #faf3e0;
   position: absolute;
   z-index: 10;
   width: var(--width-full);
@@ -52,8 +52,7 @@
   justify-content: center;
   align-items: center;
   border-bottom: 2px solid #90565433;
-  box-shadow: 
-    0px 4px 6px -4px rgba(0, 0, 0, 0.1),
+  box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1),
     0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
@@ -360,7 +359,7 @@
 
 .hero-ticket-info-btn {
   background-color: #905654;
-  color: #FAF3E0;
+  color: #faf3e0;
 }
 
 .hero-ticket-info-btn:hover {
@@ -368,7 +367,7 @@
 }
 
 .explore-the-story-btn {
-  background-color: #BBC5B8;
+  background-color: #bbc5b8;
   color: #202020;
 }
 
@@ -536,7 +535,7 @@
   }
 }
 
-/* The Story Section */
+/*----------------------------------------------- The Story Section ---------------------------------------------- */
 .section-divider {
   display: flex;
   align-items: center;
@@ -785,10 +784,10 @@
   }
 }
 
-/* Meet the Characters Section */
-/* .meet-the-characters {
-  padding: 60px 0;
-} */
+/* --------------------------------------- Meet the Characters Section ------------------------------------------------ */
+.meet-the-characters {
+  padding-bottom: 60px;
+}
 
 .meet-the-characters-headline {
   display: flex;
@@ -808,139 +807,44 @@
   font-size: 24px;
   font-style: italic;
   color: #202020;
-  padding: 20px 0 30px 0;
+  padding: 20px 0 50px 0;
 }
 
-/* Slider Container */
-.slider-container {
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; /* Improved scrolling experience on touch devices */
-  width: 90%;
-  max-width: var(--width-12col);
-  margin: 50px auto;
+.carousel-inner {
+  overflow: hidden;
+  width: 100%;
 }
 
-/* Updated: The wrapper holds all cards side-by-side */
-.first-slider-wrapper {
-  display: flex;
-  gap: 30px;
-  width: fit-content; /* Make the wrapper as wide as all its contents */
-  margin: 0; /* Remove margin from here, it's on .slider-container now */
-  padding-bottom: 20px; /* Add some padding for scrollbar visibility if needed */
-}
-
-.image-card {
-  /* Calculate the width for a single card:
-       (100% of container width - 2 * gap) / 3
-       This ensures 3 cards fit perfectly in the .slider-container width.
-       The 90%/max-width logic of .slider-container handles the overall section width.
-    */
-  width: calc((var(--width-12col) - 60px) / 3);
-  min-width: calc((var(--width-12col) - 60px) / 3);
-  flex-shrink: 0; /* Important: Prevents cards from shrinking */
-  border-radius: 10px;
+.carousel {
   position: relative;
-  scroll-snap-align: start; /* Snap the start of the card to the container edge */
-}
-
-.image img {
-  width: 100%;
-  height: 448px;
-  border-radius: 10px;
-  border: 4px solid #905654;
-}
-
-/* Text over image */
-.text-box {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #faf3e0;
-  padding: 15px 10px;
-  border-radius: 10px;
-  margin: 0 20px 20px 20px;
-}
-
-.text-box h3 {
-  color: #202020;
-  font-size: 20px;
-  font-weight: 400;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 2px;
-}
-
-/* Image Slider */
-.image-slider {
-  width: 100%;
   margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-}
-
-/* NEW CONTAINER: Hides the overflow of the sliding wrapper (The Viewport) */
-.slider-track-container {
-  overflow: hidden;
-  width: 90%;
   max-width: var(--width-12col);
-  margin: 50px auto 20px auto; /* Reduced bottom margin to make space for dots */
+  width: 90%;
+  margin: 0 auto;
 }
 
-/* The actual sliding element (Grid container) */
-.first-slider-wrapper {
-  display: grid;
-  /* CRUCIAL: Set grid columns to the TOTAL NUMBER OF CARDS (6 in this case) */
-  grid-template-columns: repeat(6, 1fr);
-  gap: 30px;
-
-  /* Calculate the total required width for all 6 cards and 5 gaps (5*30px) */
-  /* This calculation is a rough estimate but works well with the card width calculation below */
-  margin: 0;
-
-  /* Key for movement: */
-  position: relative;
-  left: 0; /* Managed by JS */
-  transition: left 0.5s ease-in-out; /* Smooth sliding animation */
-}
-
-/* --- Navigation Dots Styling --- */
-.slider-dots {
+.carousel-track {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  padding-bottom: 50px;
+  gap: 30px;
+  margin-bottom: 30px;
 }
 
-.dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+/* Image Container */
+.image-card {
+  flex: 0 0 calc((100% - 60px) / 3);
+  position: relative;
+  border-radius: 10px;
 }
 
-.dot.active {
-  background-color: #905654; /* Active dot color */
-}
-
-/* --- Rest of the existing CSS remains unchanged --- */
 .image img {
   width: 100%;
   height: 448px;
-  object-fit: cover;
   border-radius: 10px;
   border: 4px solid #905654;
+  object-fit: cover;
 }
 
-/* Text over image */
+/* Text Over Image */
 .text-box {
   position: absolute;
   bottom: 0;
@@ -962,65 +866,67 @@
   padding-bottom: 2px;
 }
 
-/* Arrows */
 .nav-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: var(--primary-text-color);
+  background-color: #905654;
   border: none;
+  border-radius: 50%;
+  padding: 20px;
   cursor: pointer;
   z-index: 10;
-  color: white;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease;
+  color: #faf3e0;
+  width: 60px;
+  font-size: 25px;
+  line-height: 1;
+  height: 60px;
 }
 
+/* Left */
 .prev {
-  left: 50%;
-  transform: translate(
-    calc(-1 * (var(--width-12col) / 2) - 80px),
-    -50%
-  ); /* Adjusted based on max-width */
+  left: -40px;
 }
 
+/* Right */
 .next {
-  right: 50%;
-  transform: translate(
-    calc(var(--width-12col) / 2 + 80px),
-    -50%
-  ); /* Adjusted based on max-width */
+  right: -40px;
 }
 
-/* Updated :hover and :active for new positioning */
-.prev:hover {
-  transform: translate(calc(-1 * (var(--width-12col) / 2) - 80px), -50%)
-    scale(0.98);
-}
-
-.prev:active {
-  transform: translate(calc(-1 * (var(--width-12col) / 2) - 80px), -50%)
-    scale(0.95);
-}
-
-.next:hover {
-  transform: translate(calc(var(--width-12col) / 2 + 80px), -50%) scale(0.98);
-}
-
-.next:active {
-  transform: translate(calc(var(--width-12col) / 2 + 80px), -50%) scale(0.95);
-}
-
-/* Tablet and smaller desktops (992px) */
 @media (max-width: 992px) {
   .meet-the-characters-headline h2 {
     font-size: 58px;
+  }
+
+  .carousel-inner {
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 20px;
+  }
+
+  .image-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+    position: relative;
+    border-radius: 10px;
+  }
+
+  .nav-button {
+    padding: 1px;
+    width: 40px;
+    font-size: 20px;
+    line-height: 1;
+    height: 40px;
+  }
+
+  .prev {
+    left: -20px;
+  }
+
+  .next {
+    right: -20px;
   }
 }
 
@@ -1038,15 +944,25 @@
     font-size: 20px;
   }
 
-  .first-slider-wrapper {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    width: 90%;
-    margin: 30px auto;
+  .image-card {
+    flex: 0 0 100%;
   }
 
-  .image-1 img {
-    height: 448px;
+  .nav-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .first-slider-wrapper {
+    display: grid;
+  }
+
+  .prev {
+    left: -20px;
+  }
+
+  .next {
+    right: -10px;
   }
 }
 
@@ -1058,7 +974,14 @@
 
   .meet-the-characters-headline p {
     font-size: 18px;
-    padding: 10px 0 20px 0;
+    padding: 10px 0 30px 0;
+  }
+
+  /* Image Container */
+  .image-card {
+    flex: 0 0 100%;
+    position: relative;
+    border-radius: 10px;
   }
 
   .image-1 img {
@@ -1072,6 +995,14 @@
 
   .text-box h3 {
     font-size: 18px;
+  }
+
+  .prev {
+    left: -10px;
+  }
+
+  .next {
+    right: -10px;
   }
 }
 
