@@ -1441,6 +1441,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
   padding: 0 2px 30px 0px;
 }
 
@@ -1482,8 +1483,9 @@
 
 /* Price*/
 .price {
-  font-size: 48px;
+  font-size: 38px;
   font-weight: 400;
+  text-transform: uppercase;
   color: var(--text-primary);
 }
 
@@ -1554,10 +1556,12 @@
 
   .subtitle {
     font-size: 18px;
+    width: 80%;
   }
 
   .price {
-    font-size: 44px;
+    font-size: 34px;
+    text-wrap: nowrap;
   }
 
   .includes-grid {
@@ -1592,7 +1596,8 @@
   }
 
   .price {
-    font-size: 40px;
+    font-size: 30px;
+    text-wrap: wrap;
   }
 
   .includes-grid {
@@ -1695,7 +1700,7 @@
   }
 
   .price {
-    font-size: 30px;
+    font-size: 25px;
     padding-top: 10px;
   }
 
@@ -1706,6 +1711,18 @@
   .ticket-information-btn {
     font-size: 15px;
     padding: 12px 10px;
+  }
+}
+
+@media (max-width: 407px){
+  .price{
+    text-wrap: nowrap;
+  }
+}
+
+@media (max-width: 360px){
+  .price{
+    text-wrap: wrap;
   }
 }
 
