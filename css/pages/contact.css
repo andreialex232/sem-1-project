@@ -36,10 +36,6 @@ li::marker {
   color: #D47720;
 }
 
-.hero {
-  background-image: url("../../assets/contact-hero.jpg");
-}
-
 @media screen and (max-width: 570px) {
   .hero {
     height: 1100px;
@@ -61,7 +57,7 @@ li::marker {
 }
 
 #contact-subtext {
-  color: #FAF3E0 !important;
+  color: #FAF3E0;
 }
 
 @media screen and (max-width: 570px) {
@@ -115,7 +111,7 @@ li::marker {
 }
 
 #about-us-header {
-    background-image: url("../../assets/img/contact-hero.jpg") !important;
+    background-image: url("../../assets/img/contact-hero-w.webp") !important;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center 10%;

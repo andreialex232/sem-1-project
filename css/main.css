@@ -272,7 +272,7 @@
 
 /* ---------------------------------------------- Header Section --------------------------------------------------- */
 .hero {
-  background-image: url("../assets/img/hero-image.png");
+  background-image: url("../assets/img/hero-image-w.webp");
   background-repeat: no-repeat;
   background-position: center center center;
   background-size: cover;
@@ -2536,7 +2536,7 @@
   }
 
   .hero {
-    background-image: url("../assets/img/hero-image-compressed.png");
+    background-image: url("../assets/img/hero-image-w.webp");
   }
   
   .mobile {
