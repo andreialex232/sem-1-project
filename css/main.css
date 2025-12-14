@@ -2521,3 +2521,25 @@
     margin-left: 10px;
   }
 }
+
+
+
+
+/* Using compressed images until a we get to a width of 768px */
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .hero {
+    background-image: url("../assets/img/hero-image-compressed.png");
+  }
+  
+  .mobile {
+    display: initial;
+  }
+}
