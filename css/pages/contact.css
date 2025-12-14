@@ -234,6 +234,7 @@ li::marker {
   list-style: none;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .contact-card-start p {
