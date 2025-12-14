@@ -6,8 +6,336 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/base/reset.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/pages/contact.css">
 </head>
 <body>
-    
+    <div class="container">
+    <!-- For making the background dark (for sidebar focus) (Responsiveness) -->
+    <div id="mobile-overlay"></div>
+    <!-- Navigation Bar -->
+    <nav class="navigation fixed">
+      <div class="menu-container">
+        <!-- Logo of the Play -->
+        <div class="logo-navbar">
+          <img src="../assets/brothers-lion-logo.svg" alt="Brothers Lionheart Logo">
+        </div>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Menu Toggle Button (Hamburger) (Visible <= 768px) -->
+        <button id="menu-toggle" class="menu-toggle-button" aria-expanded="false" aria-controls="main-menu"
+          aria-label="Open Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5 8h22M5 16h22M5 24h22" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Slide-In Menu (Fixed and initially hidden) -->
+      <nav id="mobile-menu">
+        <button id="close-button" class="close-button" aria-label="Close Menu">
+          &times; <!--The 'X' close icon -->
+        </button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </nav>
+
+    <!-- Header Area -->
+        <!-- Header Area -->
+         
+    <header id="about-us-header" class="hero">
+      <div id="contact-hero" class="hero-container contact-hero">
+
+        <div class="top-svg">
+          <img src="../assets/hero-top-contact-icon.svg" alt="" aria-hidden="true">
+        </div>
+
+        <div class="hero-text">
+          <div class="title-hero-container">
+            <h1>Get in Touch</h1>
+          </div>
+          <p class="title-hero-container-subtext">We'd love to hear from you</p>
+           <!-- Contact Cards -->
+      <div id="contact-cards-wrapper" class="contact-cards-wrapper">
+        <!-- Contact card start -->
+        <div class="contact-card-start">
+            <img src="../assets/tel-black.svg" alt="" aria-hidden="true">
+            <h2>Call us</h2>
+            <p>+45 75 12 34 56</p>
+        </div>
+      <!-- contact card end -->
+               <!-- Contact card start -->
+        <div class="contact-card-start">
+            <img src="../assets/email-black.svg" alt="" aria-hidden="true">
+            <h2>Email Us</h2>
+            <p>info@skarntyden.dk</p>
+      </div>
+      <!-- contact card end -->
+               <!-- Contact card start -->
+        <div class="contact-card-start">
+            <img src="../assets/location-black.svg" alt="" aria-hidden="true">
+            <h2>Visit Us</h2>
+            <p>Esbjerg, Denmark</p>
+      </div>
+        </div>
+      </div>
+      <!-- contact card end -->
+            </header>
+        </div>
+
+        <!-- Contact Information Section -->
+        <div class="contact-bg-color contact-info-container">
+          <!-- Form -->
+          <div class="form-container">
+            <section>
+              <div class="form-heading">
+                <div>
+                  <img src="../assets/send-message-contact.svg" alt="" aria-hidden="true">
+                  <h2>Send us a message</h2>
+                </div>
+                <p class="form-heading-subtext">Fill out the form below and we'll get back to you as soon as possible.</p>
+              </div>
+              
+              <form>
+                <div class="form-field">
+                  <label for="name">Your Name *</label>
+                  <div class="input-wrapper">
+                    <img class="input-icon" src="../assets/input-name.svg" alt="" aria-hidden="true">
+                  </div>
+                  <input class="input-with-icon" placeholder="Enter your full name" type="text" id="name" name="name">
+                </div>
+                <div class="form-field">
+                  <label for="email">Email Address *</label>
+                  <div class="input-wrapper">
+                    <img class="input-icon" src="../assets/input-email.svg" alt="" aria-hidden="true">
+                  </div>
+                  <input class="input-with-icon" placeholder="your.email@example.com" type="email" id="email" name="email">
+                </div>
+                <div class="form-field">
+                  <label for="tel">Phone Number *</label>
+                  <div class="input-wrapper">
+                    <img class="input-icon" src="../assets/input-tel.svg" alt="" aria-hidden="true">
+                  </div>
+                  <input class="input-with-icon" placeholder="+45 12 34 56 78" type="tel" name="tel" id="tel">
+                </div>
+                <div class="form-field">
+                  <label for="subject">Subject *</label>
+                  <input placeholder="What is the subject?" type="text" name="subject" id="subject">
+                </div>
+                <div class="form-field">
+                <label for="message">Your Message *</label>
+                <textarea placeholder="Tell us how we can help you..." name="message" id="message"></textarea>
+                </div>
+                <button type="submit" class="submit-button"><img src="../assets/send-email-svg.svg" alt="">Send Message</button>
+              </form>
+            </section>
+          </div>
+
+        <!--  Office Hours -->
+          <div class="info-section-container">
+            <section class="info-section">
+              <div class="info-section-heading">
+                <img src="../assets/office-hours.svg" alt="" aria-hidden="true">
+                <h3>Office Hours</h3>
+              </div>
+              <!--  Office Hours Content -->
+              <div class="info-section-content">
+                <p>Monday - Friday</p>
+                <p>10:00 - 17:00</p>
+              </div>
+              <div class="info-section-content">
+                <p>Saturday</p>
+                <p>11:00 - 15:00</p>
+              </div>
+              <div class="info-section-content">
+                <p>Sunday</p>
+                <p>Closed</p>
+              </div>
+              <p class="info-section-additional">Box office opens 1 hour before the performance times</p>
+            </section>
+
+            <!-- Visit our theater -->
+            <section class="info-section">
+              <div class="info-section-heading">
+                <img src="../assets/location-black.svg" alt="" aria-hidden="true">
+                <h3>Visit Our Theater</h3>
+              </div>
+              <div class="info-section-visit-location">
+                <p><b>Skarntyden Theatre</b></p>
+                <p>Kirkegade, 51</p>
+                <p>Esbjerg, Denmark 6700</p>
+              </div>
+              <div class="info-section-get-there">
+                <h4>Getting Here</h4>
+                <ul class="info-section-get-there-options">
+                  <li>
+                    Bus routes 12, 34 and 56 stop nearby.
+                  </li>
+                  <li>
+                    Free parking available on site
+                  </li>
+                  <li>
+                    Wheelchair accessible entrance
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+
+            <!-- Follow our journey section -->
+            <section class="info-section-journey">
+              <div class="info-section-journey-content">
+                <h3>Follow Our Journey</h3>
+                <div>
+                  <img src="../assets/contact-fb.svg" alt="Facebook Icon">
+                  <img src="../assets/contact-ig.svg" alt="Instagram Icon">
+                  <img src="../assets/contact-twitter.svg" alt="Twitter Icon">
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        
+
+          <!-- find us section divider -->
+          <div class="find-us-section">
+            <div class="section-divider">
+              <hr class="line left-line">
+              <img src="../assets/location-icon.svg" alt="">
+              <hr class="line right-line">
+          </div>
+            <!-- FIND-US H2 --> 
+            <div class="ticket-information-headline">
+              <h2>Find Us</h2>
+              <p>Skarntyden Theatre, Esbjerg</p>
+            </div>
+          </div>
+          <!-- Find us section content -->
+          <section class="find-us-map find-us-section">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2261.630879446229!2d8.4501131!3d55.4691013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464b21375c01b8b5%3A0x724ad2e33a4f5327!2sEsbjerg%20Amat%C3%B8r%20Teater%20-%20Skartyden!5e0!3m2!1sen!2sdk!4v1765415879607!5m2!1sen!2sdk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </section>
+
+          <!-- Address section -->
+          <div class="address-container">
+            <section class="address-section">
+              <h2>
+                Address
+              </h2>
+              <div class="address-container-content">
+                <p><b>Skarntyden Theatre</b></p>
+                <p>Kirkegade, 51</p>
+                <p>Esbjerg, Denmark 6700</p>
+              </div>
+              <div class="address-section-options">
+                  <div>
+                    <img src="../assets/tel-primary-color.svg" alt="Phone Icon With Site's Primary Colors">
+                    +45 75 12 34 56
+                  </div>
+                  <div>
+                    <img src="../assets/email-primary-color.svg" alt="Email Icon With Site's Primary Colors">
+                    info@skarntyden.dk
+                  </div>
+                  <div>
+                    <img src="../assets/clock-primary-color.svg" alt="Clock Icon With Site's Primary Colors">
+                    Mon - Fri 10:00-17:00
+                  </div>
+              </div>
+            </section>
+          </div>
+          
+
+          <div class="quick-answers-container">
+            <h2>Need Quick Answers</h2>
+            <div>
+              Check out our frequently asked questions or reach out directly for group bookings and special requests.
+            </div>
+            <div class="button-container">
+              <button class="button-faq">View FAQs</button>
+              <button class="button-group">Group Bookings</button>
+            </div>
+          </div>
+
+
+
+
+          <!-- Footer Section -->
+    <section class="footer">
+      <div class="site-footer">
+        <div class="footer-decoration">
+          <img src="assets/footer-icon.svg" alt="">
+        </div>
+
+        <div class="footer-content-grid">
+
+          <div class="footer-col production-info">
+            <h3>The Brothers Lionheart</h3>
+            <p>Experience the magic of Astrid Lindgren's timeless tale brought to life on stage. A theatrical adventure
+              the whole family will treasure.</p>
+            <p class="small-text">Based on the novel by Astrid Lindgren</p>
+          </div>
+
+          <div class="footer-col quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="pages/about-us.html">About Us</a></li>
+              <li><a href="pages/contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col contact-info">
+            <h3>Contact Us</h3>
+
+            <div class="contact-item">
+              <img src="assets/location-footer-icon.svg" alt="">
+              <div>
+                <p>Esbjerg Amatør Teater - Skartyden</p>
+                <p>Kirkegade 51, 6700 Esbjerg</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <img src="assets/phone-footer-icon.svg" alt="">
+              <p>(555) 123-4567</p>
+            </div>
+
+            <div class="contact-item">
+              <img src="assets/mail-footer-icon.svg" alt="">
+              <p>info@lionhearttheatre.com</p>
+            </div>
+
+            <h4>Follow Us</h4>
+            <div class="social-links">
+              <a href="#" class="social-icon facebook">f</a>
+              <a href="#" class="social-icon instagram">📸</a>
+              <a href="#" class="social-icon twitter">🐦</a>
+            </div>
+          </div>
+
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-bottom">
+          <p class="copyright">© 2025 The Brothers Lionheart Theatre Production.</p>
+          <p class="copyright">All rights reserved.</p>
+          <div class="legal-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
