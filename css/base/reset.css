@@ -27,5 +27,5 @@ html {
   grid-template-rows: auto;
   gap: var(--grid-gap);
   width: var(--width-full);
-  background-color: #FAF3E0; 
+  background-color: var(--primary-background-color); 
 }
