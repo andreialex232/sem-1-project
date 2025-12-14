@@ -451,7 +451,6 @@
 
 @media (max-width: 768px) {
   .hero-container {
-    padding: 80px 20px;
     min-height: 85vh;
   }
 
@@ -490,8 +489,7 @@
 
 @media (max-width: 567px) {
   .hero-container {
-    padding: 80px 20px;
-    min-height: 85vh;
+    min-height: 50vh;
   }
 
   .hero-pretitle {

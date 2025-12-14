@@ -65,7 +65,7 @@ header .hero-container {
 .our-mission-img1 {
     grid-column: 1 / span 6;
     border-radius: 10px;
-    border: 4px solid var(--green-color);
+    border: 4px solid #905654;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -81,7 +81,7 @@ header .hero-container {
 .our-mission-img2 {
     grid-column: 7 / span 6;
     border-radius: 10px;
-    border: 4px solid var(--brown-color);
+    border: 4px solid #905654;
     transition: box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -178,8 +178,8 @@ header .hero-container {
 }
 
 .our-mission-content {
+    display: grid;
     grid-column: 1 / span 12;
-    padding: 2.1875em;
     border: 1px solid var(--primary-text-color);
     border-radius: 10px;
     background-color: var(--card-color);
@@ -193,6 +193,8 @@ header .hero-container {
 }
 
 .mission-content-block p {
+    grid-column: 1 / span 12;
+    border: 4px solid #BBC5B8;
     background-color: #905654;
     color: #FAF3E0;
     text-align: center;
@@ -204,7 +206,6 @@ header .hero-container {
 
 @media screen and (max-width: 978px) {
     .mission-content-block p {
-        padding: .3em;
         font-size: 1.3em;
     }
 }
@@ -290,6 +291,12 @@ header .hero-container {
     display: flex;
     gap:20px;
     flex-direction: column;
+}
+
+@media screen and (max-width:530px) {
+    .card-text {
+        font-size: initial;
+    }
 }
 
 .card-text h3 {
