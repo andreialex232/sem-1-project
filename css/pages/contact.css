@@ -33,7 +33,7 @@ p {
 }
 
 li::marker {
-  color: var(--primary-text-color);
+  color: #D47720;
 }
 
 .hero {
