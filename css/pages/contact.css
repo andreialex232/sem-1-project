@@ -154,6 +154,11 @@ li::marker {
     width: initial;
 }
 
+.hero-container {
+  height: initial !important;
+}
+
+
 /* Contact cards in header */
 #contact-cards-wrapper {
   display: flex;
