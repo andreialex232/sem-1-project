@@ -301,11 +301,11 @@
 /* Hero Container */
 .hero-container {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   max-width: var(--width-12col);
-  height: auto;
-  padding: 150px 20px;
+  height: 100vh;
   margin: 0 auto;
 }
 
