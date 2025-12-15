@@ -1,4 +1,8 @@
 /* General */
+body {
+  color: #202020;
+}
+
 h1 {
   color: #FAF3E0 !important;
   font-size: 6em !important;
@@ -35,6 +39,7 @@ p {
 li::marker {
   color: #D47720;
 }
+
 
 @media screen and (max-width: 570px) {
   .hero {
@@ -236,12 +241,36 @@ li::marker {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: 1em;
 }
+
+address {
+  font-family: "Crimson Text", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.follow-us li a, .address-section-options div div {
+  transition: all 0.2s ease;
+  background-color: #905654;
+}
+
+.address-section-options div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .follow-us li a:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 6px -4px rgba(0, 0, 0, 0.1),
+      0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    opacity: 5;
+} */
 
 .contact-card-start p {
   font-style: normal;
   font-size: 1em;
-  color: black;
+  color: #202020;
   display: flex;
   justify-content: center;
 }
@@ -558,9 +587,16 @@ iframe {
   padding: 3.125em 0 9.375em 0;  
 }
 
+.practical-information-icon-circle {
+  margin-right: 0;
+  padding: 1.2em;
+}
+
 .address-section {
+  display: flex;
+  color: #202020;
   box-shadow: 0px 10px 15px -3px #0000001A;
-  border: 2px solid var(--primary-text-color);
+  border: 2px solid #905654;
   border-radius: 10px;
   margin: 0 auto;
   display: flex;
