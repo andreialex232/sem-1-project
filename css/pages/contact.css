@@ -161,6 +161,7 @@ li::marker {
 
 .hero-container {
   height: initial !important;
+  min-height: initial !important;
 }
 
 
