@@ -55,9 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Slider Functionality 
 
-
-// If check for lazy loading
-
 document.addEventListener("DOMContentLoaded", () => {
   const sliderWrapper = document.getElementById("sliderWrapper");
   const prevButton = document.getElementById("prevButton");

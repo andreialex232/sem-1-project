@@ -44,7 +44,7 @@
   --dark-green-color: #909a8d;
 }
 
-/* ---------------------------------------------- Accesibility -------------------------------------------------- */
+/* ---------------------------------------------- Accessibility -------------------------------------------------- */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -99,7 +99,7 @@
 
 .menu-container a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.25em;
   color: var(--text-primary);
   transition: color 0.3s ease-in-out;
   display: flex;
@@ -160,7 +160,7 @@
 #mobile-menu ul li a {
   color: var(--background-color-light);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.25em;
   padding: 15px 0;
   display: block;
   border-bottom: 1px solid var(--light-brown-color);
@@ -183,7 +183,7 @@
   cursor: pointer;
   padding: 10px;
   color: black;
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 /* Close Button inside the Menu */
@@ -194,7 +194,7 @@
   position: absolute;
   top: 10px;
   right: 20px;
-  font-size: 32px;
+  font-size: 2em;
   cursor: pointer;
   line-height: 1;
   padding: 5px;
@@ -220,54 +220,6 @@
 .menu-is-open #mobile-overlay {
   opacity: 1;
   visibility: visible;
-}
-
-@media (max-width: 1200px) {
-  .menu-container {
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 30px;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  /* Desktop View: Hide mobile elements */
-  .menu-toggle-button {
-    display: none;
-  }
-
-  #mobile-menu,
-  #mobile-overlay {
-    /* Important: ensure they are completely gone on desktop */
-    display: none !important;
-  }
-  .desktop-nav {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  /* Mobile View: Hide desktop elements and show mobile toggle */
-  .menu-links a {
-    display: none;
-  }
-
-  .logo-navbar img {
-    cursor: pointer;
-    height: 100px;
-  }
-}
-
-@media (max-width: 567px) {
-  .logo-navbar img {
-    cursor: pointer;
-    height: 100px;
-  }
-
-  .menu-container {
-    margin: 0 20px;
-  }
 }
 
 /* ---------------------------------------------- Header Section --------------------------------------------------- */
@@ -331,7 +283,7 @@
 .hero-pretitle {
   padding: 0;
   margin: 0 0 5px 0;
-  font-size: 36px;
+  font-size: 2.25em;
   font-weight: 400;
   color: var(--text-secondary);
 }
@@ -339,7 +291,7 @@
 /* Title Bold */
 .hero-text h1 {
   font-weight: 700;
-  font-size: 96px;
+  font-size: 6em;
   width: 80%;
   color: var(--text-secondary);
   margin-bottom: 20px;
@@ -347,7 +299,7 @@
 
 .hero-text p {
   font-family: "Crimson Text", serif;
-  font-size: 25px;
+  font-size: 1.563em;
   color: var(--text-primary);
   font-weight: 400;
   font-style: italic;
@@ -372,7 +324,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 1.25em;
   border: none;
   cursor: pointer;
   font-family: "Crimson Pro", serif;
@@ -405,116 +357,7 @@
 }
 
 
-/* ---------------------------------------------- Media Queries --------------------------------------------------- */
-
-@media (max-width: 1400px){
-  .hero {
-    min-height: 70vh;
-  }
-
-  .hero-container {
-    min-height: calc(70vh - 80px);
-  }
-}
-
-@media (max-width: 992px) {
-   .hero {
-    min-height: 50vh;
-  }
-
-  .hero-container{
-    min-height: calc(50vh - 80px);
-  }
-
-  .hero-pretitle {
-    font-size: 30px;
-  }
-  .hero-text h1 {
-    font-size: 86px;
-  }
-
-  .hero-text p {
-    font-size: 24px;
-    width: 85%;
-  }
-
-  .hero-ticket-info-btn,
-  .explore-the-story-btn {
-    height: 55px;
-    width: 180px;
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    min-height: 60vh;
-  }
-
-  .hero-container{
-    min-height: calc(60vh - 80px);
-  }
-
-  .hero-text h1 {
-    font-size: 70px;
-    width: 90%;
-  }
-
-  .hero-text p {
-    font-size: 20px;
-    width: 90%;
-    margin-bottom: 20px;
-  }
-
-  .hero-btns-container {
-    margin: 20px 0;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-ticket-info-btn,
-  .explore-the-story-btn {
-    width: 250px;
-  }
-
-  .hero-headline-icon {
-    padding-top: 50px;
-    padding-bottom: 10px;
-  }
-}
- 
-@media (max-width: 567px) {
-  .hero-pretitle {
-    font-size: 24px;
-  }
-
-  .hero-text h1 {
-    font-size: 48px;
-    width: 95%;
-  }
-
-  .hero-text p {
-    font-size: 18px;
-    width: 95%;
-  }
-
-  .hero-headline-icon {
-    padding-top: 30px;
-  }
-
-  .hero-btns-container {
-    gap: 15px;
-  }
-
-  .hero-ticket-info-btn,
-  .explore-the-story-btn {
-    height: 50px;
-    width: 230px;
-    font-size: 16px;
-  }
-}
-
-/*----------------------------------------------- The Story Section ---------------------------------------------- */
+/*-------------------------------------------------- The Story Section ---------------------------------------------- */
 .section-divider {
   display: flex;
   align-items: center;
@@ -542,13 +385,13 @@
 }
 
 .the-story-headline h2 {
-  font-size: 62px;
+  font-size: 3.875em;
   font-weight: 400;
   color: var(--text-primary);
 }
 
 .the-story-headline p {
-  font-size: 24px;
+  font-size: 1.5em;
   font-style: italic;
   color: var(--text-primary);
   padding: 20px 0 50px 0;
@@ -576,7 +419,7 @@
 }
 
 .the-story-content p {
-  font-size: 20px;
+  font-size: 1.25em;
   line-height: 1.6;
   font-weight: 400;
   margin-bottom: 20px;
@@ -587,7 +430,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5em;
   font-style: italic;
   line-height: 1.5;
   font-weight: 200;
@@ -671,103 +514,16 @@
   color: var(--text-primary);
   margin: 0 0 15px 0;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 .card p {
   color: var(--text-primary);
-  font-size: 20px;
+  font-size: 1.25em;
   line-height: 1.6;
 }
 
-/* ---------------------------- Media Queries (Responsive Design) --------------------------------------- */
-
-@media (max-width: 1200px) {
-  .the-story-content q {
-    margin-top: 50px;
-  }
-}
-@media (max-width: 992px) {
-  .the-story-headline {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .the-story-headline h2 {
-    font-size: 58px;
-  }
-}
-
-@media (max-width: 768px) {
-  .the-story-headline h2 {
-    font-size: 42px;
-    width: 80%;
-  }
-
-  .the-story-headline p {
-    font-size: 20px;
-  }
-
-  .the-story-content q {
-    font-size: 22px;
-  }
-
-  .card-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@media (max-width: 567px) {
-  .the-story {
-    padding: 0;
-  }
-
-  .the-story-headline h2 {
-    font-size: 36px;
-  }
-
-  .the-story-headline p {
-    font-size: 18px;
-    padding: 10px 0 30px 0;
-  }
-
-  .the-story-container {
-    padding: 20px 20px 20px 20px;
-    min-height: auto;
-  }
-
-  .the-story-content {
-    padding: 20px;
-  }
-
-  .the-story-content p {
-    font-size: 18px;
-  }
-
-  .the-story-content q {
-    font-size: 20px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-start;
-    text-align: start;
-  }
-
-  .card {
-    min-height: auto;
-    padding: 30px 15px;
-  }
-
-  .card h3 {
-    font-size: 22px;
-  }
-
-  .card p {
-    font-size: 18px;
-  }
-}
-
-/* --------------------------------------- Meet the Characters Section ------------------------------------------------ */
+/* -------------------------------------------------- Meet the Characters Section ------------------------------------------------ */
 .meet-the-characters {
   padding: 20px 0 60px 0;
 }
@@ -781,13 +537,13 @@
 }
 
 .meet-the-characters-headline h2 {
-  font-size: 62px;
+  font-size: 3.875em;
   font-weight: 400;
   color: var(--text-primary);
 }
 
 .meet-the-characters-headline p {
-  font-size: 24px;
+  font-size: 1.5em;
   font-style: italic;
   color: var(--text-primary);
   padding: 20px 0 50px 0;
@@ -841,7 +597,7 @@
 
 .text-box h3 {
   color: var(--text-primary);
-  font-size: 20px;
+  font-size: 1.25em;
   font-weight: 400;
   display: flex;
   justify-content: center;
@@ -861,7 +617,7 @@
   z-index: 10;
   color: var(--text-light);
   width: 60px;
-  font-size: 25px;
+  font-size: 1.563em;
   line-height: 1;
   height: 60px;
 }
@@ -876,119 +632,7 @@
   right: -40px;
 }
 
-@media (max-width: 992px) {
-  .meet-the-characters-headline h2 {
-    font-size: 58px;
-  }
-
-  .carousel-inner {
-    overflow: hidden;
-  }
-
-  .carousel-track {
-    display: flex;
-    gap: 20px;
-  }
-
-  .image-card {
-    flex: 0 0 calc((100% - 20px) / 2);
-    position: relative;
-    border-radius: 10px;
-  }
-
-  .nav-button {
-    padding: 1px;
-    width: 40px;
-    font-size: 20px;
-    line-height: 1;
-    height: 40px;
-  }
-
-  .prev {
-    left: -20px;
-  }
-
-  .next {
-    right: -20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .meet-the-characters {
-    padding: 0 0 60px 0;
-  }
-
-  .meet-the-characters-headline h2 {
-    font-size: 42px;
-    width: 80%;
-  }
-
-  .meet-the-characters-headline p {
-    font-size: 20px;
-  }
-
-  .image-card {
-    flex: 0 0 100%;
-  }
-
-  .nav-button {
-    width: 44px;
-    height: 44px;
-  }
-
-  .first-slider-wrapper {
-    display: grid;
-  }
-
-  .prev {
-    left: -20px;
-  }
-
-  .next {
-    right: -10px;
-  }
-}
-
-@media (max-width: 567px) {
-  .meet-the-characters-headline h2 {
-    font-size: 36px;
-  }
-
-  .meet-the-characters-headline p {
-    font-size: 18px;
-    padding: 10px 0 30px 0;
-  }
-
-  /* Image Container */
-  .image-card {
-    flex: 0 0 100%;
-    position: relative;
-    border-radius: 10px;
-  }
-
-  .image-1 img {
-    height: 448px;
-  }
-
-  .text-box {
-    margin: 0 15px 15px 15px;
-    padding: 10px 8px;
-  }
-
-  .text-box h3 {
-    font-size: 18px;
-  }
-
-  .prev {
-    left: -10px;
-  }
-
-  .next {
-    right: -10px;
-  }
-}
-
-/* ------------------------------ Show Calendar Section ------------------------------------------ */
+/* ------------------------------------------------ Show Calendar Section ------------------------------------------------------ */
 .show-calendar {
   background-color: var(--tertiary-background-color);
   padding: 30px 0 80px 0;
@@ -1003,13 +647,13 @@
 }
 
 .show-calendar-headline h2 {
-  font-size: 62px;
+  font-size: 3.875em;
   font-weight: 400;
   color: var(--text-primary);
 }
 
 .show-calendar-headline p {
-  font-size: 24px;
+  font-size: 1.5em;
   font-style: italic;
   color: var(--text-primary);
   padding: 20px 0 30px 0;
@@ -1057,7 +701,7 @@
 }
 
 .date-container .month {
-  font-size: 12px;
+  font-size: 0.75em;
   color: var(--text-tertiary);
   margin-bottom: 2px;
   font-weight: 300;
@@ -1065,7 +709,7 @@
 }
 
 .date-container .day {
-  font-size: 24px;
+  font-size: 1.5em;
   color: var(--text-tertiary);
 }
 
@@ -1076,12 +720,12 @@
 
 .details .day-name {
   color: var(--text-primary);
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 400;
 }
 
 .details .full-date {
-  font-size: 14px;
+  font-size: 0.875em;
   padding-top: 5px;
   color: var(--text-secondary);
   opacity: 0.7;
@@ -1094,7 +738,7 @@
   align-items: center;
   color: var(--text-primary);
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1em;
 }
 
 /* Time Icon */
@@ -1128,7 +772,7 @@
 .ticket-info-btn {
   grid-column: 10 / 12;
   background-color: var(--btn-primary-bg);
-  font-size: 16px;
+  font-size: 1em;
   height: 40px;
   font-family: "Crimson Pro", serif;
   color: var(--text-light);
@@ -1178,172 +822,14 @@
 }
 
 .show-calendar-info-content p {
-  font-size: 20px;
+  font-size: 1.25em;
   color: var(--text-light);
   line-height: 1.6;
   text-align: center;
   width: 80%;
 }
 
-/* ---------------------------- Media Queries (Responsive Design) --------------------------------------- */
-
-@media (max-width: 1200px) {
-  /* Date Container Left */
-  .date-container {
-    grid-column: 2 / 2;
-  }
-
-  .ticket-info-btn {
-    grid-column: 10 / 13;
-  }
-}
-
-@media (max-width: 992px) {
-  .show-calendar-headline h2 {
-    font-size: 58px;
-  }
-
-  .calendar-content {
-    padding: 15px;
-    gap: 5px;
-  }
-
-  /* Date Container Left */
-  .date-container {
-    width: 60px;
-    height: 60px;
-    grid-column: 1 / span 2;
-  }
-
-  .time-container {
-    font-size: 15px;
-  }
-
-  .ticket-info-btn {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-
-  .show-calendar-info {
-    padding: 30px 40px;
-    height: auto;
-  }
-
-  .show-calendar-info-content p {
-    font-size: 18px;
-    width: 90%;
-  }
-}
-
-@media (max-width: 768px) {
-  .show-calendar {
-    padding: 0 0 80px 0;
-  }
-
-  .show--headline h2 {
-    font-size: 42px;
-  }
-
-  .ticket-info-btn {
-    grid-column: 10 / 13;
-    padding: 10px 15px;
-    font-size: 12px;
-    height: 30px;
-  }
-
-  .time-container {
-    font-size: 14px;
-  }
-
-  .tag {
-    grid-column: 8 / span 2;
-    display: flex;
-    justify-self: end;
-  }
-
-  .show-calendar-info-content p {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 567px) {
-  .show-calendar-headline {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .show-calendar-headline h2 {
-    font-size: 36px;
-  }
-
-  .show-calendar-headline p {
-    font-size: 20px;
-    padding: 15px 0 5px 0;
-  }
-
-  .calendar-content {
-    grid-template-columns: repeat(12, 1fr);
-    padding: 15px;
-    row-gap: 15px;
-  }
-
-  /* Details (Besides Date Container Left) */
-  .details {
-    grid-column: 4 / span 8;
-    display: flex;
-    flex-direction: column;
-    padding-left: 5px;
-  }
-
-  .details .day-name {
-    font-size: 15px;
-  }
-
-  /* Time Container */
-  .time-container {
-    grid-column: 1 / span 4;
-  }
-
-  /* Tag */
-  .tag {
-    grid-column: 5 / span 2;
-    font-size: 0.75em;
-    padding: 4px 10px;
-  }
-
-  .ticket-info-btn {
-    grid-column: 9 / span 4;
-    text-align: center;
-    white-space: nowrap;
-    font-size: 12px;
-  }
-
-  /* Show Calendar Info Box */
-  .show-calendar-info {
-    padding: 25px 15px;
-  }
-
-  .show-calendar-info-content p {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 360px) {
-  .tag {
-    grid-column: 6 / span 2;
-    font-size: 0.75em;
-    padding: 4px 10px;
-  }
-
-  .ticket-info-btn {
-    grid-column: 9 / span 4;
-    text-align: center;
-    white-space: nowrap;
-    font-size: 12px;
-  }
-}
-
-/* --------------------------------- Ticket Information Section --------------------------------------------*/
+/* ------------------------------------------------ Ticket Information Section --------------------------------------------*/
 .ticket-information {
   padding: 30px 0 30px 0;
 }
@@ -1357,13 +843,13 @@
 }
 
 .ticket-information-headline h2 {
-  font-size: 62px;
+  font-size: 3.875em;
   font-weight: 400;
   color: var(--text-primary);
 }
 
 .ticket-information-headline p {
-  font-size: 24px;
+  font-size: 1.5em;
   font-style: italic;
   color: var(--text-primary);
   padding: 20px 0 50px 0;
@@ -1436,7 +922,7 @@
 
 /* Title */
 .ticket-title {
-  font-size: 30px;
+  font-size: 1.875em;
   font-weight: 400;
   color: var(--text-primary);
   padding-bottom: 2px;
@@ -1444,7 +930,7 @@
 
 /* Subtitle */
 .subtitle {
-  font-size: 20px;
+  font-size: 1.25em;
   color: var(--text-secondary);
   font-weight: 400;
   line-height: 1.2;
@@ -1453,7 +939,7 @@
 
 /* Price*/
 .price {
-  font-size: 38px;
+  font-size: 2.375em;
   font-weight: 400;
   text-transform: uppercase;
   color: var(--text-primary);
@@ -1462,7 +948,7 @@
 /* Includes Section (What the Card Includes) */
 .includes-title {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1em;
   color: var(--text-primary);
   padding: 15px 0 15px 2px;
   border-top: 2px solid var(--text-secondary);
@@ -1482,7 +968,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 16px;
+  font-size: 1em;
   color: var(--text-primary);
 }
 
@@ -1506,7 +992,7 @@
   border: 3px solid var(--btn-primary-bg);
   color: var(--text-secondary);
   font-family: "Crimson Pro", serif;
-  font-size: 20px;
+  font-size: 1.25em;
   padding: 18px 15px;
   margin-bottom: 30px;
   cursor: pointer;
@@ -1518,186 +1004,8 @@
   color: var(--text-light);
 }
 
-/* ---------------------------- Media Queries (Responsive Design) --------------------------------------- */
 
-@media (max-width: 1200px) {
-  .ticket-title {
-    font-size: 28px;
-  }
-
-  .subtitle {
-    font-size: 18px;
-    width: 80%;
-  }
-
-  .price {
-    font-size: 34px;
-    text-wrap: nowrap;
-  }
-
-  .includes-grid {
-    gap: 20px 15px;
-  }
-
-  .ticket-information-btn {
-    font-size: 18px;
-    padding: 15px;
-  }
-}
-
-@media (max-width: 992px) {
-  .ticket-information-headline h2 {
-    font-size: 58px;
-  }
-
-  .grid-container {
-    gap: 20px;
-  }
-
-  .header {
-    gap: 20px;
-  }
-
-  .ticket-title {
-    font-size: 24px;
-  }
-
-  .subtitle {
-    font-size: 16px;
-  }
-
-  .price {
-    font-size: 30px;
-    text-wrap: wrap;
-  }
-
-  .includes-grid {
-    gap: 15px 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  .ticket-information {
-    padding: 0;
-  }
-
-  .ticket-information-headline h2 {
-    font-size: 42px;
-  }
-
-  .ticket-information-headline p {
-    font-size: 20px;
-    padding: 15px 0 30px 0;
-  }
-
-  .childrens-ticket,
-  .family-package {
-    grid-column: 1 / -1;
-    min-height: auto;
-  }
-
-  .ticket-title {
-    font-size: 22px;
-  }
-
-  .price {
-    font-size: 32px;
-  }
-
-  .header {
-    padding: 0 2px 15px 0px;
-  }
-
-  .includes-item {
-    font-size: 14px;
-  }
-
-  .ticket-information-btn {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 567px) {
-  .ticket-information-headline {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .ticket-information-headline h2 {
-    font-size: 36px;
-  }
-
-  .ticket-information-headline p {
-    font-size: 20px;
-    padding: 10px 0 25px 0;
-  }
-
-  .grid-container {
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-
-  .childrens-ticket-content,
-  .family-package-content {
-    padding: 15px 20px 0;
-  }
-
-  .header {
-    margin: 0;
-    gap: 10px;
-  }
-
-  .icon-container {
-    display: flex;
-    align-items: center;
-  }
-
-  .icon-container img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .title-container {
-    padding: 10px 0 10px 0;
-  }
-
-  .ticket-title {
-    font-size: 18px;
-  }
-
-  .subtitle {
-    font-size: 14px;
-  }
-
-  .price {
-    font-size: 25px;
-    padding-top: 10px;
-  }
-
-  .includes-item {
-    font-size: 13px;
-  }
-
-  .ticket-information-btn {
-    font-size: 15px;
-    padding: 12px 10px;
-  }
-}
-
-@media (max-width: 407px){
-  .price{
-    text-wrap: nowrap;
-  }
-}
-
-@media (max-width: 360px){
-  .price{
-    text-wrap: wrap;
-  }
-}
-
-/* ---------------------------- Practical Information Section ------------------------------------ */
+/* ----------------------------------------------------- Practical Information Section ----------------------------------------- */
 
 .practical-information {
   padding: 30px 0 30px 0;
@@ -1712,13 +1020,13 @@
 }
 
 .practical-information-headline h2 {
-  font-size: 62px;
+  font-size: 3.875em;
   font-weight: 400;
   color: var(--text-primary);
 }
 
 .practical-information-headline p {
-  font-size: 24px;
+  font-size: 1.5em;
   font-style: italic;
   color: var(--text-primary);
   padding: 20px 0 80px 0;
@@ -1802,7 +1110,7 @@
 
 /* Title */
 .info-location-card-text-container h3 {
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 500;
   color: var(--text-primary);
   margin-bottom: 20px;
@@ -1811,7 +1119,7 @@
 /* Text & List Items */
 .info-location-card-text-container p,
 .info-location-card-text-container ul li {
-  font-size: 16px;
+  font-size: 1em;
   line-height: 1.6;
   color: var(--text-primary);
   margin-bottom: 5px;
@@ -1822,7 +1130,7 @@
   background-color: var(--btn-primary-bg);
   padding: 8px 15px;
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 0.875em;
   color: var(--text-light);
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
@@ -1843,91 +1151,7 @@
   background-color: var(--btn-primary-hover);
 }
 
-/* ---------------------------- Media Queries (Responsive Design) --------------------------------------- */
-
-@media (max-width: 992px) {
-  .practical-information-headline h2 {
-    font-size: 58px;
-  }
-}
-
-@media (max-width: 768px) {
-  .practical-information {
-    padding: 0 0 30px 0;
-  }
-
-  .practical-information-headline h2 {
-    font-size: 42px;
-  }
-
-  .practical-information-headline p {
-    font-size: 20px;
-    padding: 15px 15px 35px 15px;
-  }
-
-  .practical-information-grid-container {
-    gap: 20px;
-  }
-
-  /* One Column for Each Card */
-  #location,
-  #show-duration,
-  #public-transport,
-  #parking,
-  #accessibility,
-  #arrive-early {
-    grid-column: 1 / span 12;
-  }
-
-  /* Cards Container */
-  .location-card,
-  .show-duration-card,
-  .public-transport-card,
-  .parking-card,
-  .accessibility-card,
-  .arrive-early-card {
-    padding: 25px;
-    min-height: auto;
-  }
-
-  .practical-information-icon-circle {
-    margin-right: 10px;
-    min-width: 40px;
-    min-height: 40px;
-  }
-
-  .info-location-card-text-container h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
-
-  .info-location-card-text-container p,
-  .info-location-card-text-container ul li {
-    font-size: 15px;
-  }
-
-  .location-btn {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 567px) {
-  .practical-information-headline {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .practical-information-headline h2 {
-    font-size: 36px;
-  }
-
-  .practical-information-headline p {
-    font-size: 20px;
-    padding: 15px 15px 25px 15px;
-  }
-}
-
-/* ---------------------- Frequently Asked Questions Section--------------------------- */
+/* ------------------------------------------------------ Frequently Asked Questions Section --------------------------------- */
 .frequently-asked-questions {
   padding: 30px 0 80px;
 }
@@ -1942,14 +1166,14 @@
 
 /* Title */
 .frequently-asked-headline h2 {
-  font-size: 62px;
+  font-size: 3.875em;
   font-weight: 400;
   color: var(--text-primary);
 }
 
 /* Subtitle */
 .frequently-asked-headline p {
-  font-size: 24px;
+  font-size: 1.5em;
   font-style: italic;
   color: var(--text-primary);
   padding: 20px 0 40px 0;
@@ -1973,7 +1197,7 @@
 .section-heading {
   text-align: center;
   color: var(--text-primary);
-  font-size: 30px;
+  font-size: 1.875em;
   font-weight: 400;
   padding: 15px 0;
   grid-column: 1 / span 12;
@@ -1996,7 +1220,7 @@
 .question-box summary {
   padding: 25px 20px;
   position: relative;
-  font-size: 20px;
+  font-size: 1.25em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2021,7 +1245,7 @@
 /* Answer */
 .answer-content p {
   padding: 10px 20px 15px 20px;
-  font-size: 18px;
+  font-size: 1.125em;
   line-height: 1.6;
   color: var(--text-primary);
 }
@@ -2047,7 +1271,7 @@
 }
 
 .more-questions p {
-  font-size: 20px;
+  font-size: 1.25em;
   color: var(--text-primary);
   padding-bottom: 25px;
 }
@@ -2069,87 +1293,7 @@
   background-color: var(--btn-primary-hover);
 }
 
-/* ---------------------------- Media Queries (Responsive Design) --------------------------------------- */
-
-/* NO NEED FO 1200 PX RESPONSIVENESS*/
-
-@media (max-width: 992px) {
-  .frequently-asked-headline h2 {
-    font-size: 58px;
-  }
-
-  .frequently-asked-headline {
-    width: 90%;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .frequently-asked-questions {
-    padding: 0;
-  }
-
-  .frequently-asked-headline h2 {
-    font-size: 42px;
-    text-align: center;
-  }
-
-  .frequently-asked-headline {
-    width: 80%;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 567px) {
-  .frequently-asked-questions {
-    padding-bottom: 40px;
-  }
-
-  .frequently-asked-headline h2 {
-    font-size: 36px;
-    text-align: center;
-  }
-
-  .frequently-asked-headline p {
-    font-size: 18px;
-  }
-
-  .frequently-asked-questions-grid-container {
-    gap: 15px;
-  }
-
-  .section-heading {
-    font-size: 24px;
-  }
-
-  .question-box {
-    min-height: auto;
-    border-width: 1px;
-  }
-
-  .question-box summary {
-    padding: 15px 15px;
-    font-size: 16px;
-  }
-
-  .answer-content p {
-    padding: 10px 15px 15px 15px;
-    font-size: 14px;
-  }
-
-  .more-questions-content {
-    padding: 15px;
-  }
-
-  .more-questions p {
-    font-size: 16px;
-    padding-bottom: 15px;
-  }
-
-  
-}
-
-/*------------------------------------- Footer Section --------------------------------------------------- */
+/*---------------------------------------------------------------- Footer Section --------------------------------------------------- */
 .site-footer {
   background-color: var(--secondary-background-color);
   padding: 40px;
@@ -2178,7 +1322,7 @@
 /* Footer Heading */
 .footer-info h3 {
   color: var(--text-light);
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 400;
   margin-bottom: 20px;
 }
@@ -2189,14 +1333,14 @@
 }
 
 .production-info p {
-  font-size: 16px;
+  font-size: 1em;
   color: var(--text-tertiary-opacity);
   line-height: 1.6;
   padding-bottom: 10px;
 }
 
 .production-info .small-text {
-  font-size: 16px;
+  font-size: 1em;
   font-style: italic;
   color: var(--orange-light-color);
 }
@@ -2245,7 +1389,7 @@
 .contact-item p,
 .contact-item a {
   margin: 0 0 10px 0;
-  font-size: 16px;
+  font-size: 1em;
   color: var(--text-tertiary-opacity);
   text-decoration: none;
 }
@@ -2335,20 +1479,902 @@
   text-decoration: underline;
 }
 
+ /* -------------------------------------- Media Queries (Navigation Section) --------------------------------------------  */
+
+@media (max-width: 1200px) {
+  .menu-container {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 30px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  /* Desktop View: Hide mobile elements */
+  .menu-toggle-button {
+    display: none;
+  }
+
+  #mobile-menu,
+  #mobile-overlay {
+    /* Important: ensure they are completely gone on desktop */
+    display: none !important;
+  }
+  .desktop-nav {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Mobile View: Hide desktop elements and show mobile toggle */
+  .menu-links a {
+    display: none;
+  }
+
+  .logo-navbar img {
+    cursor: pointer;
+    height: 100px;
+  }
+}
+
+@media (max-width: 567px) {
+  .logo-navbar img {
+    cursor: pointer;
+    height: 100px;
+  }
+
+  .menu-container {
+    margin: 0 20px;
+  }
+}
+
+/* Using compressed images until a we get to a width of 768px */
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .hero {
+    background-image: url("../assets/img/hero-image-w.webp");
+  }
+  
+  .mobile {
+    display: initial;
+  }
+}
+
+ /* -------------------------------------- Media Queries (Hero Section) --------------------------------------------  */
+
+@media (max-width: 1400px){
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero-container {
+    min-height: calc(70vh - 80px);
+  }
+}
+
+@media (max-width: 992px) {
+   .hero {
+    min-height: 50vh;
+  }
+
+  .hero-container{
+    min-height: calc(50vh - 80px);
+  }
+
+  .hero-pretitle {
+    font-size: 1.875em;
+  }
+  .hero-text h1 {
+    font-size: 5.375em;
+  }
+
+  .hero-text p {
+    font-size: 1.5em;
+    width: 85%;
+  }
+
+  .hero-ticket-info-btn,
+  .explore-the-story-btn {
+    height: 55px;
+    width: 180px;
+    font-size: 1.125em;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+  }
+
+  .hero-container{
+    min-height: calc(60vh - 80px);
+  }
+
+  .hero-text h1 {
+    font-size: 4.375em;
+    width: 90%;
+  }
+
+  .hero-text p {
+    font-size: 1.25em;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .hero-btns-container {
+    margin: 20px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-ticket-info-btn,
+  .explore-the-story-btn {
+    width: 250px;
+  }
+
+  .hero-headline-icon {
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+}
+ 
+@media (max-width: 567px) {
+  .hero-pretitle {
+    font-size: 1.5em;
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
+    width: 95%;
+  }
+
+  .hero-text p {
+    font-size: 1.125em;
+    width: 95%;
+  }
+
+  .hero-headline-icon {
+    padding-top: 30px;
+  }
+
+  .hero-btns-container {
+    gap: 15px;
+  }
+
+  .hero-ticket-info-btn,
+  .explore-the-story-btn {
+    height: 50px;
+    width: 230px;
+    font-size: 1em;
+  }
+}
+
+ /* -------------------------------------- Media Queries (The Story Section) --------------------------------------------  */
+ 
+@media (max-width: 1200px) {
+  .the-story-content q {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 992px) {
+  .the-story-headline {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .the-story-headline h2 {
+    font-size: 3.625em;
+  }
+}
+
+@media (max-width: 768px) {
+  .the-story-headline h2 {
+    font-size: 2.626em;
+    width: 80%;
+  }
+
+  .the-story-headline p {
+    font-size: 1.25em;
+  }
+
+  .the-story-content q {
+    font-size: 1.375em;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 567px) {
+  .the-story {
+    padding: 0;
+  }
+
+  .the-story-headline h2 {
+    font-size: 2.25em;
+  }
+
+  .the-story-headline p {
+    font-size: 1.125em;
+    padding: 10px 0 30px 0;
+  }
+
+  .the-story-container {
+    padding: 20px 20px 20px 20px;
+    min-height: auto;
+  }
+
+  .the-story-content {
+    padding: 20px;
+  }
+
+  .the-story-content p {
+    font-size: 1.125em;
+  }
+
+  .the-story-content q {
+    font-size: 1.25em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 30px 15px;
+  }
+
+  .card h3 {
+    font-size: 1.375em;
+  }
+
+  .card p {
+    font-size: 1.125em;
+  }
+}
+
+ /* -------------------------------------- Media Queries (Meet the Characters Section) --------------------------------------------  */
+
+@media (max-width: 992px) {
+  .meet-the-characters-headline h2 {
+    font-size: 3.625em;
+  }
+
+  .carousel-inner {
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 20px;
+  }
+
+  .image-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+    position: relative;
+    border-radius: 10px;
+  }
+
+  .nav-button {
+    padding: 1px;
+    width: 40px;
+    font-size: 1.25em;
+    line-height: 1;
+    height: 40px;
+  }
+
+  .prev {
+    left: -20px;
+  }
+
+  .next {
+    right: -20px;
+  }
+}
+
+
+ /* -------------------------------------- Media Queries (Meet the Characters Section) --------------------------------------------  */
+ @media (max-width: 768px) {
+  .meet-the-characters {
+    padding: 0 0 60px 0;
+  }
+
+  .meet-the-characters-headline h2 {
+    font-size: 2.625em;
+    width: 80%;
+  }
+
+  .meet-the-characters-headline p {
+    font-size: 1.25em;
+  }
+
+  .image-card {
+    flex: 0 0 100%;
+  }
+
+  .nav-button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .first-slider-wrapper {
+    display: grid;
+  }
+
+  .prev {
+    left: -20px;
+  }
+
+  .next {
+    right: -10px;
+  }
+}
+
+@media (max-width: 567px) {
+  .meet-the-characters-headline h2 {
+    font-size: 2.25em;
+  }
+
+  .meet-the-characters-headline p {
+    font-size: 1.125em;
+    padding: 10px 0 30px 0;
+  }
+
+  /* Image Container */
+  .image-card {
+    flex: 0 0 100%;
+    position: relative;
+    border-radius: 10px;
+  }
+
+  .image-1 img {
+    height: 448px;
+  }
+
+  .text-box {
+    margin: 0 15px 15px 15px;
+    padding: 10px 8px;
+  }
+
+  .text-box h3 {
+    font-size: 1.125em;
+  }
+
+  .prev {
+    left: -10px;
+  }
+
+  .next {
+    right: -10px;
+  }
+}
+
+
+ /* -------------------------------------- Media Queries (Show Calendar Section) --------------------------------------------  */
+
+@media (max-width: 1200px) {
+  /* Date Container Left */
+  .date-container {
+    grid-column: 2 / 2;
+  }
+
+  .ticket-info-btn {
+    grid-column: 10 / 13;
+  }
+}
+
+@media (max-width: 992px) {
+  .show-calendar-headline h2 {
+    font-size: 3.625em;
+  }
+
+  .calendar-content {
+    padding: 15px;
+    gap: 5px;
+  }
+
+  /* Date Container Left */
+  .date-container {
+    width: 60px;
+    height: 60px;
+    grid-column: 1 / span 2;
+  }
+
+  .time-container {
+    font-size: 0.938em;
+  }
+
+  .ticket-info-btn {
+    padding: 10px 15px;
+    font-size: 0.875em;
+  }
+
+  .show-calendar-info {
+    padding: 30px 40px;
+    height: auto;
+  }
+
+  .show-calendar-info-content p {
+    font-size: 1.125em;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .show-calendar {
+    padding: 0 0 80px 0;
+  }
+
+  .show--headline h2 {
+    font-size: 2.625em;
+  }
+
+  .ticket-info-btn {
+    grid-column: 10 / 13;
+    padding: 10px 15px;
+    font-size: 0.75em;
+    height: 30px;
+  }
+
+  .time-container {
+    font-size: 0.875em;
+  }
+
+  .tag {
+    grid-column: 8 / span 2;
+    display: flex;
+    justify-self: end;
+  }
+
+  .show-calendar-info-content p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 567px) {
+  .show-calendar-headline {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .show-calendar-headline h2 {
+    font-size: 2.25em;
+  }
+
+  .show-calendar-headline p {
+    font-size: 1.25em;
+    padding: 15px 0 5px 0;
+  }
+
+  .calendar-content {
+    grid-template-columns: repeat(12, 1fr);
+    padding: 15px;
+    row-gap: 15px;
+  }
+
+  /* Details (Besides Date Container Left) */
+  .details {
+    grid-column: 4 / span 8;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+  }
+
+  .details .day-name {
+    font-size: 0.938em;
+  }
+
+  /* Time Container */
+  .time-container {
+    grid-column: 1 / span 4;
+  }
+
+  /* Tag */
+  .tag {
+    grid-column: 5 / span 2;
+    font-size: 0.75em;
+    padding: 4px 10px;
+  }
+
+  .ticket-info-btn {
+    grid-column: 9 / span 4;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.75em;
+  }
+
+  /* Show Calendar Info Box */
+  .show-calendar-info {
+    padding: 25px 15px;
+  }
+
+  .show-calendar-info-content p {
+    font-size: 0.875em;
+  }
+}
+
+@media (max-width: 360px) {
+  .tag {
+    grid-column: 6 / span 2;
+    font-size: 0.75em;
+    padding: 4px 10px;
+  }
+
+  .ticket-info-btn {
+    grid-column: 9 / span 4;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.75em;
+  }
+}
+
+ /* -------------------------------------- Media Queries (Ticket Information Section) --------------------------------------------  */
+ 
+@media (max-width: 1200px) {
+  .ticket-title {
+    font-size: 1.75em;
+  }
+
+  .subtitle {
+    font-size: 1.125em;
+    width: 80%;
+  }
+
+  .price {
+    font-size: 2.125em;
+    text-wrap: nowrap;
+  }
+
+  .includes-grid {
+    gap: 20px 15px;
+  }
+
+  .ticket-information-btn {
+    font-size: 1.125em;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .ticket-information-headline h2 {
+    font-size: 3.625em;
+  }
+
+  .grid-container {
+    gap: 20px;
+  }
+
+  .header {
+    gap: 20px;
+  }
+
+  .ticket-title {
+    font-size: 1.5em;
+  }
+
+  .subtitle {
+    font-size: 1em;
+  }
+
+  .price {
+    font-size: 1.875em;
+    text-wrap: wrap;
+  }
+
+  .includes-grid {
+    gap: 15px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ticket-information {
+    padding: 0;
+  }
+
+  .ticket-information-headline h2 {
+    font-size: 2.625em;
+  }
+
+  .ticket-information-headline p {
+    font-size: 1.25em;
+    padding: 15px 0 30px 0;
+  }
+
+  .childrens-ticket,
+  .family-package {
+    grid-column: 1 / -1;
+    min-height: auto;
+  }
+
+  .ticket-title {
+    font-size: 1.375em;
+  }
+
+  .price {
+    font-size: 2em;
+  }
+
+  .header {
+    padding: 0 2px 15px 0px;
+  }
+
+  .includes-item {
+    font-size: 0.875em;
+  }
+
+  .ticket-information-btn {
+    font-size: 1em;
+    margin-bottom: 1.25em;
+  }
+}
+
+@media (max-width: 567px) {
+  .ticket-information-headline {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .ticket-information-headline h2 {
+    font-size: 2.25em;
+  }
+
+  .ticket-information-headline p {
+    font-size: 1.25em;
+    padding: 10px 0 25px 0;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .childrens-ticket-content,
+  .family-package-content {
+    padding: 15px 20px 0;
+  }
+
+  .header {
+    margin: 0;
+    gap: 10px;
+  }
+
+  .icon-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon-container img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .title-container {
+    padding: 10px 0 10px 0;
+  }
+
+  .ticket-title {
+    font-size: 1.125em;
+  }
+
+  .subtitle {
+    font-size: 0.875em;
+  }
+
+  .price {
+    font-size: 1.563em;
+    padding-top: 10px;
+  }
+
+  .includes-item {
+    font-size: 0.813em;
+  }
+
+  .ticket-information-btn {
+    font-size: 0.938em;
+    padding: 12px 10px;
+  }
+}
+
+@media (max-width: 407px){
+  .price{
+    text-wrap: nowrap;
+  }
+}
+
+@media (max-width: 360px){
+  .price{
+    text-wrap: wrap;
+  }
+}
+
+ /* -------------------------------------- Media Queries (Ticket Information Section) --------------------------------------------  */
+
+@media (max-width: 992px) {
+  .practical-information-headline h2 {
+    font-size: 3.625em;
+  }
+}
+
+@media (max-width: 768px) {
+  .practical-information {
+    padding: 0 0 30px 0;
+  }
+
+  .practical-information-headline h2 {
+    font-size: 2.626em;
+  }
+
+  .practical-information-headline p {
+    font-size: 1.25em;
+    padding: 15px 15px 35px 15px;
+  }
+
+  .practical-information-grid-container {
+    gap: 20px;
+  }
+
+  /* One Column for Each Card */
+  #location,
+  #show-duration,
+  #public-transport,
+  #parking,
+  #accessibility,
+  #arrive-early {
+    grid-column: 1 / span 12;
+  }
+
+  /* Cards Container */
+  .location-card,
+  .show-duration-card,
+  .public-transport-card,
+  .parking-card,
+  .accessibility-card,
+  .arrive-early-card {
+    padding: 25px;
+    min-height: auto;
+  }
+
+  .practical-information-icon-circle {
+    margin-right: 10px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .info-location-card-text-container h3 {
+    font-size: 1.375em;
+    margin-bottom: 10px;
+  }
+
+  .info-location-card-text-container p,
+  .info-location-card-text-container ul li {
+    font-size: 0.938em;
+  }
+
+  .location-btn {
+    font-size: 0.875em;
+  }
+}
+
+@media (max-width: 567px) {
+  .practical-information-headline {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .practical-information-headline h2 {
+    font-size: 2.25em;
+  }
+
+  .practical-information-headline p {
+    font-size: 1.25em;
+    padding: 15px 15px 25px 15px;
+  }
+}
+
+
+ /* -------------------------------------- Media Queries (Ticket Information Section) --------------------------------------------  */
+
+@media (max-width: 992px) {
+  .frequently-asked-headline h2 {
+    font-size: 3.626em;
+  }
+
+  .frequently-asked-headline {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .frequently-asked-questions {
+        padding: 0 0 40px 0;
+  }
+
+  .frequently-asked-headline h2 {
+    font-size: 2.625em;
+    text-align: center;
+  }
+
+  .frequently-asked-headline {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 567px) {
+  .frequently-asked-questions {
+    padding-bottom: 40px;
+  }
+
+  .frequently-asked-headline h2 {
+    font-size: 2.25em;
+    text-align: center;
+  }
+
+  .frequently-asked-headline p {
+    font-size: 1.125em;
+  }
+
+  .frequently-asked-questions-grid-container {
+    gap: 15px;
+  }
+
+  .section-heading {
+    font-size: 1.5em;
+  }
+
+  .question-box {
+    min-height: auto;
+    border-width: 1px;
+  }
+
+  .question-box summary {
+    padding: 15px 15px;
+    font-size: 1em;
+  }
+
+  .answer-content p {
+    padding: 10px 15px 15px 15px;
+    font-size: 0.875em;
+  }
+
+  .more-questions-content {
+    padding: 15px;
+  }
+
+  .more-questions p {
+    font-size: 1em;
+    padding-bottom: 15px;
+  }
+}
+
+ /* -------------------------------------- Media Queries (Footer Section) --------------------------------------------  */
+ 
 @media (max-width: 1200px) {
   .site-footer {
     padding: 30px 20px;
   }
 
   .footer-info h3 {
-    font-size: 22px;
+    font-size: 1.375em;
     margin-bottom: 15px;
   }
 
   .production-info p,
   .production-info .small-text,
   .quick-links a {
-    font-size: 15px;
+    font-size: 0.938em;
     width: 90%;
   }
 }
@@ -2363,7 +2389,7 @@
   .production-info p,
   .production-info .small-text,
   .quick-links a {
-    font-size: 15px;
+    font-size: 0.938em;
     width: 100%;
   }
 
@@ -2380,7 +2406,7 @@
   }
 
   .footer-info h3 {
-    font-size: 20px;
+    font-size: 1.25em;
   }
 }
 
@@ -2403,7 +2429,7 @@
   }
 
   .footer-info h3 {
-    font-size: 22px;
+    font-size: 1.375em;
     margin-bottom: 10px;
     margin-top: 0;
     text-align: center;
@@ -2411,7 +2437,7 @@
 
   .production-info p,
   .quick-links a {
-    font-size: 16px;
+    font-size: 1em;
     text-align: center;
   }
 
@@ -2461,7 +2487,7 @@
   }
 
   .footer-info h3 {
-    font-size: 20px;
+    font-size: 1.25em;
   }
 
   .production-info,
@@ -2473,7 +2499,7 @@
   .production-info p,
   .production-info .small-text,
   .quick-links a {
-    font-size: 14px;
+    font-size: 0.875em;
     line-height: 1.5;
   }
 
@@ -2496,23 +2522,3 @@
 }
 
 
-
-
-/* Using compressed images until a we get to a width of 768px */
-.mobile {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .desktop {
-    display: none;
-  }
-
-  .hero {
-    background-image: url("../assets/img/hero-image-w.webp");
-  }
-  
-  .mobile {
-    display: initial;
-  }
-}
